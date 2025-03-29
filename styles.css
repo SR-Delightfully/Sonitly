@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the Scroll bar:                          
+---------------------------------------------------- */
+
+::-webkit-scrollbar {
+    max-width: 3px;
+    max-height: 3px;
+    background-color: #010144;
+
+}
+::-webkit-scrollbar-thumb {
+    background-color:#65c1fa;
+}
+
+/* ------------------------------------------------ */
+
+/* Styling the main container:                          
+---------------------------------------------------- */
+#container {
+    border: 2px solid rgb(74, 211, 0);
+
+    height: calc(100vh - 4px);
+    max-width: calc(100vw - 4px);
+    max-height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-flow: column nowrap;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-top: 0;
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-left: 0;
+}
+
+#container > li {
+    border: 2px solid rgb(89, 145, 148);
+    list-style: none;
+    min-width: 100%;
+    min-height: 175vh;
+}
+#container > li:nth-child(1) {
+    min-height: 95vh;
+    background-color: #33333330;
+}
+#container > li:nth-child(2) {
+    background-color: #33333360;
+}
+#container > li:nth-child(3) {
+    background-color: #33333390;
+}
+
