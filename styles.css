@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
+    background-color: #ccc;
 }
 
 /* Styling the Scroll bar:                          
@@ -23,6 +25,7 @@ body {
 ---------------------------------------------------- */
 #container {
     border: 2px solid rgb(74, 211, 0);
+    background-color: #ccc;
 
     height: calc(100vh - 4px);
     max-width: calc(100vw - 4px);
@@ -59,7 +62,7 @@ body {
     background-color: #33333390;
 }
 
-
+/*product deatils page*/
 #backgroundContainer {
     background-color: bisque;
     width: 80%;
@@ -109,4 +112,51 @@ body {
     padding: 1rem;
 }
 
+/* ------------------------------------- */
+/* form styling */
+input {
+    margin: 1em;
+    padding: 0.4rem;
+}
+#forgot-password {
+    margin-left: 4rem;
+}
 
+#forgot-password > a {
+    color: #010144;
+    text-decoration: none;
+}
+
+#forgot-password > a:hover {
+    text-decoration: underline;
+    color: rgb(77, 77, 88);
+}
+
+#login-container {
+    display: flex;
+    background-color: #ccc;
+}
+
+#form-container {
+    margin-top: 9rem;
+    position: absolute;
+    right: 15%;
+}
+
+#form-circle {
+    height: 60rem;
+    width: 60rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-75%, -75%);
+}
+
+#login-button {
+    margin-left: 40px;
+    padding: 4px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
