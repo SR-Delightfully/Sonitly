@@ -2,7 +2,7 @@
    for everyone to follow so we dont have drastically different styles...
    i.e. how much do i round the border? what is the maximum padding/margin, font sizes? */
 
-body {
+   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -264,4 +264,103 @@ height: 2rem;
     width: 3.6rem;
     border-radius: 100%;
     margin-left: 6.2rem;
+}
+
+/*product deatils page*/
+#backgroundContainer {
+    background-color: bisque;
+    width: 80%;
+    margin: 2%;
+    padding: 2%;
+}
+
+#productImage {
+    background-color: #010144;
+    width: 33%;
+    margin: -3% 2%; /*brings the container to almost the full height of the big container*/
+}
+
+#imageSize {
+    background-color: aquamarine;
+    height: 100%;
+    width: 70%;
+}
+
+#productRating {
+    background-color: #010144;
+    width: 9rem;
+    border-radius: 1rem;
+    margin-left: 3rem;
+    padding: 1rem;
+    margin-top: 0.7rem;
+}
+
+.circle {
+    background-color: red;
+    float: left;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    margin-left: 0.3rem;
+    margin-top: -0.35rem;
+}
+
+#productDescription {
+    float: left;
+    width: 30rem;
+    height: 13rem;
+    background-color: rebeccapurple;
+    margin-left: 17rem;
+    margin-top: -15rem;
+    padding: 1rem;
+}
+
+/* ------------------------------------- */
+/* form styling */
+input {
+    margin: 1em;
+    padding: 0.4rem;
+}
+#forgot-password {
+    margin-left: 4rem;
+}
+
+#forgot-password > a {
+    color: #010144;
+    text-decoration: none;
+}
+
+#forgot-password > a:hover {
+    text-decoration: underline;
+    color: rgb(77, 77, 88);
+}
+
+#login-container {
+    display: flex;
+    background-color: #ccc;
+}
+
+#form-container {
+    margin-top: 9rem;
+    position: absolute;
+    right: 15%;
+}
+
+#form-circle {
+    height: 60rem;
+    width: 60rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-75%, -75%);
+}
+
+#login-button {
+    margin-left: 40px;
+    padding: 4px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
