@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function handleDropDown() {
+            document.getElementById("user-drop-options").style.height = "9.2rem";
+            document.getElementById("user-drop-options").style.overflow = "visible";
+            document.getElementById("user-drop-options").style.zindex = "9999";
+        }
+    </script>
+
+</head>
+<body>
+    <header id="nav-bar">
+        <div id="nav-bar-left">
+            <a href="#home"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/812/812680.png"></a>
+            <ol id="nav-bar-tabs">
+                <li class="tab"><a href="#home"><button>Tab 1</button></a></li>
+                <li class="tab"><a href=""><button>Tab 2</button></a></li>
+                <li class="tab"><a href=""><button>Tab 3</button></a></li>
+                <li class="tab"><a href=""><button>Tab 4</button></a></li>
+            </ol>
+        </div>
+        <div id="nav-bar-right">
+            <div id="nav-bar-misc">
+                <span>  
+                    <label for="search-input">🔍</label>
+                    <input type="text" id="search-input">
+                </span>
+                <span>
+                    <a href="#cart">🛒</a>
+                </span>
+            </div>
+            <div id="nav-bar-user-drop">
+                <span>
+                    <!-- ▼ -->
+                    <h3>Hellow, {user}</h3>
+                   
+                    <ul id="user-drop-options">
+                        <li class="drop-option"><button id="drop-down" onclick="handleDropDown()">User dropdown ➤</button></li>
+                        <li class="drop-option"><a href="#profile">view profile</a></li>
+                        <li class="drop-option"><a href="#profile">view accessibility</a></li>
+                        <li class="drop-option"><a href="#profile">view more settings</a></li>
+                    </ul>
+                </span>
+                <img id="pfp" src="https://i.pinimg.com/236x/17/57/1c/17571cdf635b8156272109eaa9cb5900.jpg">
+     `      </div>
+        </div>
+    </header>
+</body>
+</html>
