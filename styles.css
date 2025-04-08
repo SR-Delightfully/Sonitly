@@ -508,6 +508,7 @@ width: 80%;
     align-items: flex-start;
     padding: 2rem;
     margin: 2rem;
+    text-align: justify;
 }
 
 #about-column-right {
@@ -533,5 +534,27 @@ width: 80%;
     width: 5rem;
 }
 
+#faq-container  {
+    text-align: center;
+}
+
+#faq-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+#faq-right-column {
+    margin-left: 10rem;
+    border: 1px solid #222;
+}
+
+#faq-left-column > ul > li {
+    list-style-type: none;
+    line-height: 2rem;
+}
 
     
