@@ -39,6 +39,7 @@
 
 /* Styling wrapper */
 #wrapper {
+    text-align: center;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -406,6 +407,21 @@ input {
     margin: 1em;
     padding: 0.4rem;
 }
+
+#have-account {
+    text-align: left;
+}
+
+#have-account > a {
+    color: #010144;
+    text-decoration: none;
+}
+
+#have-account > a:hover {
+    text-decoration: underline;
+    color: rgb(77, 77, 88);
+}
+
 #forgot-password {
     margin-left: 4rem;
 }
@@ -426,12 +442,19 @@ input {
 }
 
 #form-container {
-    margin-top: 9rem;
+    margin-top: 2rem;
     position: absolute;
-    right: 15%;
+    right: 1%;
 }
 
-#form-circle {
+#sign-up-form-container {
+    margin-top: 2rem;
+    position: absolute;
+    left: 25%;
+    top: 50px;
+}
+
+#form-circle-left {
     height: 60rem;
     width: 60rem;
     background-color: #bbb;
@@ -442,9 +465,43 @@ input {
     transform: translate(-75%, -75%);
 }
 
+#form-circle-right {
+    height: 60rem;
+    width: 60rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    right: -30%;
+    
+}
+
 #login-button {
     margin-left: 40px;
     padding: 4px;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+#sign-up-button {
+    margin-left: 40px;
+    padding: 4px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/* gallery styling */
+#gallery-container {
+margin: 0 auto;
+padding: 2rem;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+width: 80%;
+
+}
+
+.gallery-img {
+    border: solid 2px #010144;
+    padding: 1em;
+    margin: 1em;
 }
