@@ -24,10 +24,10 @@ const NavBar = () => {
                 <a href="/"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/812/812680.png" /></a>
                 {/* TABS TO NAVIGATE THROUGH PAGES */}
                 <ol id="nav-bar-tables">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/shop">Shop</Link></li>
-                    <li><Link to="/explore">Explore</Link></li>
+                    <li><Link to="/"><button>Home</button></Link></li>
+                    <li><Link to="/about"><button>About</button></Link></li>
+                    <li><Link to="/shop"><button>Shop</button></Link></li>
+                    <li><Link to="/explore"><button>Explore</button></Link></li>
                 </ol>
             </div>
             <div id="nav-bar-right">

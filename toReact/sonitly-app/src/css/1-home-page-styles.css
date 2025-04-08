@@ -4,7 +4,7 @@
     border: 2px solid rgb(74, 211, 0);
 
     min-height: calc(100vh * 3);
-    width: calc(100vw - 6rem);
+    width: calc(90vw - 6rem);
     
     display: flex;
     flex-flow: column nowrap;
@@ -123,7 +123,6 @@
     transform: translate(-50%, -50%);
 }
 #hero-container > #hero-title {
-    border: 2px solid hotpink;
     width: 40rem;
     position: absolute;
     font-size: 5rem;
@@ -131,7 +130,6 @@
     transform: translate(-70%,0);
 }
 #carousel-controls {
-    border: 2px solid hotpink;
     width: 3rem;
     min-height: 12rem;
     list-style: none;
@@ -161,6 +159,7 @@
     position: relative;
     top: 2rem;
     left: 2rem;
+    overflow: hidden;
 }
 #carousel-details {
     border: 2px solid green;
