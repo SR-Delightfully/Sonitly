@@ -7,6 +7,10 @@
 
     <script>
         function handleDropDown() {
+            const dropDown = document.getElementById("user-drop-options");
+            if(dropdown.style.height === "9.2rem") {
+                
+            }
             document.getElementById("user-drop-options").style.height = "9.2rem";
             document.getElementById("user-drop-options").style.overflow = "visible";
             document.getElementById("user-drop-options").style.zindex = "9999";
@@ -27,8 +31,8 @@
         </div>
         <div id="nav-bar-right">
             <div id="nav-bar-misc">
-                <span>  
-                    <label for="search-input">🔍</label>
+                <span id="search-container">  
+                    <label id="search-label" for="search-input">🔍</label>
                     <input type="text" id="search-input">
                 </span>
                 <span>
@@ -51,5 +55,22 @@
      `      </div>
         </div>
     </header>
+    <script>{
+        const searchLabel = document.getElementById("search-label");
+        searchLabel.setAttribute("onclick", "handleSearch()");
+        
+        function handleSearch() {
+            const searchBar = document.getElementById("search-input");
+            searchBar.style.display = "block";
+
+            const navBarMisc = document.getElementById("nav-bar-misc");
+            navBarMisc.style.width = "21rem";
+            navBarMisc.style.display = "flex";
+
+
+            const searchContainer = document.getElementById("search-container");
+            searchContainer.style.width = "26rem 1important";
+            searchContainer.style.border = "2px solid hotpink";
+    }}</script>
 </body>
 </html>
