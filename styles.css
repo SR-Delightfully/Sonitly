@@ -1,7 +1,23 @@
 /* We should probably start noting down some design rules 
    for everyone to follow so we dont have drastically different styles...
    i.e. how much do i round the border? what is the maximum padding/margin, font sizes? */
+:root{
+    /* SOLID SHADES & COLORS */
+   --s0: #EEEEEE;
+   --s1: #AEAEAE;
+   --s2: #909090;
+   --s3: #505050     ;
+   --s4: #333333;
+   --s5: #000000;
 
+    /* LOWER TRANSPARENCY */
+    --s0-80: #EEEEEE80;
+    --s1-80: #AEAEAE80;
+    --s2-80: #90909080;
+    --s3-80: #50505080;
+    --s4-80: #33333380;
+    --s5-80: #00000080;
+}
    body {
     margin: 0;
     padding: 0;
@@ -63,7 +79,7 @@
     border: 2px solid rgb(89, 145, 148);
     list-style: none;
     min-width: 100%;
-    height: 150vh;
+    height: 95vh;
 }
 #containers > li:nth-child(1) {
     max-height: 95vh !important;
@@ -81,6 +97,76 @@
 
 /* Styling the main container's subsections:                          
 ---------------------------------------------------- */
+/* ->> Introduction Section */
+#intro-container {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    border: 2px solid orange;
+    position: relative;
+    /* left: 16.5rem; */
+    gap: 1rem;
+    /* left: 50%; */
+    /* transform: translate(10%,0); */
+}
+#intro-container > div:nth-child(1){
+    min-height: 100%;
+    width: calc(65% - 0.5rem);
+}
+#featured-items {
+    position: relative;
+    bottom: 6rem;
+    display: flex;
+    height: 72.5%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;   
+}
+/* Creating falling cd layout */
+#featured-items > li:nth-child(1){
+    transform: rotate(5deg) translate(-18rem) skew(-2deg, -5deg);
+}
+#featured-items > li:nth-child(1) > span{
+    transform: rotate(-5deg) translate(18rem) skew(2deg, 5deg);
+}
+#featured-items > li:nth-child(2){
+    transform: rotate(5deg) translateX(-16rem) translateY(7rem) skew(-27.5deg, -16deg);
+}
+#featured-items > li:nth-child(2) > span{
+    transform: rotate(-2.3deg) translateX(10rem) skew(27.5deg, 14deg) scale(1.1, 1.1);
+}
+#featured-items > li:nth-child(3){
+    transform: rotate(2deg) skew(69deg, -1deg) scale(0.82, 0.30);
+}
+#featured-items > li:nth-child(3) > span{
+    transform: rotate(-2deg) skew(-45.5deg, 1deg) scale(1.18, 3);  
+}
+
+#featured-items > li {
+    border: 2px solid hotpink;
+    border-radius: 100%;
+    height: calc(2rem* 16);
+    width: calc(2rem*16);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#store-overture {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+#store-overture > h1 {
+    margin-bottom: 3rem;
+}
+#intro-container > div:nth-child(2){
+    min-height: 100%;
+    width: calc(35% - 0.5rem);
+}
 /* ->> Hero Section */
 #hero-container {
     border: 2px solid yellowgreen;
@@ -113,11 +199,15 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 #carousel-controls > li > button {
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index:9999;
 }
 #carousel-images {
     border: 2px solid green;
@@ -153,11 +243,6 @@
     text-align: center;
     align-content: center;
 }
-/* #containers > li > div {  */
-/* border: 2px solid rgb(26, 10, 76); */
-/* } */
-
-/* Styling the navigation bar */
 #nav-bar {
     border: 2px solid #666;
     background-color: #333;
@@ -185,15 +270,12 @@
     position: relative;
 }
 #nav-bar-left{
-    background-color: cyan;
     justify-content: flex-start;
 }
 #nav-bar-right {
-    background-color: magenta;
     justify-content: flex-end;
 }
 #nav-bar-left > ol{
-    border: 1px solid deeppink;
     display: flex;
     min-width: 48rem;
     justify-content: space-between;
@@ -214,15 +296,17 @@
     border: 1px solid red;
     font-size: 2rem; 
     width: 7rem;
-    display: flex;
     position: absolute;
     left: 1.5rem;
     display: flex;
     justify-content: space-between;
 }
+#nav-bar-misc > span > #search-label {
+    cursor: pointer;
+}
 
 #nav-bar-misc > span > input {
-    display: none;
+    /* display: none; */
 }
 
 #nav-bar-user-drop {
