@@ -217,7 +217,15 @@
     position: relative;
     top: 2rem;
     left: 2rem;
+    overflow-x: auto;
+    display: flex;
 }
+
+#carousel-images > img {
+    object-fit: cover;
+}
+
+
 #carousel-details {
     border: 2px solid green;
     height: calc(3rem * 16);
@@ -306,7 +314,7 @@
 }
 
 #nav-bar-misc > span > input {
-    /* display: none; */
+    display: none;
 }
 
 #nav-bar-user-drop {
@@ -505,3 +513,4 @@ width: 80%;
     padding: 1em;
     margin: 1em;
 }
+
