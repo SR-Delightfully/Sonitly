@@ -63,6 +63,7 @@ body {
 #backgroundContainer {
     background-color: bisque;
     width: 80%;
+    height: 35rem;
     margin: 2%;
     padding: 2%;
 }
@@ -80,8 +81,8 @@ body {
 }
 
 #productRating {
-    background-color: #010144;
-    width: 9rem;
+    background-color: hotpink;
+    width: 33%;
     border-radius: 1rem;
     margin-left: 3rem;
     padding: 1rem;
@@ -89,7 +90,7 @@ body {
 }
 
 .circle {
-    background-color: red;
+    background-color: deepskyblue;
     float: left;
     height: 1rem;
     width: 1rem;
