@@ -1,0 +1,16 @@
+/* gallery styling */
+#gallery-container {
+margin: 0 auto;
+padding: 2rem;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+width: 80%;
+
+}
+
+.gallery-img {
+    border: solid 2px #010144;
+    padding: 1em;
+    margin: 1em;
+}
