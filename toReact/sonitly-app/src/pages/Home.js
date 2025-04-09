@@ -40,21 +40,22 @@ const Home = () => {
                 </div>
                 <div id="store-overture">
                 <h2>Introduction</h2>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit auctor mi sed viverra. Cras mi sem, ultricies et feugiat eu, mollis vitae purus. <br />
-                        Sed dapibus commodo mi non tincidunt. Etiam sollicitudin ante a libero consectetur, eu posuere neque porta. Morbi nunc odio, fermentum sed magna nec, egestas volutpat dui. <br /> 
-                        Aliquam eget rhoncus purus. Duis sagittis neque non finibus tincidunt. Nunc posuere lectus tellus, quis luctus ex vulputate nec. Sed venenatis convallis dolor eu mattis.</p>
-                    <p> Ut vestibulum imperdiet mauris, et tempor turpis rhoncus eget. In interdum faucibus tortor, et finibus risus volutpat ac.<br/>
-                            Nunc est elit, consectetur eu suscipit auctor, volutpat et arcu. Donec tortor augue, cursus quis dolor eget, aliquam volutpat lectus.</p>
-                    <p>Integer a auctor lectus, a suscipit nisl. Maecenas pellentesque dapibus ultrices. Integer tortor est, varius vitae nunc ut, cursus tincidunt libero. <br />
-                        Integer nec dictum quam, in finibus ipsum. Mauris varius nulla quis leo interdum iaculis. Phasellus consequat suscipit consectetur. Sed vitae convallis velit.<br />
-                        In a nibh sit amet lorem viverra laoreet. Proin id rutrum quam. Curabitur ullamcorper placerat odio, quis congue ex egestas et. In hac habitasse platea dictumst.<br />
-                        Quisque et leo nec leo lacinia fermentum ut vel dui. Praesent eleifend nec lacus et varius. Donec id luctus tortor.<br /> 
-                        Mauris rhoncus, dolor in consectetur dignissim, mauris nulla condimentum sapien, in viverra dui magna nec orci. <br />
-                        In pretium imperdiet nibh, nec ultrices felis tincidunt ac. Phasellus in massa eu urna fermentum fringilla sed ac tellus. <br />
-                        Vestibulum ut efficitur arcu, at eleifend libero. Donec eget risus neque.
-                    </p>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit auctor mi sed viverra. Cras mi sem, ultricies et feugiat eu, mollis vitae purus. <br />
+                            Sed dapibus commodo mi non tincidunt. Etiam sollicitudin ante a libero consectetur, eu posuere neque porta. Morbi nunc odio, fermentum sed magna nec, egestas volutpat dui. <br /> 
+                            Aliquam eget rhoncus purus. Duis sagittis neque non finibus tincidunt. Nunc posuere lectus tellus, quis luctus ex vulputate nec. Sed venenatis convallis dolor eu mattis.</p>
+                        <p> Ut vestibulum imperdiet mauris, et tempor turpis rhoncus eget. In interdum faucibus tortor, et finibus risus volutpat ac.<br/>
+                                Nunc est elit, consectetur eu suscipit auctor, volutpat et arcu. Donec tortor augue, cursus quis dolor eget, aliquam volutpat lectus.</p>
+                        <p>Integer a auctor lectus, a suscipit nisl. Maecenas pellentesque dapibus ultrices. Integer tortor est, varius vitae nunc ut, cursus tincidunt libero. <br />
+                            Integer nec dictum quam, in finibus ipsum. Mauris varius nulla quis leo interdum iaculis. Phasellus consequat suscipit consectetur. Sed vitae convallis velit.<br />
+                            In a nibh sit amet lorem viverra laoreet. Proin id rutrum quam. Curabitur ullamcorper placerat odio, quis congue ex egestas et. In hac habitasse platea dictumst.<br />
+                            Quisque et leo nec leo lacinia fermentum ut vel dui. Praesent eleifend nec lacus et varius. Donec id luctus tortor.<br /> 
+                            Mauris rhoncus, dolor in consectetur dignissim, mauris nulla condimentum sapien, in viverra dui magna nec orci. <br />
+                            In pretium imperdiet nibh, nec ultrices felis tincidunt ac. Phasellus in massa eu urna fermentum fringilla sed ac tellus. <br />
+                            Vestibulum ut efficitur arcu, at eleifend libero. Donec eget risus neque.
+                        </p>
+                    </div>
                 </div>
             </div>  
         </li>
