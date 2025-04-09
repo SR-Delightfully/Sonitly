@@ -358,17 +358,98 @@ height: 2rem;
     margin-left: 6.2rem;
 }
 
-/*product deatils page*/
-#informationContainer {
+/*product deatils page FULL PAGE*/
+#informationContainerFullP {
     background-color: aliceblue;
+    display: flex;
+    flex-flow: column nowrap;
     height: 20em;
     width: 85%;
     border-radius: 1rem;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#productImageFullP {
+    background-color: cadetblue;
+    margin: 1rem 0rem 0.5rem 1rem;
+    width: 10rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    float: left;
+}
+
+#productInformationContainerFullP {
+    float: left;
+    margin: 1rem 1rem 0.5rem 1rem;
+    background-color: cadetblue;
+    width: 65%;
+    height: 14rem;
+}
+
+#productInformationContainerFullP > h2 {
+    margin-top: -0.3rem;
+}
+
+#ratingContainerFullP {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: cadetblue;
+    float: left;
+    width: 10rem;
+    height: 2rem;
+    margin: 0rem 0rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.ratingCircleFullP {
+    background-color: aliceblue;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    float: left;
+    margin: 0.5rem;
+}
+
+#socialFullP {
+    border: 2px solid honeydew;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    float: left;
+    width: 65%;
+    height: 3rem;
+    margin-left: 1rem;
+    padding: 0rem;
+}
+
+.socialContainerFullP {
+    background-color: cadetblue;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 0.5rem;
+}
+
+#ratingInfoFullP {
+    margin: -1.8rem 0rem 0rem 1rem;
+}
+
+/*product deatils page SMALL*/
+#informationContainer {
+    background-color: aliceblue;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 20em;
+    width: 85%;
+    border-radius: 1rem;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #productImage {
     background-color: cadetblue;
-    margin: 1rem 0rem 1rem 1rem;
+    margin: 1rem 0rem 0.5rem 1rem;
     width: 10rem;
     height: 14rem;
     object-fit: cover;
@@ -378,14 +459,57 @@ height: 2rem;
 
 #productInformationContainer {
     float: left;
-    margin: 1rem;
-    background-color: blueviolet;
-    width: 60%;
+    margin: 1rem 1rem 0.5rem 1rem;
+    background-color: cadetblue;
+    width: 65%;
     height: 14rem;
 }
 
 #productInformationContainer > h2 {
     margin-top: -0.3rem;
+}
+
+#ratingContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: cadetblue;
+    float: left;
+    width: 10rem;
+    height: 2rem;
+    margin: 0rem 0rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.ratingCircle {
+    background-color: aliceblue;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    float: left;
+    margin: 0.5rem;
+}
+
+#social {
+    border: 2px solid honeydew;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    float: left;
+    width: 65%;
+    height: 3rem;
+    margin-left: 1rem;
+    padding: 0rem;
+}
+
+.socialContainer {
+    background-color: cadetblue;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 0.5rem;
+}
+
+#ratingInfo {
+    margin: -1.8rem 0rem 0rem 1rem;
 }
 
 /* ------------------------------------- */
@@ -508,6 +632,7 @@ width: 80%;
     align-items: flex-start;
     padding: 2rem;
     margin: 2rem;
+    text-align: justify;
 }
 
 #about-column-right {
@@ -533,5 +658,27 @@ width: 80%;
     width: 5rem;
 }
 
+#faq-container  {
+    text-align: center;
+}
+
+#faq-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+#faq-right-column {
+    margin-left: 10rem;
+    border: 1px solid #222;
+}
+
+#faq-left-column > ul > li {
+    list-style-type: none;
+    line-height: 2rem;
+}
 
     
