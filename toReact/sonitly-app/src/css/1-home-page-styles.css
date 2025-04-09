@@ -1,17 +1,12 @@
 /* Styling the main container:                          
 ---------------------------------------------------- */
 #containers {
-    border: 2px solid rgb(74, 211, 0);
-
     min-height: calc(100vh * 3);
     width: calc(90vw - 6rem);
-    
     display: flex;
     flex-flow: column nowrap;
-
-    margin: 3rem 0;
+    margin: 0;
     padding: 0;
-
     position: relative;
     left:50%;
     transform: translate(-50%,0);
@@ -20,21 +15,20 @@
 /* Styling the main container's children:                          
 ---------------------------------------------------- */
 #containers > li {
-    border: 2px solid rgb(89, 145, 148);
     list-style: none;
     min-width: 100%;
     height: 95vh;
+    /* border: 2px solid var(--s3); */
 }
 #containers > li:nth-child(1) {
-    max-height: 95vh !important;
-    background-color: #33333330;
+    z-index: 80;
 }
 #containers > li:nth-child(2) {
-    background-color: #33333360;
+    z-index: 70;
 }
 #containers > li:nth-child(3) {
     background-color: #33333390;
-    border-bottom: 4px solid hotpink;
+    z-index: 60;
 }
 
 
@@ -47,22 +41,23 @@
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    border: 2px solid orange;
     position: relative;
-    /* left: 16.5rem; */
     gap: 1rem;
-    /* left: 50%; */
-    /* transform: translate(10%,0); */
 }
 #intro-container > div:nth-child(1){
-    min-height: 100%;
-    width: calc(65% - 0.5rem);
+    height: 100%;
+    width: calc(32.9% - 0.5rem);
+}
+#intro-container > div:nth-child(2){
+    height: 100%;
+    width: 58% !important;
+    text-align: justify ;
 }
 #featured-items {
     position: relative;
     bottom: 6rem;
     display: flex;
-    height: 72.5%;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -71,26 +66,26 @@
 }
 /* Creating falling cd layout */
 #featured-items > li:nth-child(1){
-    transform: rotate(5deg) translate(-18rem) skew(-2deg, -5deg);
+    transform: rotate(5deg) translateX(-5rem) translateY(0.75rem) skew(-2deg, -5deg);
 }
 #featured-items > li:nth-child(1) > span{
-    transform: rotate(-5deg) translate(18rem) skew(2deg, 5deg);
+    transform: rotate(-5deg) translate(9rem) skew(2deg, 5deg);
 }
 #featured-items > li:nth-child(2){
-    transform: rotate(5deg) translateX(-16rem) translateY(7rem) skew(-27.5deg, -16deg);
+    transform: rotate(4.5deg) translateX(-12rem) translateY(10rem) skew(-27.5deg, -16deg);
 }
 #featured-items > li:nth-child(2) > span{
-    transform: rotate(-2.3deg) translateX(10rem) skew(27.5deg, 14deg) scale(1.1, 1.1);
+    transform: rotate(-2.3deg) translateX(19rem)  translateY(6rem) skew(27.5deg, 14deg) scale(1.1, 1.1);
 }
 #featured-items > li:nth-child(3){
-    transform: rotate(2deg) skew(69deg, -1deg) scale(0.82, 0.30);
+    transform: rotate(16deg) translateX(-3rem) translateY(15rem) skew(69deg, -1deg) scale(0.82, 0.30);
 }
 #featured-items > li:nth-child(3) > span{
-    transform: rotate(-2deg) skew(-45.5deg, 1deg) scale(1.18, 3);  
+    transform: rotate(-22.5deg) translateX(37.2rem) translateY(-8rem) skew(-63deg, -0.5deg) scale(2, 1.79);
 }
 
 #featured-items > li {
-    border: 2px solid hotpink;
+    border: 2px solid var(--s2);
     border-radius: 100%;
     height: calc(2rem* 16);
     width: calc(2rem*16);
@@ -98,14 +93,33 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(circle, rgba(0,0,0,0) 11%, var(--s3) 12%, var(--s0) 13%, var(--s1) 14%, #ffffff 15%, var(--s1) 76%, var(--s0) 100%);
 }
 #store-overture {
+    height: 100%;
+    background-color: var(--s0);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 1.25rem;
+    padding: 0 1.25rem;
+    gap: 1rem;
+}
+
+#store-overture > div {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
+    height: calc(100% - 16rem);
 }
-#store-overture > h1 {
+#store-overture > h2 {
     margin-bottom: 3rem;
+    background-color: var(--s5);
+    height: 6rem;
+    width: 90%;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
 }
 #intro-container > div:nth-child(2){
     min-height: 100%;
@@ -113,9 +127,9 @@
 }
 /* ->> Hero Section */
 #hero-container {
-    border: 2px solid yellowgreen;
-    height: calc(3.25rem * 16);
-    width: calc(6.925rem * 16);
+    background-color: var(--s0);
+    height: calc(3.25rem * 17.75);
+    width: calc(6rem * 17.75);
     border-radius: 1.25rem;
     position: relative;
     left: 50%;
@@ -123,11 +137,15 @@
     transform: translate(-50%, -50%);
 }
 #hero-container > #hero-title {
-    width: 40rem;
+    width: 64rem;
     position: absolute;
     font-size: 5rem;
-    left: 70%;
+    left: 75%;
+    top: 4rem;
     transform: translate(-70%,0);
+    z-index: 99;
+    background-color: var(--s5);
+    color: var(--s0);
 }
 #carousel-controls {
     width: 3rem;
@@ -152,34 +170,44 @@
     z-index:9999;
 }
 #carousel-images {
-    border: 2px solid green;
-    height: calc(3rem * 16);
-    width: calc(3.5rem * 16);
+    border: 2px solid var(--s4);
+    height: calc(3rem * 17.75);
+    width: calc(3.5rem * 17.75);
     border-radius: 0.5rem;
     position: relative;
+    display: flex;
     top: 2rem;
     left: 2rem;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: auto;
+    z-index: 85;
 }
+
+#carousel-images > img {
+    object-fit: cover;
+}
+
 #carousel-details {
-    border: 2px solid green;
-    height: calc(3rem * 16);
-    width: calc(3rem * 16);
+    background-color: var(--s3);
+    height: calc(3rem * 17.75);
+    width: calc(3rem * 17.75);
     border-radius: 100%;
     position: absolute;
     top: 2rem;
-    right: 6rem;
+    right: -3rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    z-index: 79;
 }
 #carousel-details > H3 {
     position: absolute;
     top: 16rem;
 }
 #carousel-details > p {
-    border: 2px solid green;
+    background-color: var(--s4);
+    border: 2px solid var(--s5);
     height: calc(1.5rem * 16);
     width: calc(1.5rem * 16); 
     border-radius: 100%;
