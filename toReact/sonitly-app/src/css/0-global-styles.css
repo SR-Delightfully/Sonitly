@@ -52,10 +52,8 @@
     top: 0px;
     left: 0px;
     max-height: calc(100vh - 5px);
-    /* max-height: 100%; */
     max-width: 100%;
     min-width: calc(100vw - 4px);
-    border: 2px solid hotpink;
     overflow-x: hidden;
     overflow-y: scroll;
 }
