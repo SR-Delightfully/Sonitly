@@ -38,7 +38,7 @@ const Home = () => {
                         <li><span><h3>product name</h3><p>product desctiption</p></span></li>
                     </ol>
                 </div>
-                <div id="store-overture">
+                <div id="store-intro">
                 <h2>Introduction</h2>
                     <div>
                         <p>
@@ -60,10 +60,32 @@ const Home = () => {
             </div>  
         </li>
 
-        <li>
-            <h2>Overview</h2>
-            <div></div>
-            <div></div>
+        <li id="overview-container">
+            <div>
+                    <h2>Overview</h2>
+                    <p>This is a paragraph to give a general summary of the store's mission and other information<br /> that they may want to display to their users. Lorem ipsum...</p>
+                    <p></p>
+            </div>
+            <div>
+                <ol id="book">
+                    <li>
+                        <h3>Project created by:</h3>
+                        <div>
+                            <p>Students:</p>
+                            <ul>
+                                <li>Helene Rousseau</li>
+                                <li>Rachel Herron</li>
+                                <li>Sabrina Robinson</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>page</li>
+                    <li>page</li>
+                    <li>page</li>
+                    <li>book cover</li>  
+                </ol>
+            </div>
+            <span className='divider-shelf'></span>
         </li>
     </ol>
   );
