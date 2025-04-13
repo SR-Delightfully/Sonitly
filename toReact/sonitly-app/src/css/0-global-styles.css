@@ -57,3 +57,21 @@
     overflow-x: hidden;
     overflow-y: scroll;
 }
+h2 {
+    margin-bottom: 3rem;
+    background-color: var(--s5);
+    height: 6rem;
+    width: 90%;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Setting display:
+------------------------------------------------------------------------------------------ */
+.invisible {
+    display: none;
+}
+.visible {
+    display: block;
+}

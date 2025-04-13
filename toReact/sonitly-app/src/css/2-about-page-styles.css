@@ -1,0 +1,65 @@
+/* Styling contact page */
+
+#wrapper > h1 {
+    margin-left: 1rem;
+    text-align: center;
+}
+
+#about-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 2rem;
+    text-align: justify;
+}
+
+#about-column-right {
+    margin-left: 4rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 2rem;
+
+}
+
+#contact-right-column {
+    margin-left: 5rem;
+}
+
+.contact-label {
+    display:inline-block;
+    width: 5rem;
+}
+
+#faq-container  {
+    text-align: center;
+}
+
+#faq-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+#faq-right-column {
+    margin-left: 10rem;
+    border: 1px solid #222;
+}
+
+#faq-left-column > ul > li {
+    list-style-type: none;
+    line-height: 2rem;
+}
+
+    

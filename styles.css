@@ -363,10 +363,9 @@ height: 2rem;
     background-color: aliceblue;
     display: flex;
     flex-flow: column nowrap;
-    height: 20em;
     width: 85%;
     border-radius: 1rem;
-
+    margin: 5rem 3rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -426,8 +425,8 @@ height: 2rem;
 
 .socialContainerFullP {
     background-color: cadetblue;
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 0.5rem;
 }
 
@@ -439,12 +438,20 @@ height: 2rem;
 #informationContainer {
     background-color: aliceblue;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     height: 20em;
     width: 85%;
     border-radius: 1rem;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousselCounter {
+    background-color: cadetblue;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    margin: 5rem 2rem 0.5rem 2rem;
 }
 
 #productImage {
