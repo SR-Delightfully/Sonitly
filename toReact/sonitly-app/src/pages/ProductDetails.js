@@ -1,9 +1,11 @@
+import Image from '../images/carousel-placeholder.jpg';
+
 const ProductDetails = () => {
   return (
     <div id="tempContainer">
     <div id="baseInformationContainer">
         <img id="productImageFullP"
-        src="cat.jpg"
+        src={Image}
         alt="product image"/>
 
         <div id="carrousselIndicator">            
@@ -64,31 +66,31 @@ const ProductDetails = () => {
 
     <div id="furtherStuff">
         <img class="productImageSmall"
-        src="anothercat.jpg"
+        src={Image}
         alt="product image"/>
 
         <img class="productImageSmall"
-        src="cat.jpg"
+        src={Image}
         alt="product image"/>
 
         <img class="productImageSmall"
-        src="anothercat.jpg"
+        src={Image}
         alt="product image"/>
 
         <img class="productImageSmall"
-        src="cat.jpg"
+        src={Image}
         alt="product image"/>
 
         <img class="productImageSmall"
-        src="anothercat.jpg"
+        src={Image}
         alt="product image"/>
 
         <img class="productImageSmall"
-        src="cat.jpg"
+        src={Image}
         alt="product image"/>
 
         <img class="productImageSmall"
-        src="anothercat.jpg"
+        src={Image}
         alt="product image"/>
     </div>
 </div>
