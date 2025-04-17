@@ -35,7 +35,7 @@
     object-fit: cover;
     border-radius: 1rem;
     float: left;
-    margin: 1rem 5rem 0rem 15rem;
+    margin: 1rem 5rem 0rem 14rem;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -82,7 +82,7 @@
     width: 100%;
     height: 6rem;
     /*border: 2px solid hotpink;*/
-    padding-left: 33.5rem;
+    padding-left: 36rem;
 }
 
 #connectingDiv :nth-child(4) {
@@ -122,10 +122,10 @@
 
 #additionalItemInformation {
     /*background-color: cadetblue;*/
-    width: 25rem;
+    width: 22rem;
     height: 26rem;
-    margin-left: 8rem;
-    padding-left: 2rem;
+    text-align: left;
+    padding-left: 15rem;
 }
 
 #additionalItemInformation >h3 {
