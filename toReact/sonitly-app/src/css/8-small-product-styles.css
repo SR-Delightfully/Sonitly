@@ -1,0 +1,75 @@
+/*product deatils page*/
+#informationContainer {
+    background-color: aliceblue;
+    margin-top: 15rem;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 20em;
+    width: 85%;
+    border-radius: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#productImage {
+    background-color: cadetblue;
+    margin: 1rem 0rem 0.5rem 1rem;
+    width: 10rem;
+    height: 14rem;
+    object-fit: cover;
+    height: 2rem;
+}
+
+#productInformationContainer {
+    float: left;
+    margin: 1rem 1rem 0.5rem 1rem;
+    background-color: cadetblue;
+    width: 65%;
+    height: 14rem;
+}
+
+#productInformationContainer > h2 {
+    margin-top: -0.3rem;
+}
+
+#ratingContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: cadetblue;
+    float: left;
+    width: 10rem;
+    height: 2rem;
+    margin: 0rem 0rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.ratingCircle {
+    background-color: aliceblue;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    float: left;
+    margin: 0.5rem;
+}
+
+#social {
+    border: 2px solid honeydew;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    float: left;
+    width: 65%;
+    height: 3rem;
+    margin-left: 1rem;
+    padding: 0rem;
+}
+
+.socialContainer {
+    background-color: cadetblue;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 0.5rem;
+}
+
+#ratingInfo {
+    margin: -1.8rem 0rem 0rem 1rem;
+}
