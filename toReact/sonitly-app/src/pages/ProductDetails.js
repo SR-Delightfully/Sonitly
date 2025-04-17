@@ -64,7 +64,8 @@ const ProductDetails = () => {
 
         <h2 id="alsoLikeTitle">You might also like...</h2>
         <br/>
-
+        <SmallProduct></SmallProduct>
+        
         <div id="furtherStuff">
             <img class="productImageSmall"
             src={Image}
@@ -78,7 +79,9 @@ const ProductDetails = () => {
             src={Image}
             alt="product image"/>
 
-            {SmallProduct}
+
+            <SmallProduct></SmallProduct>
+
 
             <img class="productImageSmall"
             src={Image}

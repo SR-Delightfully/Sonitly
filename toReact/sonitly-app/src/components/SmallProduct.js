@@ -10,9 +10,15 @@ const SmallProduct = () => {
             alt="Product image"/>
     
             <div id="productInformationContainer">
-                <h2>This is a title</h2>
+                <h3>This is a title</h3>
                 <p>this is a description silly change hehe</p>
             </div>
+
+            <div id="tagsContainer">
+                    <span class="itemTags">Genre</span>
+                    <span class="itemTags">Another Genre</span>
+                    <span class="itemTags">Genre3</span>
+                </div>
         </div>
 
         <div>
