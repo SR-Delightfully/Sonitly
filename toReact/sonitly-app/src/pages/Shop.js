@@ -1,25 +1,36 @@
 import ImagePlaceholder from '../images/image-placeholder.png';
 import Product from '../components/Product';
-
+import { fetchData } from '../data/fetchWrapper'; 
+import { useEffect, useState } from "react";
 
 const Shop = () => {
-    const data = [
-        {productName: "one", price: 0, src: ""},
-        {productName: "two", price: 0, src: ""},
-        {productName: "three", price: 0, src: ""}
-    ];
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        async function loadProducts() {
+            console.log("Loading the products");
+            const uri = '/data/catalog.json';
+            const catalog = await fetchData(uri);
+            console.log(catalog.categories);
+            console.log(catalog.products);
+            setProducts(catalog.products);
+    }
+    loadProducts(); 
+    }, []);
+   
   return (
+    
     <>
     <h2>Product Gallery</h2>
     <div id="gallery-container">
-        {data.map((d) => {
-            <Product
-            productName={d.productName}
-            price={d.price}
-            src={d.src} />
-        })
-        };
-        
+    {products.map((d) => (
+          <Product
+            key={d.item_id}
+            productName={d.item_title}
+            price={d.unit_price}
+            src={d.thumbnail_image || ImagePlaceholder}
+          />
+        ))}
+    
     </div>
     </>
   );
