@@ -3,7 +3,7 @@ import SmallProduct from '../components/SmallProduct';
 
 const ProductDetails = () => {
   return (
-    <div id="tempContainer">
+    <div id="productContainers">
         <div id="baseInformationContainer">
             <img id="productImageFullP"
             src={Image}
@@ -64,7 +64,8 @@ const ProductDetails = () => {
 
         <h2 id="alsoLikeTitle">You might also like...</h2>
         <br/>
-
+        <SmallProduct></SmallProduct>
+        
         <div id="furtherStuff">
             <img class="productImageSmall"
             src={Image}
@@ -78,7 +79,9 @@ const ProductDetails = () => {
             src={Image}
             alt="product image"/>
 
-            {SmallProduct}
+
+            <SmallProduct></SmallProduct>
+
 
             <img class="productImageSmall"
             src={Image}
@@ -91,7 +94,7 @@ const ProductDetails = () => {
             <img class="productImageSmall"
             src={Image}
             alt="product image"/>
-        </div>
+        </div>  
     </div>
   );
 }

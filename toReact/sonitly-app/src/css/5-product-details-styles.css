@@ -1,4 +1,4 @@
-#tempContainer {
+#productContainers {
     background-color: lavender;
     display: flex;
     flex-flow: row wrap;
@@ -36,22 +36,25 @@
     border-radius: 1rem;
     float: left;
     margin: 1rem 5rem 0rem 14rem;
-    position: absolute;
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #baseItemText {
     float: left;
-    margin: 0rem 0rem 1rem 35rem;
+    margin: 0rem 0rem 1rem 37rem;
+    position: absolute;
 }
 
 #baseItemText >h1 {
     font-size: 4rem;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 #baseItemText >h3 {
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 #tagsContainer {
@@ -60,8 +63,9 @@
     align-items: flex-start;
     align-content: space-between;
     /*border: 2px solid hotpink;*/
+    position: relative;
     max-width: 80%;
-    margin-bottom: 2rem;
+    margin: 0rem 0rem 2rem 0rem;
 }
 
 .itemTags {
@@ -78,7 +82,7 @@
     width: 100%;
     height: 6rem;
     /*border: 2px solid hotpink;*/
-    padding-left: 33.5rem;
+    padding-left: 36rem;
 }
 
 #connectingDiv :nth-child(4) {
@@ -118,10 +122,10 @@
 
 #additionalItemInformation {
     /*background-color: cadetblue;*/
-    width: 25rem;
+    width: 22rem;
     height: 26rem;
-    margin-left: 8rem;
-    padding-left: 2rem;
+    text-align: left;
+    padding-left: 15rem;
 }
 
 #additionalItemInformation >h3 {
@@ -156,11 +160,11 @@
 #furtherStuff {
     width: 100%;
     height: 25rem;
-    /*border: 2px solid hotpink;*/
+    border: 2px solid hotpink;
     background-color: aliceblue;
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 0rem 1rem;
+    /*display: flex;
+    flex-flow: row nowrap;*/
+    padding: 0rem 13rem;
 }
 
 .productImageSmall {
@@ -198,9 +202,8 @@
     right: 24rem;
 } 
 
-#furtherStuff :nth-child(4) {
-    width: 15rem;
+/*#furtherStuff :nth-child(4) {
+    width: 30rem;
     height: 20rem;
     position: relative;
-    right: 35rem;
-} 
+}*/
