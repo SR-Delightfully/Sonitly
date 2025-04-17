@@ -160,11 +160,11 @@
 #furtherStuff {
     width: 100%;
     height: 25rem;
-    /*border: 2px solid hotpink;*/
+    border: 2px solid hotpink;
     background-color: aliceblue;
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 0rem 1rem;
+    /*display: flex;
+    flex-flow: row nowrap;*/
+    padding: 0rem 13rem;
 }
 
 .productImageSmall {
@@ -202,9 +202,8 @@
     right: 24rem;
 } 
 
-#furtherStuff :nth-child(4) {
-    width: 15rem;
+/*#furtherStuff :nth-child(4) {
+    width: 30rem;
     height: 20rem;
     position: relative;
-    right: 35rem;
-} 
+}*/
