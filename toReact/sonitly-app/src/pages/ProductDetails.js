@@ -1,5 +1,5 @@
 import Image from '../images/carousel-placeholder.jpg';
-import SmallProduct from './SmallProduct';
+import SmallProduct from '../components/SmallProduct';
 
 const ProductDetails = () => {
   return (
