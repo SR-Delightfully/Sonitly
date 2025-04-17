@@ -1,0 +1,14 @@
+
+#containers > li > #hero-container > form > div{
+    border: 2px solid hotpink;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#containers > li > #hero-container > form > div > div{
+    border: 2px solid cyan;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#containers > li > #hero-container > form > div > div > span{
+     border: 2px solid orangered;
+}
