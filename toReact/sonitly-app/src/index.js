@@ -11,7 +11,8 @@ import './css/4-explore-page-styles.css';
 import './css/5-product-details-styles.css';
 import './css/6-login-signup-styles.css';
 import './css/7-nav-bar-styles.css';
-import './css/8-settings-styles.css';
+import './css/8-small-product-styles.css';
+import './css/9-settings-styles.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
