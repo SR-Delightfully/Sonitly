@@ -1,70 +1,25 @@
 import ImagePlaceholder from '../images/image-placeholder.png';
+import Product from '../components/Product';
 
 
 const Shop = () => {
+    const data = [
+        {productName: "one", price: 0, src: ""},
+        {productName: "two", price: 0, src: ""},
+        {productName: "three", price: 0, src: ""}
+    ];
   return (
     <>
     <h2>Product Gallery</h2>
     <div id="gallery-container">
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
-        <div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div><div class="gallery-img">
-            <img class="zoom" src={ImagePlaceholder} alt="Image Placeholder" width="200" height="200" />
-            <p>Title</p>
-            <p>$ Price</p>
-        </div>
+        {data.map((d) => {
+            <Product
+            productName={d.productName}
+            price={d.price}
+            src={d.src} />
+        })
+        };
+        
     </div>
     </>
   );
