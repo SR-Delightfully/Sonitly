@@ -3,7 +3,7 @@ import SmallProduct from '../components/SmallProduct';
 
 const ProductDetails = () => {
   return (
-    <div id="tempContainer">
+    <div id="containers">
         <div id="baseInformationContainer">
             <img id="productImageFullP"
             src={Image}
@@ -91,7 +91,7 @@ const ProductDetails = () => {
             <img class="productImageSmall"
             src={Image}
             alt="product image"/>
-        </div>
+        </div>  
     </div>
   );
 }
