@@ -1,0 +1,110 @@
+{
+    "categories": [
+        {
+            "category_id": 1,
+            "category_name": "Vinyls",
+            "description": "Physical analog sound storage medium"
+        },
+        {
+            "category_id": 2, 
+            "category_name": "CDs",
+            "description": "Compact disc"
+        },
+        {
+            "category_id": 3,
+            "category_name": "Books",
+            "description": "Bound set of pages"
+        },
+        {
+            "category_id": 4,
+            "category_name": "eBooks",
+            "description": "Electronic book"
+        },
+        {
+            "category_id": 5, 
+            "category_name": "Digital music",
+            "description": "Songs online"
+        }
+
+    ],
+    "products": [
+        {
+            "item_id": 1, 
+            "category_id": 3,
+            "item_title": "To Kill a Mockingbird",
+            "description": "Classic novel",
+            "brand": "Harper Lee",
+            "unit_price": 15.99,
+            "quantity_in_stock": 13,
+            "make":"HarperCollins",
+            "thumbnail_image": "{ImagePlaceholder}"
+        },
+        {
+            "item_id": 2, 
+            "category_id": 1,
+            "item_title": "Abbey Road - The Beatles",
+            "description": "Classic rock album on vinyl",
+            "brand": "The Beatles",
+            "unit_price": 59.99,
+            "quantity_in_stock": 29,
+            "make":"Apple Records",
+            "thumbnail_image": "{ImagePlaceholder}"
+        },
+        {
+            "item_id": 3, 
+            "category_id": 2,
+            "item_title": "Greatest Hits - Queen",
+            "description": "Collection of Queen’s biggest hits.",
+            "brand": "Queen",
+            "unit_price": 14.99,
+            "quantity_in_stock": 7,
+            "make":"EMI",
+            "thumbnail_image": "{ImagePlaceholder}"
+        },
+        {
+            "item_id": 4, 
+            "category_id": 4,
+            "item_title": "The Midnight Library",
+            "description": "A novel about infinite life choices.",
+            "brand": "Matt Haig",
+            "unit_price": 8.99,
+            "quantity_in_stock": 1000,
+            "make":"Canongate Books",
+            "thumbnail_image": "{ImagePlaceholder}"
+        },
+        {
+            "item_id": 5, 
+            "category_id": 5,
+            "item_title": "Shape of You - Ed Sheeran",
+            "description": "Popular hit in MP3 format.",
+            "brand": "Ed Sheeran",
+            "unit_price": 2.99,
+            "quantity_in_stock": 9999,
+            "make":"Asylum",
+            "thumbnail_image": "{ImagePlaceholder}"
+        },
+        {
+            "item_id": 6, 
+            "category_id": 1,
+            "item_title": "Rumours - Fleetwood Mac",
+            "description": "Best-selling 1977 album on vinyl.",
+            "brand": "Fleetwood Mac",
+            "unit_price": 49.99,
+            "quantity_in_stock": 17,
+            "make":"Warner Bros.",
+            "thumbnail_image": "{ImagePlaceholder}"
+        },
+        {
+            "item_id": 7, 
+            "category_id": 5,
+            "item_title": "Blinding Lights - The Weeknd",
+            "description": "Digital download of the chart-topping single.",
+            "brand": "The Weeknd",
+            "unit_price": 2.99,
+            "quantity_in_stock": 9999,
+            "make":"Republic Records",
+            "thumbnail_image": "{ImagePlaceholder}"
+        }
+
+    ]
+}
