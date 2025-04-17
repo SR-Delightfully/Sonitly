@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Explore from "./pages/Explore";
+import SmallProduct from "./components/SmallProduct";
 import ProductDetails from "./pages/ProductDetails";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
