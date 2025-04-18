@@ -1,19 +1,23 @@
 /* Styling contact page */
 
-#wrapper > h1 {
-    margin-left: 1rem;
+.wrapper > * > h2, .wrapper > * > * > h2 {
     text-align: center;
+    min-width: 100% !important;
 }
 
 #about-container {
     width: 80%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     padding: 2rem;
-    margin: 2rem;
+    margin: -4rem 0 0 -2rem;
     text-align: justify;
+}
+#about-container > div {
+    max-width: calc(49% - 1rem);
 }
 
 #about-column-right {
