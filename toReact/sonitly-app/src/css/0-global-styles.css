@@ -67,6 +67,39 @@ h2 {
     font-size: 3rem;
 }
 
+/* Styling the main container:                          
+---------------------------------------------------- */
+#containers {
+    min-height: calc(100vh * 3);
+    width: calc(94vw - 6rem);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+/* Styling the main container's children:                          
+---------------------------------------------------- */
+#containers > li {
+    list-style: none;
+    min-width: 100%;
+    height: 100vh;
+    /* border: 2px solid var(--s3); */
+}
+#containers > li:nth-child(1) {
+    z-index: 80;
+}
+#containers > li:nth-child(2) {
+    z-index: 70;
+}
+#containers > li:nth-child(3) {
+    z-index: 60;
+}
+
 /* Setting display:
 ------------------------------------------------------------------------------------------ */
 .invisible {

@@ -1,9 +1,8 @@
 const About = () => {
   return (
-    <>
+    <ol id="containers" className="wrapper">
+      <li id="about-container">
       <h2>About Sonitly</h2>
-
-      <div id="about-container">
         <div id="about-column-left">
           <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
@@ -63,10 +62,10 @@ const About = () => {
               delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
           </p>
         </div>
-      </div>
+      </li>
 
+      <li id="contact-container">
       <h2>Get in Touch with Us</h2>
-      <div id="contact-container">
         <div id="contact-form">
           {/* <!-- contact form here --> */}
           <div id="contact-left-column">
@@ -100,7 +99,8 @@ const About = () => {
             </form>   
           </div>
         </div>
-
+        </li>
+        <li>
         <div id="faq-container">
           <h2>FAQ</h2>
           <div id="faq-flex">
@@ -120,8 +120,8 @@ const About = () => {
             </div>
           </div>  
         </div>
-      </div>
-    </>
+      </li>
+    </ol>
   );
 }
 

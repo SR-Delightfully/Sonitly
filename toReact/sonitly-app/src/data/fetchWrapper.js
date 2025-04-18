@@ -16,5 +16,4 @@ async function fetchData(resourceUri) {
          return null;
     }
  }
-
  export {fetchData};

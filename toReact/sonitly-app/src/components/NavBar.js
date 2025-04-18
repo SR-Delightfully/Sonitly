@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 
 const NavBar = () => {
     useEffect(() => {
@@ -90,9 +92,9 @@ const NavBar = () => {
                         <h3>How's it groovin' {"Username"} ?</h3>
                         <ul id="user-drop-options">
                             <li className="drop-option"><button id="drop-down">User dropdown ➤</button></li>
-                            <li className="drop-option"><a href="/profile">view profile</a></li>
-                            <li className="drop-option"><a href="/settings">view accessibility</a></li>
-                            <li className="drop-option"><a href="/settings">view more settings</a></li>
+                            <li className="drop-option"><HashLink smooth to="/settings#user-settings">View Settings</HashLink></li>
+                            <li className="drop-option"><HashLink smooth to="/settings#accessibility-settings">View Accessibility</HashLink></li>
+                            <li className="drop-option"><HashLink smooth to="/settings#connection-settings">view More Settings</HashLink></li>
                         </ul>
                     </span>
                     <a href="/profile"><img id="pfp" src="https://i.pinimg.com/236x/17/57/1c/17571cdf635b8156272109eaa9cb5900.jpg" /></a>
