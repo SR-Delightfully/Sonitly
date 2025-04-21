@@ -70,7 +70,7 @@ const NavBar = () => {
                 {/* CLICKABLE LOGO */}
                 <a href="/"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/812/812680.png" /></a>
                 {/* TABS TO NAVIGATE THROUGH PAGES */}
-                <ol id="nav-bar-tables">
+                <ol id="nav-bar-tabs">
                     <li><Link to="/"><button>Home</button></Link></li>
                     <li><Link to="/about"><button>About</button></Link></li>
                     <li><Link to="/shop"><button>Shop</button></Link></li>

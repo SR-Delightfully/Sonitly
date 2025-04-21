@@ -10,9 +10,11 @@ import './css/3-shop-page-styles.css';
 import './css/4-explore-page-styles.css';
 import './css/5-product-details-styles.css';
 import './css/6-login-signup-styles.css';
-import './css/7-nav-bar-styles.css';
+import './css/7-bar-styles.css';
 import './css/8-small-product-styles.css';
 import './css/9-settings-styles.css';
+import './css/10-book-shelf-styles.css';
+import './css/11-profile-styles.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

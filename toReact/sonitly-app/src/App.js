@@ -1,4 +1,3 @@
-import NavBar from "./components/NavBar";
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,12 +18,18 @@ import UserDetails from "./pages/UserDetails";
 import UserSettings from "./pages/UserSettings";
 import UserCart from "./pages/UserCart";
 
+// Importing components:
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+
+
 
 const App = () => {
   return (
     <Router>
     <div id="wrapper">
-      <NavBar />
+    <span id="top" className=""></span>
+    <NavBar />
       <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
@@ -37,7 +42,9 @@ const App = () => {
             <Route path="/settings" element={<UserSettings />}></Route>
             <Route path="/cart" element={<UserCart />}></Route>
         </Routes>
+    <Footer></Footer>
     </div>
+
     </Router>
   );
 }
