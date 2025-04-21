@@ -1,6 +1,7 @@
-/* Styling the main container's subsections:                          
+/* Styling the main container's subsections:  
+
+/* ->> Introduction Section 
 ---------------------------------------------------- */
-/* ->> Introduction Section */
 #intro-container {
     display: flex;
     flex-flow: row wrap;
@@ -68,6 +69,9 @@
     padding: 0 1.25rem;
     gap: 1rem;
 }
+#store-intro > h2 {
+    padding: 0 0.25rem;
+}
 
 #store-intro > div {
     display: flex;
@@ -76,7 +80,6 @@
     height: calc(100% - 16rem);
 }
 #intro-container > div:nth-child(1){
-    background-color: cyan;
 }
 #intro-container > div:nth-child(2){
     min-height: 100%;
@@ -118,7 +121,7 @@
     align-items: center;
     gap: 1rem;
 }
-#carousel-controls > li > button {
+#carousel-controls > li > a > button {
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 100%;
@@ -142,6 +145,8 @@
 
 #carousel-images > img {
     object-fit: cover;
+    height:100%;
+    width: 100%;
 }
 
 #carousel-details {
@@ -158,9 +163,16 @@
     align-items: center;
     z-index: 79;
 }
+#carousel-details > hr {
+    color: var(--s0);
+    width: 12rem;
+    position: relative;
+    top: 10rem;
+}
 #carousel-details > H3 {
     position: absolute;
-    top: 16rem;
+    top: 18rem;
+    font-size: 1.5rem;
 }
 #carousel-details > p {
     background-color: var(--s4);
@@ -170,4 +182,32 @@
     border-radius: 100%;
     text-align: center;
     align-content: center;
+}
+
+/* ->> Overview Section 
+---------------------------------------------------- */
+#overview-container {
+    margin-top: 2.6 rem;
+    min-height: 64rem;
+    max-height: 64rem;
+    min-width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#overview-container > span > h2 {
+    min-width: 100% !important  ;
+    margin-top: -0.1rem;
+    padding-left: 7.5rem;
+
+}
+
+#overview-text {
+    text-align: justify;
+    width: 38.5%;
+    position: relative;
+    margin: 3rem 0;
+    left: 7.2rem;
+    background-color: var(--s0);
+    border-radius: 1.25rem;
+    padding: 1.25rem; 
 }

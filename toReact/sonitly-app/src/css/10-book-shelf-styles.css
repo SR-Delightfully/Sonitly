@@ -1,0 +1,89 @@
+ #hard-cover-front, #hard-cover-back, .page {
+    position: absolute;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.book-wrapper {
+    right: 9.9rem;
+    position: relative;
+    bottom: -5.75rem;
+}
+#book {
+    list-style: none;
+}
+#book.large::after {
+    content: "";
+    width: 6rem;
+    border-radius: 1.1rem;
+    height: calc(16rem * 3.25);
+    padding: 1.26rem;
+    z-index: 50;
+    position: absolute;
+    top: 2.75rem;
+    left: 2.25rem;
+    background-color: var(--s4);
+}
+#book.small::after {
+    content: "";
+    width: calc(10rem * 0.5);
+    height: calc(16rem * 0.5);
+    content: "";
+    width: 2rem;
+    border-radius: 1.1rem;
+    padding: 1.275rem;
+    z-index: 50;
+    position: absolute;
+    top: 2.73rem;
+    left: 2.25rem;
+    background-color: var(--s4);
+}
+.large {
+    width: calc(10rem * 3.25);
+    height: calc(16rem * 3.25);
+}
+.small {
+    width: calc(10rem * 0.45);
+    height: calc(16rem * 0.5);
+}
+.book-wrapper > li > div > ul {
+    list-style: none;
+}
+
+#divider-shelf {
+    border: 2px outset var(--s2);
+    border-radius: 0.25rem;
+    background-color: var(--s2);
+    width: 95%;
+    height: 1rem;
+    box-shadow: 0rem 0.75rem 1rem var(--s2-80);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#hard-cover-front {
+    background-color: var(--s2);
+    right: -3rem;
+    z-index: 61;
+    padding: 1rem;
+    top: 2.75rem;
+    border: 4px solid var(--s5-80);
+    box-shadow: 0.2rem 0rem 0.2rem var(--s2-80);
+
+}
+#hard-cover-back {
+    background-color: var(--s2);
+    z-index: 57;
+    top: 2.75rem;
+    border: 4px solid var(--s5-80);
+    padding: 1rem;
+    right: -5.2rem;
+}
+.page {
+    background-color: var(--s0);
+    border: 3px solid var(--s5-80);
+    box-shadow: 0.3rem 0.2rem 0.2rem var(--s2-80);
+    top: 3.5rem;
+    padding: 0.5rem;
+}
