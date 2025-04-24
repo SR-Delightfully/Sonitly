@@ -142,91 +142,9 @@
     text-align: justify;
 }
 
-#otherProducts {
-    display: flex;
-    flex-flow: row nowrap;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100%;
-    padding-left: 4rem;
-    margin-top: 2rem;
-}
-
-#otherProducts >h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.productImageSmall {
-    width: 12rem;
-    height: 18rem;
-    object-fit: cover;
-    border-radius: 0.7rem;
-    border-radius: 1rem;
-    margin-top: 1rem;
-}
-
-#otherProducts :first-child {
-    border: 2px solid hotpink;
-    height: 15rem;
-    width: 10rem;
+.smallProductWrapper {
     position: relative;
-    margin-top: 3rem;
-    left: 9rem;
-    filter: blur(1.5px)  brightness(0.7) opacity(0.8);
+    left: 18rem;
+    top: 25rem;
+    z-index: 9999;
 }
-
-#otherProducts :nth-child(2) {
-    height: 16.5rem;
-    width: 11rem;
-    position: relative;
-    margin-top: 2.3rem;
-    filter: blur(1.3px)  brightness(0.7) opacity(0.9);
-}
-
-#otherProducts :nth-child(3) {
-    height: 18rem;
-    width: 12rem;
-    position: relative;
-    right: 9rem;
-    margin-top: 1.5rem;
-    filter: blur(1.1px)  brightness(0.7) opacity(0.95);
-}
-
-#otherProducts :nth-child(4) {
-    margin: none;
-    padding: none;
-    height: 100%;
-    width: 100%;
-    
-}
-
-#otherProducts :nth-child(5) {
-    height: 18rem;
-    width: 12rem;
-    position: relative;
-    left: 18.5rem;
-    margin-top: 1.5rem;
-    z-index: 9998;
-    filter: blur(1.1px)  brightness(0.7) opacity(0.95);
-}
-
-#otherProducts :nth-child(6) {
-    height: 16.5rem;
-    width: 11rem;
-    position: relative;
-    left: 9rem;
-    z-index: 9997;
-    margin-top: 2.3rem;
-    filter: blur(1.3px)  brightness(0.7) opacity(0.9);
-}
-
-#otherProducts :nth-child(7) {
-    height: 15rem;
-    width: 10rem;
-    z-index: 9996;
-    position: relative;
-    margin-top: 3rem;
-    filter: blur(1.5px)  brightness(0.7) opacity(0.8);
-}
-
