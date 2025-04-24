@@ -27,7 +27,7 @@ const UserSettings = () => {
                                     <label htmlFor="username">Username:</label>
                                     <input type="text" id="username"></input>    
                                 </span>
-                                <span id='htmlFor-name-fields'>
+                                <span id='form-name-fields'>
                                     <span>
                                         <label htmlFor="first-name">First Name:</label>
                                         <input type="text" id="first-name"></input>    
