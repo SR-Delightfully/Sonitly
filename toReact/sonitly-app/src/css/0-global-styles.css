@@ -2,8 +2,23 @@
 /* Please note that these styles will be used throughout the project by multiple components */
 /* This is also where we will store root variables, to reuse specific style settings.       */
 /*------------------------------------------------------------------------------------------*/
-:root{
-    /* SOLID SHADES & COLORS */
+:root{  
+    /* Declaring color scheme variables: */
+    --background-primary: var(--s0);
+    --background-secondary: var(--s1);
+    
+    --color-accent-1: var(--s2);
+    --color-accent-2: var(--s3);
+    --color-accent-3: var(--s4);
+    --color-accent-4: var(--s5);
+    --color-accent-5: var(--s1-80);
+    --color-accent-6: var(--s2-80);
+    --color-accent-7: var(--s3-80);
+    --color-accent-8: var(--s4-80);
+    --color-accent-9: var(--s5-80);
+
+
+     /* Declaring Solid Shades */
    --s0: #EEEEEE;
    --s1: #AEAEAE;
    --s2: #909090;
@@ -11,13 +26,81 @@
    --s4: #333333;
    --s5: #000000;
 
-    /* LOWER TRANSPARENCY */
+    /* Declaring Semi-Opaque Shades */
+
     --s0-80: #EEEEEE80;
     --s1-80: #AEAEAE80;
     --s2-80: #90909080;
     --s3-80: #50505080;
     --s4-80: #33333380;
     --s5-80: #00000080;
+
+    /* Declaring colors: */
+    --color-really-dark-teal: #1e2a53;
+    --color-dark-teal: #2a555e;
+    --color-teal: #339a79;
+    --color-light-teal: #23c39b;
+    --color-really-light-teal: #c7fff9;
+    --color-off-white: #fffefd;
+    --color-dark-off-white: #fef3e2;
+    --color-really-light-orange: #fed29b;
+    --color-light-orange: #f9ad72;
+    --color-orange: #e97260;
+    --color-dark-orange: #bc302b;
+    --color-really-dark-orange: #7f201e;
+    --color-really-dark-yellow: #93341f;
+    --color-dark-yellow: #b9532b;
+    --color-yellow: #dd7a3c;
+    --color-light-yellow: #fdd053;
+    --color-really-light-yellow: #fefead;
+    --color-really-light-lime: #d2d064;
+    --color-light-lime: #bcab2a;
+    --color-lime: #868823;
+    --color-dark-lime: #5b6628;
+    --color-really-dark-lime: #324024;
+    --color-olive: #7e5f3b;
+    --color-light-olive: #a08a64;
+    --color-really-light-olive: #c8ae79;
+    --color-green: #649d47;
+    --color-light-green: #91b951;
+    --color-mint: #82eda2;
+    --color-dark-mint: #3a784d;
+    --color-dark-indigo: #190931;
+    --color-really-dark-aqua: #004988;
+    --color-dark-aqua: #007da8;
+    --color-aqua: #05b5cc;
+    --color-light-aqua: #00c9d5;
+    --color-really-dark-blue: #3d52b9;
+    --color-dark-blue:#529be2;
+    --color-blue: #1f8dd3;
+    --color-light-blue: #7fb2f4;
+    --color-really-light-blue: #8ad5fa;
+    --color-really-light-grey: #b8cedf;
+    --color-light-grey: #86a0c0;
+    --color-grey: #727fa9;
+    --color-dark-grey: #5e5684;
+    --color-really-dark-grey: #3b3a61;
+    --color-indigo: #402187;
+    --color-really-dark-violet: #6e32a0;
+    --color-dark-violet: #895bb3;
+    --color-violet: #ab79d8;
+    --color-light-violet: #d59df8;
+    --color-purple: #9f4390;
+    --color-dark-purple: #7d1966;
+    --color-really-dark-magenta: #3d193f;
+    --color-dark-magenta: #5f1d43;
+    --color-magenta: #952857;
+    --color-light-magenta: #ce5196;
+    --color-really-light-magenta: #f5c6e9;
+    --color-light-salmon: #f6afb1;
+    --color-salmon: #fa979e;
+    --color-dark-salmon: #d63e55;
+    --color-really-dark-brown: #693543;
+    --color-dark-brown: #8f5759;
+    --color-brown: #964659;
+    --color-light-brown: #b16b5e;
+    --color-really-light-brown: #e09286;
+    --color-peach: #f6afb1;
 }
 
 /* Styling the body tag:                          
