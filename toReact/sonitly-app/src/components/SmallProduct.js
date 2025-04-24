@@ -15,19 +15,19 @@ const SmallProduct = () => {
             </div>
 
             <div id="tagsContainerSP">
-                    <span class="itemTagsSP">Genre</span>
-                    <span class="itemTagsSP">Another Genre</span>
-                    <span class="itemTagsSP">Genre3</span>
+                    <span className="itemTagsSP">Genre</span>
+                    <span className="itemTagsSP">Another Genre</span>
+                    <span className="itemTagsSP">Genre3</span>
                 </div>
         </div>
 
         <div>
             <div id="ratingContainer">
-                <span class="ratingCircle"></span>
-                <span class="ratingCircle"></span>
-                <span class="ratingCircle"></span>
-                <span class="ratingCircle"></span>
-                <span class="ratingCircle"></span>
+                <span className="ratingCircle"></span>
+                <span className="ratingCircle"></span>
+                <span className="ratingCircle"></span>
+                <span className="ratingCircle"></span>
+                <span className="ratingCircle"></span>
             </div>
             
             <div id="ratingInfo">
@@ -35,11 +35,11 @@ const SmallProduct = () => {
             </div>
 
             <div id="social">
-                <span class="socialContainer"></span>
-                <span class="socialContainer"></span>
-                <span class="socialContainer"></span>
-                <span class="socialContainer"></span>
-                <span class="socialContainer"></span>
+                <span className="socialContainer"></span>
+                <span className="socialContainer"></span>
+                <span className="socialContainer"></span>
+                <span className="socialContainer"></span>
+                <span className="socialContainer"></span>
             </div>
         </div>
     </div>
