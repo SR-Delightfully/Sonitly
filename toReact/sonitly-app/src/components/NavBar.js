@@ -65,6 +65,7 @@ const NavBar = () => {
         }, []);
 
   return (
+    <>
         <header id="nav-bar">
             <div id="nav-bar-left">
                 {/* CLICKABLE LOGO */}
@@ -101,6 +102,21 @@ const NavBar = () => {
                 </div>
             </div>
         </header>
+        <div id="paletteSquares">
+            <span className="paletteSquare background-primary"> </span>
+            <span className="paletteSquare background-secondary"></span>
+            <span className="paletteSquare color-accent-1"></span>
+            <span className="paletteSquare color-accent-2"></span>
+            <span className="paletteSquare color-accent-3"></span>
+            <span className="paletteSquare color-accent-4"></span>
+            <span className="paletteSquare color-accent-5"></span>
+            <span className="paletteSquare color-accent-6"></span>
+            <span className="paletteSquare color-accent-7"></span>
+            <span className="paletteSquare color-accent-8"></span>
+            <span className="paletteSquare color-accent-9"></span>
+            <span className="paletteSquare color-accent-10"></span>
+        </div>
+        </>
   );
 }
 

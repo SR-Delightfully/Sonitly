@@ -103,6 +103,36 @@
     --color-really-light-brown: #e09286;
     --color-peach: #f6afb1;
 }
+:root[data-theme=testing1] {
+    --background-primary: var(--color-really-light-blue);
+    --background-secondary: var(--color-light-blue);
+    
+    --color-accent-1: var(--color-light-grey);
+    --color-accent-2: var(--color-grey);
+    --color-accent-3: var(--color-dark-grey);
+    --color-accent-4: var(--color-really-dark-grey);
+    --color-accent-5: var(--s1-80);
+    --color-accent-6: var(--s2-80);
+    --color-accent-7: var(--s3-80);
+    --color-accent-8: var(--s4-80);
+    --color-accent-9: var(--s5-80);
+    --color-accent-10: var(--s0-80);
+}
+:root[data-theme=eyesore] {
+    --background-primary: var(--color-salmon);
+    --background-secondary: var(--color-light-salmon);
+    
+    --color-accent-1: var(--color-dark-violet);
+    --color-accent-2: var(--color-light-violet);
+    --color-accent-3: var(--color-really-dark-blue);
+    --color-accent-4: var(--color-light-blue);
+    --color-accent-5: var(--color-dark-mint);
+    --color-accent-6: var(--color-mint);
+    --color-accent-7: var(--color-light-lime);
+    --color-accent-8: var(--color-yellow);
+    --color-accent-9: var(--color-dark-yellow);
+    --color-accent-10: var(--color-dark-orange);
+}
 
 /* Styling the body tag:                          
 ------------------------------------------------------------------------------------------ */
@@ -193,3 +223,59 @@ h2 {
 .visible {
     display: block;
 }
+
+/* Setting display:
+------------------------------------------------------------------------------------------ */
+#paletteSquares {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid hotpink;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    height: 6rem;
+}
+.paletteSquare {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.background-primary {
+    background-color: var(--background-primary);
+}
+.background-secondary {
+    background-color: var(--background-secondary);
+}
+.color-accent-1 {
+    background-color: var(--color-accent-1);
+}
+.color-accent-2 {
+    background-color: var(--color-accent-2);
+}
+.color-accent-3 {
+    background-color: var(--color-accent-3);
+}
+.color-accent-4 {
+    background-color: var(--color-accent-4);
+}
+.color-accent-5 {
+    background-color: var(--color-accent-5);
+}
+.color-accent-6 {
+    background-color: var(--color-accent-6);
+}
+.color-accent-7 {
+    background-color: var(--color-accent-7);
+}
+.color-accent-8 {
+    background-color: var(--color-accent-8);
+}
+.color-accent-9 {
+    background-color: var(--color-accent-9);
+}
+.color-accent-10 {
+    background-color: var(--color-accent-10);
+}
+
+
+
