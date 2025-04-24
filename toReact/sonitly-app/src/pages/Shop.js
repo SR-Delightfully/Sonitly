@@ -5,8 +5,8 @@ import TestBook from '../components/TestBook';
 import { fetchData } from '../data/fetchWrapper'; // Custom fetch function
 import { Link } from 'react-router-dom';
 
-// Google Books API endpoint
-const GOOGLE_BOOKS_API = "https://www.googleapis.com/books/v1/volumes?q=search+terms&maxResults=25";
+
+
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -26,7 +26,7 @@ const Shop = () => {
         console.log("Music Catalog:", musicCatalog);
 
         // fetching book data
-        const booksUri = GOOGLE_BOOKS_API.replace("search+terms", "fiction"); // example query for books
+        const booksUri = "https://www.googleapis.com/books/v1/volumes?q=fiction&maxResults=25";
         const booksCatalog = await fetchData(booksUri);
         console.log("Books Catalog:", booksCatalog);
 
