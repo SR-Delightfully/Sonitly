@@ -8,11 +8,11 @@ const Product = ({ productName, price, src }) => {
       <img
         src={src}
         alt="Album cover"
-        width="174"
-        height="174"
+        width="350"
+        height="350"
       />
       <p>{productName}</p>
-      <p>${price}</p>
+      <p>{price}</p>
     </div>
   );
 };
