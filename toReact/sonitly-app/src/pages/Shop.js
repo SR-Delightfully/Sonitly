@@ -5,35 +5,75 @@ import { useEffect, useState } from "react";
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
     useEffect(() => {
         async function loadProducts() {
+          setLoading(true);
+          setError(null);
+        try {
             console.log("Loading the products");
-            const uri = '/data/catalog.json';
+          
+            const apiKey = 'a6c0f430e1ec2b10d0155c7772a945d1'; 
+            const uri = `http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${apiKey}&format=json`;
+
+
+
             const catalog = await fetchData(uri);
-            console.log(catalog.categories);
-            console.log(catalog.products);
-            setProducts(catalog.products);
+            console.log(catalog);
+
+            console.log("catalog", catalog);
+console.log("catalog.tracks", catalog.tracks);
+console.log("catalog.tracks.track", catalog.tracks.track);
+            
+            
+            if (catalog && catalog.tracks && catalog.tracks.track) {
+              // Map the Last.fm track data to your product structure
+              const mappedTracks = catalog.tracks.track.map((track, index) => ({
+                item_id: index,
+                item_title: `${track.name} - ${track.artist.name}`,
+                unit_price: track.price, // fake "price" for visual
+                thumbnail_image: track.image?.[2]?.['#text'] || ImagePlaceholder
+              }));
+    
+              setProducts(mappedTracks);
+            } else {
+              setError("Failed to fetch products")
+            }
+         
+        }
+        catch (error) {
+          setError("Error occurred")
+          console.log(error);
+        } finally {
+          setLoading(false);
     }
+  }
     loadProducts(); 
     }, []);
    
-  return (
-    
-    <>
-    <h2>Product Gallery</h2>
-    <div id="gallery-container">
-    {products.map((d) => (
-          <Product
-            key={d.item_id}
-            productName={d.item_title}
-            price={d.unit_price}
-            src={d.thumbnail_image || ImagePlaceholder}
-          />
-        ))}
-    
-    </div>
-    </>
-  );
-}
+    if (loading) return <p>Loading products...</p>;
+    if (error) return <p>{error}</p>;
 
+    return (
+      <>
+          <h2>Trending Music Gallery</h2>
+          <div id="gallery-container">
+              {products.map((d) => (
+                 
+                  
+                  <Product
+                      key={d.item_id}
+                      productName={d.item_title}
+                      price={d.unit_price}
+                      src={d.thumbnail_image}
+                  />
+                  
+              ))}
+          </div>
+      </>
+  );
+
+};
 export default Shop;
