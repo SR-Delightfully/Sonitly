@@ -10,40 +10,59 @@ const Shop = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-<<<<<<< HEAD
   useEffect(() => {
-      async function loadProducts() {
-=======
-    useEffect(() => {
-        async function loadProducts() {
->>>>>>> 059fc54a306efcda1b182fb4cb99599dfabd1b47
-          setLoading(true);
-          setError(null);
-          try {
-              const uri = "https://musicbrainz.org/ws/2/recording?query=*&fmt=json";
-              const catalog = await fetchData(uri);
-              
-              if (catalog && catalog.recordings) {
-                  const mappedTracks = catalog.recordings.map((track, index) => ({
-                      item_id: index,
-                      item_title: track.title,
-                      unit_price: parseFloat((track.score / 1000000).toFixed(2)), // Fake price for visualization
-                      thumbnail_image: track['release-group']?.['cover-art-archive']?.front || ImagePlaceholder
-                  }));
+    async function loadProducts() {
+      setLoading(true);
+      setError(null);
+      try {
+          console.log("Loading the products");
 
-<<<<<<< HEAD
-                  setProducts(mappedTracks);
-              } else {
-                  setError("Failed to fetch products");
-              }
-          } catch (error) {
-              setError("Error occurred");
-              console.log(error);
+          // Fetching top tracks from the MusicBrainz API
+          const uri = 'https://musicbrainz.org/ws/2/recording/?query=release:top&fmt=json';
+          const catalog = await fetchData(uri);
+          console.log(catalog); // Log the response for inspection
+
+          // Map through the data and fetch cover art from Cover Art Archive
+          if (catalog && catalog.recordings) {
+              const mappedTracks = await Promise.all(
+                  catalog.recordings.map(async (track, index) => {
+                      // Try to get the cover art from Cover Art Archive (if available)
+                      const releaseGroupId = track.release_groups && track.release_groups[0]?.id;
+                      let thumbnail_image = ImagePlaceholder; // Default placeholder
+
+                      if (releaseGroupId) {
+                          // Fetch cover art from Cover Art Archive
+                          const coverUri = `https://coverartarchive.org/release-group/${releaseGroupId}`;
+                          const coverRes = await fetchData(coverUri);
+                          if (coverRes && coverRes.images && coverRes.images[0]) {
+                              thumbnail_image = coverRes.images[0].image;
+                          }
+                      }
+
+                      return {
+                          item_id: index,
+                          item_title: `${track.title} - ${track.artist ? track.artist.name : 'Unknown Artist'}`,
+                          unit_price: parseFloat((track.score / 1000).toFixed(2)), // fake "price" for visual
+                          thumbnail_image: thumbnail_image
+                      };
+                  })
+              );
+
+              setProducts(mappedTracks);
+          } else {
+              setError("Failed to fetch products");
           }
+      } catch (error) {
+          setError("Error occurred");
+          console.log(error);
+      } finally {
+        setLoading(false)
       }
+  }
 
-      loadProducts();
-  }, []);
+  loadProducts();
+}, []);
+ 
 
   if (loading) return <p>Loading products...</p>;
   if (error) return <p>{error}</p>;
@@ -62,60 +81,6 @@ const Shop = () => {
               ))}
           </div>
       </div>
-=======
-
-
-            const catalog = await fetchData(uri);
-            console.log(catalog);
-
-            console.log("catalog", catalog);
-console.log("catalog.tracks", catalog.tracks);
-console.log("catalog.tracks.track", catalog.tracks.track);
-            
-            
-            if (catalog && catalog.tracks && catalog.tracks.track) {
-              // Map the Last.fm track data to your product structure
-              const mappedTracks = catalog.tracks.track.map((track, index) => ({
-                item_id: index,
-                item_title: `${track.name} - ${track.artist.name}`,
-                unit_price: track.price, // fake "price" for visual
-                thumbnail_image: track.image?.[2]?.['#text'] || ImagePlaceholder
-              }));
-    
-              setProducts(mappedTracks);
-            } else {
-              setError("Failed to fetch products")
-            }
-         
-        }
-        catch (error) {
-          setError("Error occurred")
-          console.log(error);
-        } finally {
-          setLoading(false);
-    }
-  }
-    loadProducts(); 
-    }, []);
-   
-  return (
-    
-    <>
-      <h2>Trending Music Gallery</h2>
-    <div id="gallery-container">
-    {products.map((d) => (
-        <Link to={`/shop/product/${d.item_id}`}>
-          <Product
-            key={d.item_id}
-            productName={d.item_title}
-            price={d.unit_price}
-            src={d.thumbnail_image || ImagePlaceholder}
-          /></Link>
-        ))}
-    
-    </div>
-    </>
->>>>>>> 059fc54a306efcda1b182fb4cb99599dfabd1b47
   );
 };
 
