@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ImagePlaceholder from '../images/image-placeholder.png'; // Placeholder image
 import Product from '../components/Product'; // Product component
+import TestBook from '../components/TestBook';
 import { fetchData } from '../data/fetchWrapper'; // Custom fetch function
 import { Link } from 'react-router-dom';
 
@@ -64,7 +65,7 @@ const Shop = () => {
         }));
 
         // Combine both catalogs
-        const allProducts = [...musicProducts, ...bookProducts].slice(0, 50);
+        const allProducts = [...musicProducts, ...bookProducts];
         setProducts(allProducts);
         
 
@@ -88,11 +89,20 @@ const Shop = () => {
       <div id="gallery-container">
         {products.map((product) => (
           <Link to={`/shop/product/${product.item_id}`} key={product.item_id}>
-            <Product
-              productName={product.item_title}
-              price={product.unit_price}
-              src={product.thumbnail_image}
-            />
+            {product.category === 'Music' ? (
+              <Product
+                productName={product.item_title}
+                price={product.unit_price}
+                src={product.thumbnail_image}
+              />
+            ) : (
+              <TestBook
+                bookName={product.item_title}
+                author={product.author}
+                price={product.unit_price}
+                src={product.thumbnail_image}
+              />
+            )}
           </Link>
         ))}
       </div>
