@@ -49,7 +49,7 @@
 }
 
 #featured-items > li {
-    border: 2px solid var(--s2);
+    border: 2px solid var(--color-accent-1);
     border-radius: 100%;
     height: calc(2rem* 16);
     width: calc(2rem*16);
@@ -57,11 +57,11 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(0,0,0,0) 11%, var(--s3) 12%, var(--s0) 13%, var(--s1) 14%, #ffffff 15%, var(--s1) 76%, var(--s0) 100%);
+    background: radial-gradient(circle, rgba(0,0,0,0) 11%, var(--color-accent-2) 12%, var(--background-primary) 13%, var(--background-secondary) 14%, #ffffff 15%, var(--background-secondary) 76%, var(--background-primary) 100%);
 }
 #store-intro {
     height: 100%;
-    background-color: var(--s0);
+    background-color: var(--background-primary);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -87,7 +87,7 @@
 }
 /* ->> Hero Section */
 #hero-container {
-    background-color: var(--s0);
+    background-color: var(--background-primary);
     height: calc(3.25rem * 17.75);
     width: calc(6rem * 17.75);
     border-radius: 1.25rem;
@@ -104,8 +104,8 @@
     top: 4rem;
     transform: translate(-70%,0);
     z-index: 99;
-    background-color: var(--s5);
-    color: var(--s0);
+    background-color: var(--color-accent-4);
+    color: var(--background-primary);
 }
 #carousel-controls {
     width: 3rem;
@@ -130,7 +130,7 @@
     z-index:9999;
 }
 #carousel-images {
-    border: 2px solid var(--s4);
+    border: 2px solid var(--color-accent-3);
     height: calc(3rem * 17.75);
     width: calc(3.5rem * 17.75);
     border-radius: 0.5rem;
@@ -150,7 +150,7 @@
 }
 
 #carousel-details {
-    background-color: var(--s3);
+    background-color: var(--color-accent-2);
     height: calc(3rem * 17.75);
     width: calc(3rem * 17.75);
     border-radius: 100%;
@@ -164,7 +164,7 @@
     z-index: 79;
 }
 #carousel-details > hr {
-    color: var(--s0);
+    color: var(--background-primary);
     width: 12rem;
     position: relative;
     top: 10rem;
@@ -175,8 +175,8 @@
     font-size: 1.5rem;
 }
 #carousel-details > p {
-    background-color: var(--s4);
-    border: 2px solid var(--s5);
+    background-color: var(--color-accent-3);
+    border: 2px solid var(--color-accent-4);
     height: calc(1.5rem * 16);
     width: calc(1.5rem * 16); 
     border-radius: 100%;
@@ -207,7 +207,7 @@
     position: relative;
     margin: 3rem 0;
     left: 7.2rem;
-    background-color: var(--s0);
+    background-color: var(--background-primary);
     border-radius: 1.25rem;
     padding: 1.25rem; 
 }

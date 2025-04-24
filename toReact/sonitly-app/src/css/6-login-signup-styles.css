@@ -9,13 +9,13 @@ input {
 }
 
 #have-account > a {
-    color: #010144;
+    color: var(--color-accent-4);
     text-decoration: none;
 }
 
 #have-account > a:hover {
     text-decoration: underline;
-    color: rgb(77, 77, 88);
+    color: var(--color-accent-2);
 }
 
 #forgot-password {
@@ -23,18 +23,18 @@ input {
 }
 
 #forgot-password > a {
-    color: #010144;
+    color: var(--color-accent-4);
     text-decoration: none;
 }
 
 #forgot-password > a:hover {
     text-decoration: underline;
-    color: rgb(77, 77, 88);
+    color: var(--color-accent-2);
 }
 
 #login-container {
     display: flex;
-    background-color: #ccc;
+    background-color: var(--background-primary);
 }
 
 #form-container {
@@ -53,7 +53,7 @@ input {
 #form-circle-left {
     height: 60rem;
     width: 60rem;
-    background-color: #bbb;
+    background-color: var(--background-secondary);
     border-radius: 50%;
     position: absolute;
     top: 70%;
@@ -64,7 +64,7 @@ input {
 #form-circle-right {
     height: 60rem;
     width: 60rem;
-    background-color: #bbb;
+    background-color: var(--background-secondary);
     border-radius: 50%;
     position: absolute;
     top: -10%;
