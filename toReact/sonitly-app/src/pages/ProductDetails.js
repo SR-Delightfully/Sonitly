@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Image from '../images/carousel-placeholder.jpg';
 import SmallProduct from '../components/SmallProduct';
+import ProductSuggestion from '../components/ProductSuggestion';
 
 const ProductDetails = () => {
     const { item_id } = useParams();
@@ -74,6 +75,8 @@ const ProductDetails = () => {
         </span>
       </div>
 
+      <ProductSuggestion></ProductSuggestion>
+
       <div id="additionalProductInfo">
       <span id="leftStats">
         <h3>Edition House</h3>
@@ -96,33 +99,10 @@ const ProductDetails = () => {
       </span>
       </div>
 
-      <div id="otherProducts">
-        <img class="productImageSmall"
-        src={Image}
-        alt="product image"/>
-
-        <img class="productImageSmall"
-        src={Image}
-        alt="product image"/>
-
-        <img class="productImageSmall"
-        src={Image}
-        alt="product image"/>
-
-        <SmallProduct></SmallProduct>
-
-        <img class="productImageSmall"
-        src={Image}
-        alt="product image"/>
-
-        <img class="productImageSmall"
-        src={Image}
-        alt="product image"/>
-
-        <img class="productImageSmall"
-        src={Image}
-        alt="product image"/>
-      </div>
+      {/*<div className="smallProductWrapper">
+          <SmallProduct></SmallProduct>
+        </div>*/}
+        <ProductSuggestion></ProductSuggestion>
     </>
   );
 }
