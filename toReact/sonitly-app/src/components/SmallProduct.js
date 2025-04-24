@@ -30,9 +30,9 @@ const SmallProduct = () => {
                 <span className="ratingCircle"></span>
             </div>
             
-            <div id="ratingInfo">
+            {/*<div id="ratingInfo">
                 <p>00 Reviews</p>
-            </div>
+            </div>*/}
 
             <div id="social">
                 <span className="socialContainer"></span>

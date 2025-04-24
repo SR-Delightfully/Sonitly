@@ -1,58 +1,58 @@
-#productContainers {
+#wrapper {
+    height: 100%;
+}
+
+#baseProductInfo {
     background-color: lavender;
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 60rem;
+    flex-flow: row nowrap;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#baseInformationContainer {
-    flex-flow: column nowrap;
-    width: 100%;
-    height: 21rem;
-    padding-top: 3rem;
-    background-color: aliceblue;
+#leftInfo {
+    display: flex;
+    flex-flow: row nowrap;
+    min-width: 40%;
 }
 
-#carrousselIndicator {
-    margin: 12rem 2rem 0rem 10rem;
-    position: absolute;
+#CButtons {
+    display: flex;
+    flex-flow: column wrap;
+    align-self: center;
+    width: calc(100% - 25rem);
+    gap: 1rem;
+    align-items: flex-end;
+    margin-right: 2rem;
 }
 
-.carrousselIndicatorItem {
+.carousselButton {
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
+    border: none;
     background-color: burlywood;
-    width: 0.7rem;
-    height: 0.7rem;
-    margin: 0rem;
-    float: left;
 }
 
-#productImageFullP {
+#productImage {
     width: 18rem;
     height: 26rem;
     object-fit: cover;
     border-radius: 1rem;
-    float: left;
-    margin: 1rem 5rem 0rem 14rem;
-    position: relative;
+    margin-top: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#baseItemText {
-    float: left;
-    margin: 0rem 0rem 1rem 37rem;
-    position: absolute;
+#rightInfo {
+    margin-top: 1rem;
 }
 
-#baseItemText >h1 {
-    font-size: 4rem;
+#rightInfo >h1 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: left;
 }
 
-#baseItemText >h3 {
+#rightInfo >h3 {
     margin-bottom: 2rem;
     text-align: left;
 }
@@ -62,109 +62,99 @@
     flex-flow: row wrap;
     align-items: flex-start;
     align-content: space-between;
-    /*border: 2px solid hotpink;*/
     position: relative;
     max-width: 80%;
-    margin: 0rem 0rem 2rem 0rem;
+    margin-bottom: 2rem;
+    /*border: 2px solid royalblue;*/
 }
 
 .itemTags {
     padding: 0.3rem 1rem 0.4rem 1rem;
-    border-radius: 0.4rem;
     background-color: burlywood;
     border-radius: 1.5rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
 
-#connectingDiv {
-    background-color: burlywood;
-    width: 100%;
-    height: 6rem;
-    /*border: 2px solid hotpink;*/
-    padding-left: 36rem;
+#optionContainer {
+    display: flex;
+    max-width: 80%;
 }
 
-#connectingDiv :nth-child(4) {
-    /*border: 2px solid hotpink;*/
-    margin-left: 8.5rem;
-}
-
-.buyOptions {
-    background-color: cadetblue;
-    float: left;
-    margin: 1.2rem 1rem 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1.5rem;
-}
-
-.socialPlaceholderTemp{
-    background-color: aliceblue;
-    width: 2.5rem;
-    height: 2.5rem;
-    float: left;
-    margin: 1.2rem 0.5rem 0.5rem;
+#optionContainer :nth-child(4) {
+    margin-left: 31%;
+    padding: 0.7rem 1rem;
     border-radius: 50%;
 }
 
-#additionalInformationContainer {
+#optionContainer :nth-child(5) {
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+}
+
+#optionContainer :nth-child(6) {
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    margin-right: 0rem;
+}
+
+.buyingOption {
+    font-size: 95%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: none;
     background-color: burlywood;
-    width: 100%;
-    height: 30rem;
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+}
+
+#additionalProductInfo {
     /*border: 2px solid hotpink;*/
-}
-
-#additionalInformationContainer {
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
+    flex-flow: row nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#additionalItemInformation {
-    /*background-color: cadetblue;*/
-    width: 22rem;
-    height: 26rem;
-    text-align: left;
-    padding-left: 15rem;
+#leftStats {
+    width: 33%;
+    padding-left: 14rem;
+    /*border: 2px solid blue;*/
 }
 
-#additionalItemInformation >h3 {
+#leftStats >h3 {
     line-height: 80%;
     margin-top: 3rem;
 }
 
-#additionalItemInformation >p {
+#leftStats >p {
     line-height: 50%;
 }
 
-#itemFullDescription >h3 {
+#rightDescription {
+    width: 80%;
+    padding-right: 13%;
+    /*border: 2px solid blueviolet;*/
+}
+
+#rightDescription >h3 {
     line-height: 80%;
     margin-top: 3rem;
 }
 
-
-#itemFullDescription {
-    /*background-color: lavenderblush;*/
-    width: 40rem;
-    height: 26rem;
+#rightDescription >p {
     text-align: justify;
 }
 
-#alsoLikeTitle {
-    width: 100%;
-    background-color: aliceblue;
-    padding: 2rem;
-    margin: -2rem 0rem;
+#otherProducts {
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
 }
 
-#furtherStuff {
-    width: 100%;
-    height: 25rem;
-    border: 2px solid hotpink;
-    background-color: aliceblue;
-    /*display: flex;
-    flex-flow: row nowrap;*/
-    padding: 0rem 13rem;
+#otherProducts >h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
 .productImageSmall {
@@ -172,38 +162,62 @@
     height: 18rem;
     object-fit: cover;
     border-radius: 0.7rem;
-    float: left;
-    margin: 1rem 1rem 0rem 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 1rem;
+    margin-top: 1rem;
 }
 
-#furtherStuff :nth-child(1) {
+#otherProducts :first-child {
     border: 2px solid hotpink;
+    height: 15rem;
     width: 10rem;
-    height: 16rem;
-    margin-top: 2rem;
-    filter: blur(2px)  brightness(0.6) opacity(0.7);
-} 
-
-#furtherStuff :nth-child(2) {
-    border: 2px solid hotpink;
-    width: 11rem;
-    height: 17rem;
-    margin-top: 1.5rem;
     position: relative;
-    right: 12rem;
+    margin-top: 3rem;
+    left: 9rem;
     filter: blur(1.5px)  brightness(0.7) opacity(0.8);
-}   
+}
 
-#furtherStuff :nth-child(3) {
-    border: 2px solid hotpink;
-    filter: blur(1px)  brightness(0.8) opacity(0.9);
+#otherProducts :nth-child(2) {
+    height: 16.5rem;
+    width: 11rem;
     position: relative;
-    right: 24rem;
-} 
+    margin-top: 2.3rem;
+    filter: blur(1.3px)  brightness(0.7) opacity(0.9);
+}
 
-/*#furtherStuff :nth-child(4) {
-    width: 30rem;
-    height: 20rem;
+#otherProducts :nth-child(3) {
+    height: 18rem;
+    width: 12rem;
     position: relative;
-}*/
+    right: 9rem;
+    margin-top: 1.5rem;
+    filter: blur(1.1px)  brightness(0.7) opacity(0.95);
+}
+
+#otherProducts :nth-child(4) {
+    height: 18rem;
+    width: 12rem;
+    position: relative;
+    left: 18.5rem;
+    margin-top: 1.5rem;
+    filter: blur(1.1px)  brightness(0.7) opacity(0.95);
+}
+
+#otherProducts :nth-child(5) {
+    height: 16.5rem;
+    width: 11rem;
+    position: relative;
+    left: 9rem;
+    z-index: -2;
+    margin-top: 2.3rem;
+    filter: blur(1.3px)  brightness(0.7) opacity(0.9);
+}
+
+#otherProducts :nth-child(6) {
+    height: 15rem;
+    width: 10rem;
+    z-index: -3;
+    position: relative;
+    margin-top: 3rem;
+    filter: blur(1.5px)  brightness(0.7) opacity(0.8);
+}
+
