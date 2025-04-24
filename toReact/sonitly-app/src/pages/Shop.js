@@ -10,8 +10,13 @@ const Shop = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+<<<<<<< HEAD
   useEffect(() => {
       async function loadProducts() {
+=======
+    useEffect(() => {
+        async function loadProducts() {
+>>>>>>> 059fc54a306efcda1b182fb4cb99599dfabd1b47
           setLoading(true);
           setError(null);
           try {
@@ -26,6 +31,7 @@ const Shop = () => {
                       thumbnail_image: track['release-group']?.['cover-art-archive']?.front || ImagePlaceholder
                   }));
 
+<<<<<<< HEAD
                   setProducts(mappedTracks);
               } else {
                   setError("Failed to fetch products");
@@ -56,6 +62,60 @@ const Shop = () => {
               ))}
           </div>
       </div>
+=======
+
+
+            const catalog = await fetchData(uri);
+            console.log(catalog);
+
+            console.log("catalog", catalog);
+console.log("catalog.tracks", catalog.tracks);
+console.log("catalog.tracks.track", catalog.tracks.track);
+            
+            
+            if (catalog && catalog.tracks && catalog.tracks.track) {
+              // Map the Last.fm track data to your product structure
+              const mappedTracks = catalog.tracks.track.map((track, index) => ({
+                item_id: index,
+                item_title: `${track.name} - ${track.artist.name}`,
+                unit_price: track.price, // fake "price" for visual
+                thumbnail_image: track.image?.[2]?.['#text'] || ImagePlaceholder
+              }));
+    
+              setProducts(mappedTracks);
+            } else {
+              setError("Failed to fetch products")
+            }
+         
+        }
+        catch (error) {
+          setError("Error occurred")
+          console.log(error);
+        } finally {
+          setLoading(false);
+    }
+  }
+    loadProducts(); 
+    }, []);
+   
+  return (
+    
+    <>
+      <h2>Trending Music Gallery</h2>
+    <div id="gallery-container">
+    {products.map((d) => (
+        <Link to={`/shop/product/${d.item_id}`}>
+          <Product
+            key={d.item_id}
+            productName={d.item_title}
+            price={d.unit_price}
+            src={d.thumbnail_image || ImagePlaceholder}
+          /></Link>
+        ))}
+    
+    </div>
+    </>
+>>>>>>> 059fc54a306efcda1b182fb4cb99599dfabd1b47
   );
 };
 
