@@ -16,6 +16,7 @@
     --color-accent-7: var(--s3-80);
     --color-accent-8: var(--s4-80);
     --color-accent-9: var(--s5-80);
+    --color-accent-10: var(--s0-80);
 
 
      /* Declaring Solid Shades */
@@ -119,11 +120,11 @@
 ::-webkit-scrollbar {
     max-width: 3px;
     max-height: 3px;
-    background-color: #010144;
+    background-color: var(--color-accent-8);
 
 }
 ::-webkit-scrollbar-thumb {
-    background-color:#65c1fa;
+    background-color:var(--color-accent-9);
 }
 
 /* Styling wrapper:
@@ -139,13 +140,14 @@
     min-width: calc(100vw - 4px);
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: var(--background-secondary);
 }
 h2 {
     margin-bottom: 3rem;
-    background-color: var(--s5);
+    background-color: var(--color-accent-4);
     height: 6rem;
     width: 90%;
-    color: white;
+    color: var(--background-primary) !important;
     text-align: center;
     font-size: 3rem;
 }

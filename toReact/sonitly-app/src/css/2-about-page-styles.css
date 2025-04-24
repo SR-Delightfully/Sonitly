@@ -58,7 +58,7 @@
 
 #faq-right-column {
     margin-left: 10rem;
-    border: 1px solid #222;
+    border: 1px solid var(--color-accent-4);
 }
 
 #faq-left-column > ul > li {
