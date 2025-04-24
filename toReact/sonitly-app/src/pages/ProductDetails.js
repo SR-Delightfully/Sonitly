@@ -46,7 +46,7 @@ const ProductDetails = () => {
               <button class="carousselButton"></button>
           </span>
 
-          <img id="productImage"
+          <img id="productImageBig"
           src={Image}
           alt="product image"/>
       </span>
@@ -108,6 +108,8 @@ const ProductDetails = () => {
         <img class="productImageSmall"
         src={Image}
         alt="product image"/>
+
+        <SmallProduct></SmallProduct>
 
         <img class="productImageSmall"
         src={Image}
