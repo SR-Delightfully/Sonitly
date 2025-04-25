@@ -49,8 +49,13 @@
 }
 
 #rightInfo >h3 {
-    margin-bottom: 2rem;
     text-align: left;
+    margin-bottom: 1rem;
+}
+
+#rightInfo >p {
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
 #tagsContainer {
@@ -96,7 +101,7 @@
 
 .buyingOption {
     font-size: 95%;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0rem 1rem;
     border: none;
     background-color: burlywood;
     border-radius: 1.5rem;
@@ -112,7 +117,7 @@
 
 #leftStats {
     width: 40%;
-    padding-left: 15.5rem;
+    padding-left: 15.5rem; /*on my pc = 15.5*/
     text-align: left;
     /*border: 2px solid blue;*/
 }

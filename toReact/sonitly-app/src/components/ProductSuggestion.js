@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import Image from '../images/carousel-placeholder.jpg';
 
 const ProductSuggestion = () => {

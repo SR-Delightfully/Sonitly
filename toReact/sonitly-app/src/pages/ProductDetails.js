@@ -55,6 +55,8 @@ const ProductDetails = () => {
         <span id="rightInfo">
           <h1 id="itemTitle">{product?.item_title}</h1>
           <h3 id="itemAuthor">{product?.brand}</h3>
+
+          <p>00 | 00 Reviews</p>
           
           <div id="tagsContainer">
               <span class="itemTags">{product?.category_id}</span>
@@ -99,10 +101,34 @@ const ProductDetails = () => {
       </span>
       </div>
 
-      {/*<div className="smallProductWrapper">
-          <SmallProduct></SmallProduct>
-        </div>*/}
-        <ProductSuggestion></ProductSuggestion>
+      <SmallProduct></SmallProduct>
+      <div id="otherProducts">
+
+  
+        {/*<img class="productImageSmall"
+        src={Image}
+        alt="product image"/>
+
+        <img class="productImageSmall"
+        src={Image}
+        alt="product image"/>
+
+        <img class="productImageSmall"
+        src={Image}
+        alt="product image"/>
+
+        <img class="productImageSmall"
+        src={Image}
+        alt="product image"/>
+
+        <img class="productImageSmall"
+        src={Image}
+        alt="product image"/>
+
+        <img class="productImageSmall"
+        src={Image}
+        alt="product image"/>*/}
+      </div>
     </>
   );
 }
