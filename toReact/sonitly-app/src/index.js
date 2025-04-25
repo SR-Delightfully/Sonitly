@@ -16,6 +16,7 @@ import './css/9-settings-styles.css';
 import './css/10-book-shelf-styles.css';
 import './css/11-profile-styles.css';
 import './css/12-product-suggestion-styles.css';
+import './css/13-user-cart-styles.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

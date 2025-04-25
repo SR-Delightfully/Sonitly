@@ -13,17 +13,8 @@
     margin-bottom: 2rem;
     text-align: left;
 }
- 
-/*#otherProducts > img.productImageSmall {
-    width: 12rem;
-    height: 18rem;
-    object-fit: cover;
-    border-radius: 0.7rem;
-    border-radius: 1rem;
-    margin-top: 1rem;
-}
 
-#otherProducts :first-child {
+#leftImageCaroussel :first-child {
     border: 2px solid hotpink;
     height: 15rem;
     width: 10rem;
@@ -33,7 +24,7 @@
     filter: blur(1.5px)  brightness(0.7) opacity(0.8);
 }
 
-#otherProducts :nth-child(2) {
+#leftImageCaroussel :nth-child(2) {
     height: 16.5rem;
     width: 11rem;
     position: relative;
@@ -41,7 +32,7 @@
     filter: blur(1.3px)  brightness(0.7) opacity(0.9);
 }
 
-#otherProducts :nth-child(3) {
+#leftImageCaroussel :nth-child(3) {
     height: 18rem;
     width: 12rem;
     position: relative;
@@ -50,7 +41,7 @@
     filter: blur(1.1px)  brightness(0.7) opacity(0.95);
 }
 
-#otherProducts :nth-child(4) {
+#rightImageCaroussel :first-child {
     height: 18rem;
     width: 12rem;
     position: relative;
@@ -60,7 +51,7 @@
     filter: blur(1.1px)  brightness(0.7) opacity(0.95);
 }
 
-#otherProducts :nth-child(5) {
+#rightImageCaroussel :nth-child(2) {
     height: 16.5rem;
     width: 11rem;
     position: relative;
@@ -70,11 +61,11 @@
     filter: blur(1.3px)  brightness(0.7) opacity(0.9);
 }
 
-#otherProducts :nth-child(6) {
+#rightImageCaroussel :nth-child(3) {
     height: 15rem;
     width: 10rem;
     z-index: 9996;
     position: relative;
     margin-top: 3rem;
     filter: blur(1.5px)  brightness(0.7) opacity(0.8);
-}*/
+}
