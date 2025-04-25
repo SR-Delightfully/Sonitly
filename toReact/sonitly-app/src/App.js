@@ -41,6 +41,7 @@ const App = () => {
             <Route path="/cart" element={<UserCart />}></Route>
         </Routes>
     <Footer></Footer>
+    
     </div>
 
     </Router>
