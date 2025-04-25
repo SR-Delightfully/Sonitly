@@ -1,7 +1,7 @@
 
 #otherProducts {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
     padding-left: 4rem;
@@ -14,7 +14,7 @@
     text-align: left;
 }
  
-#otherProducts > img.productImageSmall {
+/*#otherProducts > img.productImageSmall {
     width: 12rem;
     height: 18rem;
     object-fit: cover;
@@ -50,11 +50,6 @@
     filter: blur(1.1px)  brightness(0.7) opacity(0.95);
 }
 
-#otherProducts >smallProductWrapper {
-    all: unset;
-    object-fit: cover;
-}
-
 #otherProducts :nth-child(4) {
     height: 18rem;
     width: 12rem;
@@ -82,4 +77,4 @@
     position: relative;
     margin-top: 3rem;
     filter: blur(1.5px)  brightness(0.7) opacity(0.8);
-}
+}*/
