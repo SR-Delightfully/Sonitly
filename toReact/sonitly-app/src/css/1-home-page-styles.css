@@ -8,6 +8,7 @@
     height: 100%;
     position: relative;
     gap: 1rem;
+    background-color: var(--background-primary);
 }
 #intro-container > div:nth-child(1){
     height: 100%;
@@ -61,7 +62,7 @@
 }
 #store-intro {
     height: 100%;
-    background-color: var(--background-primary);
+    color: var(--text-color-1);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -86,7 +87,7 @@
 }
 /* ->> Hero Section */
 #hero-container {
-    background-color: var(--background-primary);
+    color: var(--text-color-1);
     height: calc(3.25rem * 17.75);
     width: calc(6rem * 17.75);
     border-radius: 1.25rem;
@@ -94,6 +95,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background-color: linearvar(--background-primary);
+    background: linear-gradient(var(--background-primary) 0%, var(--color-accent-3) 100%);
 }
 #hero-container > #hero-title {
     width: 64rem;
@@ -104,7 +107,7 @@
     transform: translate(-70%,0);
     z-index: 99;
     background-color: var(--color-accent-4);
-    color: var(--background-primary);
+    color: var(--text-color-1);
 }
 #carousel-controls {
     width: 3rem;
@@ -163,7 +166,7 @@
     z-index: 79;
 }
 #carousel-details > hr {
-    color: var(--background-primary);
+    color: var(--text-color-1);
     width: 12rem;
     position: relative;
     top: 10rem;
@@ -206,7 +209,8 @@
     position: relative;
     margin: 3rem 0;
     left: 7.2rem;
-    background-color: var(--background-primary);
+    color: var(--text-color-1);
     border-radius: 1.25rem;
     padding: 1.25rem; 
+    background-color: var(--background-primary);
 }

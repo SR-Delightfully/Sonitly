@@ -81,7 +81,7 @@
     right: -5.2rem;
 }
 .page {
-    background-color: var(--background-primary);
+    color: var(--background-color-primary);
     border: 3px solid var(--color-accent-9);
     box-shadow: 0.3rem 0.2rem 0.2rem var(--color-accent-6);
     top: 3.5rem;
