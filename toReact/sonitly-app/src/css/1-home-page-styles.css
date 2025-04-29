@@ -79,8 +79,7 @@
     gap: 1rem;
     height: calc(100% - 16rem);
 }
-#intro-container > div:nth-child(1){
-}
+
 #intro-container > div:nth-child(2){
     min-height: 100%;
     width: calc(64.5% - 0.5rem) !important;

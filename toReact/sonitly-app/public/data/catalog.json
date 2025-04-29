@@ -106,5 +106,40 @@
             "thumbnail_image": "{ImagePlaceholder}"
         }
 
+    ],
+    "carouselData": [
+        {
+            "item_id": 1, 
+            "category_id": 3,
+            "item_title": "Celeste Complete Vinyl Soundtrack Box Set",
+            "description": "Lena Raine's Celeste, B-Sides, and Farewell soundtracks are now all available in one massive, 6-LP set!",
+            "brand": "Celeste",
+            "unit_price": 114.99,
+            "quantity_in_stock": 4,
+            "make":"LenaRaine",
+            "thumbnail_image": "https://lightintheattic.net/cdn/shop/files/tmp_2F1683147895437-qajkcanswyl-1c342a1b5bccff8f8a9a82a78ae792c8_2FVBOX02-Celeste-Complete-COVER_281_29_974x.jpg?v=1690531996"
+        },
+        {
+            "item_id": 2, 
+            "category_id": 1,
+            "item_title": "Abbey Road - The Beatles",
+            "description": "Classic rock album on vinyl",
+            "brand": "The Beatles",
+            "unit_price": 59.99,
+            "quantity_in_stock": 29,
+            "make":"Apple Records",
+            "thumbnail_image": "https://images.radiox.co.uk/images/596109?crop=1_1&width=660&format=webp&signature=D8me8E6dKDwQrHYEGS-ml8W-osw="
+        },
+        {
+            "item_id": 3, 
+            "category_id": 2,
+            "item_title": "Greatest Hits - Queen",
+            "description": "Collection of Queen’s biggest hits.",
+            "brand": "Queen",
+            "unit_price": 14.99,
+            "quantity_in_stock": 7,
+            "make":"EMI",
+            "thumbnail_image": "https://m.media-amazon.com/images/I/61+RI+JWU4S._UF1000,1000_QL80_.jpg"
+        }
     ]
 }
