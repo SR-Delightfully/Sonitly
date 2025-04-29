@@ -11,6 +11,7 @@ const Home = () => {
     const [carouselData, setCarouselData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
     useEffect(() => {
         async function loadCarouselData() {
@@ -41,15 +42,13 @@ const Home = () => {
                     <h2 id="hero-title">Company Name</h2>
 
                     <ol id="carousel-controls">
-                        {
-                            carouselData.map((_, index) => (
-                                <li key={index}>
-                                    <HashLink smooth to={`#heroImg${index + 1}`}>
-                                        <button></button>
-                                    </HashLink>
-                                </li>
-                            ))
-                        }
+                        {carouselData.map((_, index) => (
+                            <li key={index}>
+                            <HashLink smooth to={`#heroImg${index + 1}`}>
+                                <button onClick={() => setCurrentSlideIndex(index)}></button>
+                            </HashLink>
+                            </li>
+                        ))}
                     </ol>
 
                     <div id="carousel-images">
@@ -66,13 +65,13 @@ const Home = () => {
                     </div>
 
                     <div id="carousel-details">
-                        <h3>Title of image</h3>
-                        <hr />
-                        <p>
-                            Description of images, <br />
-                            or more information about <br />
-                            the artist, the sale, etc.
-                        </p>
+                        {carouselData.length > 0 && (
+                            <>
+                            <h3>{carouselData[currentSlideIndex].item_title}</h3>
+                            <hr />
+                            <p>{carouselData[currentSlideIndex].description}</p>
+                            </>
+                        )}
                     </div>
                 </div>
             </li>
