@@ -64,8 +64,15 @@ const Home = () => {
                         }
                     </div>
 
-                    <div id="carousel-details">
-                        {carouselData.length > 0 && (
+                    <div
+                        id="carousel-details"
+                        style={{
+                            backgroundColor: `var(--color-${carouselData[currentSlideIndex]?.background_color})`
+                        }}
+                    >
+                        {console.log("Current background color:", carouselData[currentSlideIndex]?.background_color)}
+
+                         {carouselData.length > 0 && (
                             <>
                             <h3>{carouselData[currentSlideIndex].item_title}</h3>
                             <hr />
@@ -92,6 +99,27 @@ const Home = () => {
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit auctor mi sed viverra...
                             </p>
+                            <p>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempora ratione excepturi at? Laborum ea officiis beatae sapiente, excepturi corporis doloremque at eius fugit! Ut esse magni voluptatum minima consectetur!</span>
+                            <span>Nostrum asperiores non optio mollitia! Voluptas, sint reiciendis ipsum adipisci dignissimos iure saepe numquam non illo dolore quisquam delectus? Eos quibusdam aperiam impedit culpa incidunt maxime iusto quis labore asperiores.</span>
+                            <span>Eveniet ex necessitatibus in porro ullam quam, cumque itaque voluptatem eum provident. Modi sapiente obcaecati dolorem ex iste, minima repellendus deleniti repudiandae excepturi, voluptas illum tempora eaque quis expedita nihil.</span>
+                            <span>Quisquam nesciunt, temporibus unde consequuntur cumque quod sit quae aliquam ab architecto velit atque nam sunt voluptate voluptates fugit inventore perspiciatis voluptatum earum reprehenderit rerum quis. Nemo eos quidem voluptatem.</span>
+                            <span>Consequuntur doloremque sunt accusantium ipsa laborum. Deserunt voluptates necessitatibus fugiat fugit tempore sapiente enim sequi aliquam nemo cum iste aliquid nostrum doloremque voluptatem sit quaerat, libero adipisci quos, asperiores dolorum.</span>
+                            <span>Velit alias commodi atque ratione deleniti excepturi. Odio rerum voluptatibus deleniti velit. Nihil adipisci quas unde, veritatis laudantium maxime velit nulla repudiandae laborum. Nihil illum voluptate veniam ex numquam laudantium.</span>
+                            <br /><br />
+                            <span>Perspiciatis, eveniet iure harum saepe praesentium sequi quod tempora a fugit perferendis tenetur possimus, hic natus, soluta eius voluptatum amet ducimus repellendus deserunt libero nemo ea delectus eligendi ratione. Dolore.</span>
+                            <span>Explicabo quibusdam iusto tempore, ut nemo soluta ducimus deleniti iste, laboriosam ullam repellat amet commodi ratione. Eligendi debitis modi aut nobis totam harum quam? Unde illum accusamus sit totam quis?</span>
+                            <span>Quo dolorem dolore repellat molestias cum similique, pariatur ut iste doloribus quia. Nulla, recusandae iste deserunt quas aliquam rem quibusdam sapiente molestiae explicabo, minima consectetur quo provident! Ad, quis doloribus.</span>
+                            <span>Aut rem blanditiis doloribus ea nisi aspernatur at iste in veniam expedita. In impedit officia reprehenderit voluptatibus, quaerat iste possimus ea molestias repellat facilis aliquam mollitia, labore delectus quis. Aliquam!</span>
+                            <br /><br />
+                            <br /><br />
+                            <br /><br />
+                            <br /><br />
+                            <br /><br />
+                            <br />
+                            <span>Quibusdam nam odio illum eaque facere nobis, officia perferendis et molestias earum doloribus, in itaque illo, dicta laborum cumque aut libero animi laudantium! Ab, quo molestias voluptate ipsam atque illo!</span>
+                            <span>Hic, earum nostrum. Asperiores, non ullam. Perspiciatis et molestiae, eaque autem enim consequatur nulla est. Laboriosam voluptatum quas aliquam culpa voluptas dicta. Eligendi error ea amet dolorem architecto officia odio.</span>
+                        </p>
                         </div>
                     </div>
                 </div>
