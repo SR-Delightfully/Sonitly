@@ -145,8 +145,8 @@
 
 #carousel-images > img {
     object-fit: cover;
-    height:100%;
-    width: 100%;
+    min-height:100% !important;
+    min-width: 100% !important;
 }
 
 #carousel-details {
