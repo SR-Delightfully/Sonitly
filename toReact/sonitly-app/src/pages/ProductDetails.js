@@ -31,7 +31,6 @@ const ProductDetails = () => {
       setLoading(false);
     }
   };
-
   loadProduct();
 }, [item_id]);
   
