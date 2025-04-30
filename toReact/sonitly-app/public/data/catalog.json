@@ -117,7 +117,7 @@
             "quantity_in_stock": 4,
             "make":"LenaRaine",
             "thumbnail_image": "https://lightintheattic.net/cdn/shop/files/tmp_2F1683147895437-qajkcanswyl-1c342a1b5bccff8f8a9a82a78ae792c8_2FVBOX02-Celeste-Complete-COVER_281_29_974x.jpg?v=1690531996",
-            "background_color": "really-light-violet"
+            "background_color": "really-light-magenta"
         },
         {
             "item_id": 2, 
@@ -134,6 +134,45 @@
         },
         {
             "item_id": 3, 
+            "category_id": 1,
+            "item_title": "Midnights: Lavender Edition Vinyl",
+            "description": "13 Songs, Collectible album jacket with unique front and back cover art",
+            "brand": "Taylor Swift",
+            "unit_price": 39.99,
+            "quantity_in_stock": 9,
+            "make":"TSwift",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png",
+            "background_color": "violet"
+        
+        },
+        {
+            "item_id": 4, 
+            "category_id": 1,
+            "item_title": "fruitcake LP",
+            "description": "Two sided track on vinyl",
+            "brand": "Sabrina Carpenter",
+            "unit_price": 39.99,
+            "quantity_in_stock": 3,
+            "make":"Carpenter",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Sabrina_Carpenter_-_Fruitcake.png",
+            "background_color": "really-light-lime"
+        
+        },
+        {
+            "item_id": 2, 
+            "category_id": 1,
+            "item_title": "Savage Sinusoid",
+            "description": "Gold blackdust vinyl strictly limited to 600 copies worldwide, as stated on front sleeve sticker.Includes free download card!",
+            "brand": "Igorrr",
+            "unit_price": 47.39,
+            "quantity_in_stock": 5,
+            "make": "Metal Blade Records",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/b/bd/Savage_sin.jpg",
+            "background_color": "really-dark-blue"
+        
+        },
+        {
+            "item_id": 3, 
             "category_id": 2,
             "item_title": "Greatest Hits - Queen",
             "description": "Collection of Queen’s biggest hits.",
@@ -142,7 +181,7 @@
             "quantity_in_stock": 7,
             "make":"EMI",
             "thumbnail_image": "https://m.media-amazon.com/images/I/61+RI+JWU4S._UF1000,1000_QL80_.jpg",
-            "background_color": "really-really-light-orange"
+            "background_color": "really-light-orange"
 
         }
     ]
