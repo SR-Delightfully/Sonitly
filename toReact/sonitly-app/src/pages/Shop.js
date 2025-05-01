@@ -8,10 +8,8 @@ const Shop = () => {
     useEffect(() => {
         async function loadProducts() {
             console.log("Loading the products");
-            const uri = '/data/catalog.json';
+            const uri = './data/catalog.json';
             const catalog = await fetchData(uri);
-            console.log(catalog.categories);
-            console.log(catalog.products);
             setProducts(catalog.products);
     }
     loadProducts(); 

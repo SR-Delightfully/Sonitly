@@ -96,15 +96,70 @@
         },
         {
             "item_id": 7, 
-            "category_id": 1,
-            "item_title": "Celeste Complete Vinyl Soundtrack Box Set",
-            "description": "Lena Raine's Celeste, B-Sides, and Farewell soundtracks are now all available in one massive, 6-LP set!",
-            "brand": "Celeste",
+            "category_id": 1, 
+            "item_title":"Celeste Complete Vinyl Soundtrack Box Set",
+            "description":"Lena Raine's Celeste, B-Sides, and Farewell soundtracks are now all available in one massive, 6-LP set!",
+            "brand":"Celeste", 
             "unit_price": 114.99,
             "quantity_in_stock": 4,
-            "make":"LenaRaine",
-            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/e/e6/The_Weeknd_-_Blinding_Lights.png"
+            "thumbnail_image":"https://lightintheattic.net/cdn/shop/files/tmp_2F1683147895437-qajkcanswyl-1c342a1b5bccff8f8a9a82a78ae792c8_2FVBOX02-Celeste-Complete-COVER_281_29_974x.jpg?v=1690531996"
+        },
+        {
+            "item_id": 8, 
+            "category_id": 1,
+            "item_title": "Midnights: Lavender Edition - Taylor Swift",
+            "description": "13 Songs, Collectible album jacket with unique front and back cover art",
+            "brand": "Taylor Swift",
+            "unit_price": 39.99,
+            "quantity_in_stock": 9,
+            "make":"TSwift",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png"
+        },
+        {
+            "item_id": 9, 
+            "category_id": 1,
+            "item_title": "fruitcake LP - Sabrina Carpenter",
+            "description": "Two sided track on vinyl",
+            "brand": "Sabrina Carpenter",
+            "unit_price": 39.99,
+            "quantity_in_stock": 3,
+            "make":"Carpenter",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Sabrina_Carpenter_-_Fruitcake.png"
+        },
+        {
+            "item_id": 10, 
+            "category_id": 1,
+            "item_title": "Savage Sinusoid - Igorrr",
+            "description": "Gold blackdust vinyl strictly limited to 600 copies worldwide, as stated on front sleeve sticker.Includes free download card!",
+            "brand": "Igorrr",
+            "unit_price": 47.39,
+            "quantity_in_stock": 5,
+            "make": "Metal Blade Records",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/b/bd/Savage_sin.jpg"
+        },
+        {
+            "item_id": 11, 
+            "category_id": 1,
+            "item_title": "Negative Spaces - Poppy",
+            "description": "Poppy's highly anticipated new album, Negative Spaces",
+            "brand": "Poppy",
+            "unit_price": 44.99,
+            "quantity_in_stock": 10,
+            "make": "Sumerian Records",
+            "thumbnail_image": "https://freesonrock.com/cdn/shop/files/R-32300360-1732945663-7489.jpg?v=1743960341"
+        },
+        {
+            "item_id": 12, 
+            "category_id": 1,
+            "item_title": "In Darkness - Varials",
+            "description": "In Darkness is the second studio album by Varials",
+            "brand": "Varials",
+            "unit_price": 54.99,
+            "quantity_in_stock": 10,
+            "make": "Fearless Records",
+            "thumbnail_image": "https://i.scdn.co/image/ab67616d0000b2734499d4e61bf6b5029873fea0"
         }
+        
     ],
     "carouselData": [
         {
