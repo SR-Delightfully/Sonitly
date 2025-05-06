@@ -11,7 +11,7 @@ const Login = () => {
             <input placeholder="password" type="text" />
             <br />
             <div id="forgot-password">
-                <a href="reset-password">forgot password?</a>
+                <a href="ResetPassword">forgot password?</a>
             </div>
             <br />
             <button id="login-button" type="button">Login</button> 
