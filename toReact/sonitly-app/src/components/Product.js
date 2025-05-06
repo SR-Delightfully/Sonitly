@@ -1,4 +1,4 @@
-const Product = ({ productName, price, src }) => {
+const Product = ({ productName, description, price, src }) => {
   
   return (
     <div className="gallery-img">
@@ -9,7 +9,8 @@ const Product = ({ productName, price, src }) => {
         height='300'
       />
       <p>{productName}</p>
-      <p>S{price}</p>
+      <p>{description}</p>
+      <p>${price}</p>
     </div>
   );
 };
