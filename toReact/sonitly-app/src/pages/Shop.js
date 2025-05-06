@@ -24,6 +24,7 @@ const Shop = () => {
           <Product
             key={d.item_id}
             productName={d.item_title}
+            description={d.description}
             price={d.unit_price}
             src={d.thumbnail_image || ImagePlaceholder}
           />
