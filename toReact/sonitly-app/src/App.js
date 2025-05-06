@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  
 } from "react-router-dom";
 
 // Importing pages:
@@ -13,6 +13,7 @@ import Explore from "./pages/Explore";
 import ProductDetails from "./pages/ProductDetails";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import ResetPassword from "./pages/ResetPassword";
 import UserDetails from "./pages/UserDetails";
 import UserSettings from "./pages/UserSettings";
 import UserCart from "./pages/UserCart";
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/explore" element={<Explore />}></Route>
             <Route path="/signup" element={<Signup />}></Route>
             <Route path="/login" element={<Login />}></Route>
+            <Route path="/resetPassword" element={<ResetPassword />}></Route>
             <Route path="/shop/product/:item_id" element={<ProductDetails />}></Route>
             <Route path="/productDetails" element={<ProductDetails />}></Route>
             <Route path="/profile" element={<UserDetails />}></Route>
