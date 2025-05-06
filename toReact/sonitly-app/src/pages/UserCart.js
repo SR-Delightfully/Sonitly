@@ -1,4 +1,5 @@
 import Image from '../images/image-placeholder.png';
+import ProductSuggestion from '../components/ProductSuggestion';
 
 const UserCart = () => {
     return (
@@ -26,6 +27,8 @@ const UserCart = () => {
               <button id="removeFromCart">Remove</button>
             </span>
           </span>
+
+          <ProductSuggestion></ProductSuggestion>
         </div>
 
       </>
