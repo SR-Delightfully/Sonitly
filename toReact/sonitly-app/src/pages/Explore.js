@@ -1,6 +1,15 @@
+import React from "react";
+import LeafletMap from "../components/LeafletMap";
+
 const Explore = () => {
   return (
-    <p>THIS IS WHERE WE WOULD PUT THE REMOTE DATA RENDERING STUFF??</p>
+
+    <div>
+      <h1>Explore Locations</h1>
+    <div style={{display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <LeafletMap />
+    </div>
+    </div>
   );
 }
 

@@ -95,7 +95,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: linearvar(--background-primary);
+    background-color: var(--background-primary);
     background: linear-gradient(var(--background-primary) 0%, var(--color-accent-3) 100%);
 }
 #hero-container > #hero-title {
@@ -130,6 +130,24 @@
     cursor: pointer;
     position: relative;
     z-index:9999;
+}
+#carousel-controls > li:nth-child(1) > a > button {
+    background-color: var(--color-r);
+}
+#carousel-controls > li:nth-child(2) > a > button {
+    background-color: var(--color-o);
+}
+#carousel-controls > li:nth-child(3) > a > button {
+    background-color: var(--color-y);
+}
+#carousel-controls > li:nth-child(4) > a > button {
+    background-color: var(--color-g);
+}
+#carousel-controls > li:nth-child(5) > a > button {
+    background-color: var(--color-b);
+}
+#carousel-controls > li:nth-child(6) > a > button {
+    background-color: var(--color-p);
 }
 #carousel-images {
     border: 2px solid var(--color-accent-3);
