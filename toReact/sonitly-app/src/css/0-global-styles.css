@@ -201,6 +201,26 @@ h2 {
 
 }
 
+a:link {
+    color: var(--text-color-1);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--text-color-1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-p);
+    text-decoration: none;
+}
+
+a:visited {
+    color:var(--text-color-1);
+    text-decoration: none;
+}
+
 /* Styling the main container:                          
 ---------------------------------------------------- */
 #containers {

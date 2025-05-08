@@ -48,7 +48,7 @@ const ProductDetails = () => {
           </span>
 
           <img id="productImageBig"
-          src={Image}
+          src={product?.thumbnail_image}
           alt="product image"/>
       </span>
 
@@ -60,7 +60,7 @@ const ProductDetails = () => {
           
           <div id="tagsContainer">
               <span class="itemTags">{product?.category_id}</span>
-              <span class="itemTags">Another Genre</span>
+              <span class="itemTags">{product?.category_name}</span>
               <span class="itemTags">Genre3</span>
               <span class="itemTags">Really loonnng genre</span>
               <span class="itemTags">Overflowing genre</span>
@@ -94,8 +94,7 @@ const ProductDetails = () => {
       </span>
       <span id="rightDescription">
         <h3>Description</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-            <br/><br/> Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.</p>
+        <p>{product?.description}</p>
       </span>
       </div>
 
