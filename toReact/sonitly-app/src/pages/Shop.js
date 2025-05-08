@@ -23,14 +23,15 @@ const Shop = () => {
     <div id="gallery-container">
     {products.map((d) => (
           <>
-            <Product
-              key={d.item_id}
-              productName={d.item_title}
-              price={d.unit_price}
-              src={d.thumbnail_image || ImagePlaceholder}
-            />
-            <Link to={`/shop/product/${d.item_id}`}>more info</Link>
-          </>
+          <Product
+            key={d.item_id}
+            productName={d.item_title}
+            description={d.description}
+            price={d.unit_price}
+            src={d.thumbnail_image || ImagePlaceholder}
+          />
+          <Link to={`/shop/product/${d.item_id}`}>more info</Link>
+        </>
         ))}
     
     </div>

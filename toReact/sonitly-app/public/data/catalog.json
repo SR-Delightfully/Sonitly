@@ -183,7 +183,9 @@
             "unit_price": 59.99,
             "quantity_in_stock": 29,
             "make":"Apple Records",
-            "thumbnail_image": "https://images.radiox.co.uk/images/596109?crop=1_1&width=660&format=webp&signature=D8me8E6dKDwQrHYEGS-ml8W-osw="
+            "thumbnail_image": "https://images.radiox.co.uk/images/596109?crop=1_1&width=660&format=webp&signature=D8me8E6dKDwQrHYEGS-ml8W-osw=",
+            "background_color": "really-light-blue"
+        
         },
         {
             "item_id": 3, 
@@ -235,6 +237,7 @@
             "make":"EMI",
             "thumbnail_image": "https://m.media-amazon.com/images/I/61+RI+JWU4S._UF1000,1000_QL80_.jpg",
             "background_color": "really-light-orange"
+
         }
     ]
 }
