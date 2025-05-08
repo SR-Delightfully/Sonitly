@@ -27,8 +27,6 @@
         }
 
     ],
-<<<<<<< HEAD
-=======
     "products": [
         {
             "item_id": 1, 
@@ -163,7 +161,6 @@
         }
         
     ],
->>>>>>> 8d2ef683f6799603090fb1d9d088d915585c1348
     "carouselData": [
         {
             "item_id": 1, 
@@ -174,12 +171,8 @@
             "unit_price": 114.99,
             "quantity_in_stock": 4,
             "make":"LenaRaine",
-<<<<<<< HEAD
-            "thumbnail_image": "https://lightintheattic.net/cdn/shop/files/tmp_2F1683147895437-qajkcanswyl-1c342a1b5bccff8f8a9a82a78ae792c8_2FVBOX02-Celeste-Complete-COVER_281_29_974x.jpg?v=1690531996"
-=======
             "thumbnail_image": "https://lightintheattic.net/cdn/shop/files/tmp_2F1683147895437-qajkcanswyl-1c342a1b5bccff8f8a9a82a78ae792c8_2FVBOX02-Celeste-Complete-COVER_281_29_974x.jpg?v=1690531996",
             "background_color": "really-light-magenta"
->>>>>>> 8d2ef683f6799603090fb1d9d088d915585c1348
         },
         {
             "item_id": 2, 
@@ -240,13 +233,8 @@
             "unit_price": 14.99,
             "quantity_in_stock": 7,
             "make":"EMI",
-<<<<<<< HEAD
-            "thumbnail_image": "https://m.media-amazon.com/images/I/61+RI+JWU4S._UF1000,1000_QL80_.jpg"
-=======
             "thumbnail_image": "https://m.media-amazon.com/images/I/61+RI+JWU4S._UF1000,1000_QL80_.jpg",
             "background_color": "really-light-orange"
-
->>>>>>> 8d2ef683f6799603090fb1d9d088d915585c1348
         }
     ]
 }

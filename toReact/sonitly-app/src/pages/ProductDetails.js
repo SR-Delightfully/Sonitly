@@ -38,6 +38,7 @@ const ProductDetails = () => {
     if (!product) return <div>Product not found.</div>;
   return (
     <>
+
       <div id="baseProductInfo">
         <span id="leftInfo">
           <span id="CButtons">
