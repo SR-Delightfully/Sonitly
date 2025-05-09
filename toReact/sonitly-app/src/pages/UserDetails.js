@@ -1,13 +1,13 @@
 import BannerPlaceholder from '../images/banner-placeholder.png';
 import Book from '../components/Book';
-const UserDetails = () => {
+const UserDetails = (currentUser) => {
   const authors = ["username"];
     const pages = ["page1","page2", "page3"];
     return (
         <ol id="containers">
           <li>
             <div id="hero-container" className="profile-container">
-               <img id="banner-picture-img" className='profile-banner' src={BannerPlaceholder} />
+               <img id="banner-picture-img" className='profile-banner' src={currentUser.currentUser.user_banner_src} />
                <div id="profile-gallery">
                 <ul id='profile-gallery-tabs'>
                   <li><button>Books</button></li>
@@ -20,7 +20,7 @@ const UserDetails = () => {
                 </ol>
                </div>
                <div id="profile-info">
-                  <img id="pfp" className='profile-pfp' src="https://i.pinimg.com/236x/17/57/1c/17571cdf635b8156272109eaa9cb5900.jpg" />
+                  <img id="pfp" className='profile-pfp' src={currentUser.currentUser.user_pfp_src} />
                   <h3>Username</h3>
                   <ul id="profile-buttons">
                     <li><button id="add-user-btn">Add User</button></li>

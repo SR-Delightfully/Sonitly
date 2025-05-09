@@ -90,7 +90,7 @@ const NavBar = () => {
               <input type="text" id="search-input" />
             </span>
             <span>
-              <a href="/cart">🛒</a>
+              <Link to="/cart">🛒</Link>
             </span>
           </div>
           <div id="nav-bar-user-drop">
