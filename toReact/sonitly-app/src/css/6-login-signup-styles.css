@@ -39,8 +39,9 @@ input {
 
 #form-container {
     margin-top: 2rem;
-    position: absolute;
+    position: relative;
     right: 1%;
+    
 }
 
 #sign-up-form-container {
@@ -53,22 +54,24 @@ input {
 #form-circle-left {
     height: 60rem;
     width: 60rem;
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     border-radius: 50%;
-    position: absolute;
-    top: 70%;
-    left: 20%;
-    transform: translate(-75%, -75%);
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, 0);
+    z-index: 99;
 }
 
 #form-circle-right {
     height: 60rem;
     width: 60rem;
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     border-radius: 50%;
     position: absolute;
-    top: -10%;
-    right: -30%;
+    top: 50%;
+    right: 0rem;
+    transform: translate(50%, -50%);
     
 }
 
@@ -84,4 +87,10 @@ input {
     padding: 4px;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.login, .signup {
+    background-color: var(--background-primary) !important;
+    min-height: 100vh !important;
+    min-width: calc(100% - 5px) !important;
 }
