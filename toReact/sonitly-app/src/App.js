@@ -1,53 +1,59 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { CurrentUserContext } from "./components/CurrentUserContext";
 
-// Importing pages:
 import Home from "./pages/Home";
-import Shop from "./pages/Shop";
-import About from "./pages/About";
-import Explore from "./pages/Explore";
-import ProductDetails from "./pages/ProductDetails";
-import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import ResetPassword from "./pages/ResetPassword";
+import Signup from "./pages/Signup";
+import About from "./pages/About";
+import Shop from "./pages/Shop";
+import ProductDetails from "./pages/ProductDetails";
 import UserDetails from "./pages/UserDetails";
 import UserSettings from "./pages/UserSettings";
 import UserCart from "./pages/UserCart";
-
-// Importing components:
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 const App = () => {
+  const { currentUser } = useContext(CurrentUserContext);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("loggedInUser");
+    if (storedUser && !currentUser) {
+      // Optionally set currentUser here if it wasn't set via context before
+    }
+  }, [currentUser]);
+
   return (
     <Router>
-    <div id="wrapper">
-    <span id="top" className=""></span>
-    <NavBar />
-      <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/shop" element={<Shop />}></Route>
-            <Route path="/explore" element={<Explore />}></Route>
-            <Route path="/signup" element={<Signup />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/resetPassword" element={<ResetPassword />}></Route>
-            <Route path="/shop/product/:item_id" element={<ProductDetails />}></Route>
-            <Route path="/productDetails" element={<ProductDetails />}></Route>
-            <Route path="/profile" element={<UserDetails />}></Route>
-            <Route path="/settings" element={<UserSettings />}></Route>
-            <Route path="/cart" element={<UserCart />}></Route>
-        </Routes>
-    <Footer></Footer>
-    
-    </div>
+      <div id="wrapper">
+        {currentUser && <NavBar currentUser={currentUser} />}
 
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<Signup />} />
+
+          {currentUser ? (
+            <>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/profile/:username" element={<UserDetails />} />
+              <Route path="/settings" element={<UserSettings />} />
+              <Route path="/cart" element={<UserCart />} />
+            </>
+          ) : (
+            <Route path="/" element={<Navigate to="/login" />} />
+          )}
+
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+
+        {currentUser && <Footer />}
+      </div>
     </Router>
   );
-}
+};
 
 export default App;

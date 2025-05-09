@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { CurrentUserProvider } from './components/CurrentUserContext';
 
-// importing style sheets:
 import './css/0-global-styles.css';
 import './css/1-home-page-styles.css';
 import './css/2-about-page-styles.css';
@@ -20,5 +20,7 @@ import './css/13-user-cart-styles.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <CurrentUserProvider>
     <App />
+  </CurrentUserProvider>
 );
