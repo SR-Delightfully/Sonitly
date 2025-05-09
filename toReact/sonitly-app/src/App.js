@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
+import Explore from "./pages/Explore";
 import ProductDetails from "./pages/ProductDetails";
 import UserDetails from "./pages/UserDetails";
 import UserSettings from "./pages/UserSettings";
@@ -27,7 +28,7 @@ const App = () => {
   return (
     <Router>
       <div id="wrapper">
-        {currentUser && <NavBar currentUser={currentUser} />}
+        {currentUser && <NavBar />}
 
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -39,9 +40,12 @@ const App = () => {
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/shop" element={<Shop />} />
-              <Route path="/profile/:username" element={<UserDetails />} />
+              <Route path="/explore" element={<Explore />} />
+              <Route path="/shop/product/:item_id" element={<ProductDetails />} />
+              <Route path="/profile/:username" element={<UserDetails currentUser={currentUser} />} />
               <Route path="/settings" element={<UserSettings />} />
               <Route path="/cart" element={<UserCart />} />
+
             </>
           ) : (
             <Route path="/" element={<Navigate to="/login" />} />
