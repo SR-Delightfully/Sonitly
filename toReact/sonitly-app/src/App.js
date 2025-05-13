@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CurrentUserContext } from "./components/CurrentUserContext";
 
 import Home from "./pages/Home";
@@ -16,14 +16,23 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const { currentUser } = useContext(CurrentUserContext);
+  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
+  const [loading, setLoading] = useState(true); // Loading state for user authentication
 
   useEffect(() => {
     const storedUser = localStorage.getItem("loggedInUser");
     if (storedUser && !currentUser) {
-      // Optionally set currentUser here if it wasn't set via context before
+      // Set the currentUser from localStorage if it's not already set
+      setCurrentUser(JSON.parse(storedUser));
     }
-  }, [currentUser]);
+    // Once the user state is set, stop loading
+    setLoading(false);
+  }, [currentUser, setCurrentUser]);
+
+  if (loading) {
+    // Show a loading screen while checking user authentication
+    return <div>Loading...</div>;
+  }
 
   return (
     <Router>
@@ -45,7 +54,6 @@ const App = () => {
               <Route path="/profile/:username" element={<UserDetails currentUser={currentUser} />} />
               <Route path="/settings" element={<UserSettings />} />
               <Route path="/cart" element={<UserCart />} />
-
             </>
           ) : (
             <Route path="/" element={<Navigate to="/login" />} />

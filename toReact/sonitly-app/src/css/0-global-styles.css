@@ -98,7 +98,7 @@
     --color-purple: #9f4390;
     --color-dark-purple: #7d1966;
     --color-really-dark-magenta: #3d193f;
-    --color-dark-magenta: #5f1d43;
+    --color-dark-indigo: #5f1d43;
     --color-magenta: #952857;
     --color-light-magenta: #ce5196;
     --color-really-light-magenta: #f5c6e9;
@@ -159,6 +159,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+  
 
 
 /* Styling the site's scroll bar:       
