@@ -318,5 +318,10 @@ a:visited {
     background-color: var(--color-accent-10);
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1280px) { }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) { }
 
+@media screen and (min-width: 480px) and (max-width: 768px) { }
+
+@media screen and (max-width: 480px) { }
