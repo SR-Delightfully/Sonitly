@@ -3,6 +3,8 @@ import ProductSuggestion from '../components/ProductSuggestion';
 import CartITem from '../components/CartItem';
 
 const UserCart = () => {
+
+
     return (
       <>
         <h1 id="cartTitle">Shopping Cart</h1>

@@ -15,7 +15,9 @@ const Shop = () => {
     }
     loadProducts(); 
     }, []);
-   
+
+    if (loading) return <div>Loading product details...</div>;
+    if (!product) return <div>Product not found.</div>;
   return (
     
     <>
@@ -23,7 +25,7 @@ const Shop = () => {
     <div id="gallery-container">
     {products.map((d) => (
           <Link to={`/shop/product/${d.item_id}`}>
-          <Product
+          <Product type={'product'}
             key={d.item_id}
             productName={d.item_title}
             description={d.description}
