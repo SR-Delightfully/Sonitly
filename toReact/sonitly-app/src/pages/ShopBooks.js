@@ -2,7 +2,7 @@ import ImagePlaceholder from '../images/image-placeholder.png';
 import Product from '../components/Product';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
-const fs = require('fs');
+//const fs = require('fs');
 const path = require('path');
 import {fetchData} from "../data/fetchWrapper";
 
@@ -10,7 +10,7 @@ const filePath = path.join(__dirname, 'public', 'data', 'bookCatalog.json');
 
 // Clear the file
 console.log("clearing all the contents of the JSON file");
-fs.writeFileSync(filePath, JSON.stringify([], null, 2)); //test if it wo
+//fs.writeFileSync(filePath, JSON.stringify([], null, 2)); //test if it wo
 
 const ShopBooks = () => {
     const [books, setBooks] = useState([]);
@@ -44,7 +44,8 @@ const ShopBooks = () => {
             }
 
             try {
-                fs.writeFileSync('./data/bookCatalog.json', JSON.stringify(allBooks, null, 2));
+                console.log(JSON.stringify(allBooks, null, 2));
+                //fs.writeFileSync('./data/bookCatalog.json', JSON.stringify(allBooks, null, 2));
                 console.log('Saved to bookCatalog.json!');
             } catch (error) {
                 console.log("error saving to JSON file");
@@ -56,7 +57,7 @@ const ShopBooks = () => {
     useEffect(() => {
         async function loadBooks() {
             console.log("Loading the books");
-            const uri = './data/bookCatalog.json';
+            const uri = './data/bookCatalog.json'; //will not work
             const bookCatalog = await fetchData(uri);
             setBooks(bookCatalog.books);
         }
