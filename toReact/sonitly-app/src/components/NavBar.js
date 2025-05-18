@@ -79,14 +79,8 @@ const NavBar = () => {
           <ol id="nav-bar-tabs">
             <li><Link to="/"><button>Home</button></Link></li>
             <li><Link to="/about"><button>About</button></Link></li>
-            <li>
-                <ul id="user-drop-options">
-                  <li className="drop-option"><button id="drop-down">Shop ➤</button></li>
-                  <li className="drop-option"><Link to="/shop">Products</Link></li>
-                  <li className="drop-option"><Link to="/shopBooks">Books</Link></li>
-              </ul>
-            </li>
-            {/*<li><Link to="/shop"><button>Shop</button></Link></li>*/}
+            <li><Link to="/shop"><button>Products</button></Link></li>
+            <li><Link to="/shopBooks"><button>Books</button></Link></li>
             <li><Link to="/explore"><button>Explore</button></Link></li>
           </ol>
         </div>
