@@ -80,7 +80,7 @@ const NavBar = () => {
             <li><Link to="/"><button>Home</button></Link></li>
             <li><Link to="/about"><button>About</button></Link></li>
             <li><Link to="/shop"><button>Products</button></Link></li>
-            <li><Link to="/shopBooks"><button>Books</button></Link></li>
+            {/*<li><Link to="/shopBooks"><button>Books</button></Link></li>*/}
             <li><Link to="/explore"><button>Explore</button></Link></li>
           </ol>
         </div>
