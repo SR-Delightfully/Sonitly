@@ -2,11 +2,11 @@ import ImagePlaceholder from '../images/image-placeholder.png';
 import Product from '../components/Product';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
-//const fs = require('fs');
-const path = require('path');
 import {fetchData} from "../data/fetchWrapper";
+//const fs = require('fs');
+{/*const path = require('path');*/}
 
-const filePath = path.join(__dirname, 'public', 'data', 'bookCatalog.json');
+{/*const filePath = '/data/bookCatalog.json';*/}
 
 // Clear the file
 console.log("clearing all the contents of the JSON file");
@@ -20,9 +20,9 @@ const ShopBooks = () => {
             console.log("Loading the books");
 
             for (let i = 1; i < 26; i++) { // Fetch 25 pages
-                const url = `https://gutendex.com/books?page=${i}`;
+                {/*const url = `https://gutendex.com/books?page=${i}`;*/}
                 try {
-                    const response = await fetch(url);
+                    const response = await fetch(`https://gutendex.com/books?page=${i}`);
                     const data = await response.json();
 
                     const result = data.results.map(book => ({
