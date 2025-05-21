@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Sonitly/static/css/main.11eb50d4.css",
+    "main.js": "/Sonitly/static/js/main.225bf9ec.js",
+    "static/media/carousel-placeholder.jpg": "/Sonitly/static/media/carousel-placeholder.902fc854d8be1ed303db.jpg",
+    "index.html": "/Sonitly/index.html",
+    "main.11eb50d4.css.map": "/Sonitly/static/css/main.11eb50d4.css.map",
+    "main.225bf9ec.js.map": "/Sonitly/static/js/main.225bf9ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11eb50d4.css",
+    "static/js/main.225bf9ec.js"
+  ]
+}

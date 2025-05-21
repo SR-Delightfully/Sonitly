@@ -22,6 +22,8 @@ import './css/14-footer.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <CurrentUserProvider>
+      {console.log("hello from index")}
+
     <App />
   </CurrentUserProvider>
 );
