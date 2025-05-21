@@ -15,7 +15,6 @@ app.use(cors());
 
 const usersFilePath = path.join(__dirname, '..', 'public', 'data', 'users.json');
 
-// Helper: Load users from file
 function loadUsers() {
   try {
     const data = fs.readFileSync(usersFilePath);
@@ -26,7 +25,6 @@ function loadUsers() {
   }
 }
 
-// Helper: Save users to file
 function saveUsers(users) {
   try {
     fs.writeFileSync(usersFilePath, JSON.stringify({ users }, null, 2));
@@ -35,7 +33,6 @@ function saveUsers(users) {
   }
 }
 
-// Login route
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
   const users = loadUsers();
@@ -54,7 +51,6 @@ app.post('/login', (req, res) => {
   res.json({ token, user }); 
 });
 
-// Signup route
 app.post('/signup', (req, res) => {
   const { email, password, name } = req.body;
   const users = loadUsers();
@@ -87,44 +83,49 @@ app.post('/signup', (req, res) => {
   res.status(201).json({ message: 'Signup successful' });
 });
 
-// Spotify OAuth route remains unchanged
-app.get('/spotify/callback', async (req, res) => {
-  const { code } = req.query;
-
-  try {
-    const response = await axios.post('https://accounts.spotify.com/api/token', null, {
-      params: {
-        code,
-        redirect_uri: process.env.REDIRECT_URI,
-        grant_type: 'authorization_code',
-      },
-      headers: {
-        'Authorization': `Basic ${Buffer.from(process.env.SPOTIFY_CLIENT_ID + ':' + process.env.SPOTIFY_CLIENT_SECRET).toString('base64')}`,
-      },
-    });
-
-    const { access_token } = response.data;
-
-    const userResponse = await axios.get('https://api.spotify.com/v1/me', {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
-    });
-
-    const spotifyUser = userResponse.data;
-
-    const token = jwt.sign(
-      { email: spotifyUser.email, name: spotifyUser.display_name },
-      process.env.JWT_SECRET,
-      { expiresIn: '1h' }
-    );
-
-    res.json({ token, spotifyUser });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Error during Spotify OAuth' });
+app.get('/api/users/:username', (req, res) => {
+  const users = loadUsers();
+  const user = users.find(u => u.user_name === req.params.username);
+  if (user) {
+    res.json(user);
+  } else {
+    res.status(404).json({ message: 'User not found' });
   }
 });
+
+app.get('/api/search', (req, res) => {
+  const query = req.query.q?.toLowerCase() || "";
+  if (!query) return res.status(400).json({ message: "Query is required." });
+
+  const users = loadUsers();
+  
+  const productsFilePath = path.join(__dirname, '..', 'public', 'data', 'products.json');
+  let products = [];
+  
+  try {
+    const data = fs.readFileSync(productsFilePath);
+    products = JSON.parse(data).products;
+  } catch (err) {
+    console.error('Error loading products:', err);
+  }
+
+  const matchedUsers = users.filter(
+    user =>
+      user.user_name.toLowerCase().includes(query) ||
+      user.user_about_me.toLowerCase().includes(query)
+  );
+
+  const matchedProducts = products.filter(
+    product =>
+      product.item_title.toLowerCase().includes(query) ||
+      product.brand.toLowerCase().includes(query) ||
+      product.description.toLowerCase().includes(query)
+  );
+
+  res.json({ users: matchedUsers, products: matchedProducts });
+});
+
+
 
 app.listen(PORT, () => {
   console.log(`🎵💿 Server listening on port ${PORT} 🎶`);

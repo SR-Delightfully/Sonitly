@@ -28,11 +28,7 @@ const Book = ({title, authors, pages, size, type}) => {
         <li id="hard-cover-front" className={size}>
             <h3>{title}</h3>
             <h5> Written by: 
-                {authors.map((author, index) => (
-                    <span>
-                    {(index == authors.length - 1) ? `${author} ` : ` ${author}, `}
-                    </span>
-                ))}
+                {authors}
             </h5>
         </li>
         {pages.map((pages, index) => (

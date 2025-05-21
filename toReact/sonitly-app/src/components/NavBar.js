@@ -1,142 +1,171 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { CurrentUserContext } from '../components/CurrentUserContext';  // Import the context
+import { CurrentUserContext } from "../components/CurrentUserContext";
+import axios from "axios";
 
 const NavBar = () => {
-  const { currentUser, logoutUser } = useContext(CurrentUserContext); // Get currentUser and logoutUser
-  const navigate = useNavigate();  // Use navigate to redirect user after logout
+  const { currentUser, logoutUser } = useContext(CurrentUserContext);
+  const navigate = useNavigate();
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearchVisible, setSearchVisible] = useState(false);
 
   useEffect(() => {
-    const label = document.getElementById("search-label");
-    const input = document.getElementById("search-input");
-    const dropDownBTN = document.getElementById("drop-down");
-
-    input.classList.add("invisible");
-
-    const handleSearchBar = () => {
-      try {
-        if (input.classList.contains("invisible")) {
-          label.innerHTML = "✖️";
-          input.classList.remove("invisible");
-        } else {
-          label.innerHTML = "🔍";
-          input.classList.add("invisible");
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-
-    if (label && input) {
-      label.addEventListener("click", handleSearchBar);
+    if (!searchQuery.trim()) {
+      setSearchResults([]);
+      return;
     }
 
-    const handleDropDown = () => {
-      try {
-        const dropOptions = document.getElementById("user-drop-options");
+    const delayDebounce = setTimeout(() => {
+      axios.get(`/api/users`)
+        .then(res => {
+          const filtered = res.data.filter(user =>
+            user.user_name.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+          setSearchResults(filtered);
+        })
+        .catch(err => console.error("Search error:", err));
+    }, 300);
 
-        if (dropDownBTN) {
-          if (dropOptions.style.minHeight === "12rem") {
-            dropOptions.style.maxHeight = "2.3rem";
-            dropOptions.style.minHeight = "2.3rem";
-          } else {
-            dropOptions.style.minHeight = "12rem";
-            dropOptions.style.maxHeight = "12rem";
-          }
-        } else {
-          throw new Error(`Failed to load drop down. please try again.`);
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
+    return () => clearTimeout(delayDebounce);
+  }, [searchQuery]);
 
-    if (dropDownBTN) {
-      dropDownBTN.addEventListener("click", handleDropDown);
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setSearchQuery("");
+      setSearchResults([]);
+      setSearchVisible(false);
     }
+  };
 
-    return () => {
-      if (label) label.removeEventListener("click", handleSearchBar);
-      if (input) input.removeEventListener("click", handleSearchBar);
-      if (dropDownBTN) dropDownBTN.removeEventListener("click", handleDropDown);
-    };
-  }, []);
-
-  // Sign-out handler
   const handleSignOut = () => {
-    logoutUser();  // Call the logout function from context
-    navigate("/login");  // Redirect user to the login page
+    logoutUser();
+    navigate("/login");
   };
 
   return (
-    <>
-      <header id="nav-bar">
-        <div id="nav-bar-left">
-          {/* CLICKABLE LOGO */}
-          <a href="/"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/812/812680.png" /></a>
-          {/* TABS TO NAVIGATE THROUGH PAGES */}
-          <ol id="nav-bar-tabs">
-            <li><Link to="/"><button>Home</button></Link></li>
-            <li><Link to="/about"><button>About</button></Link></li>
-            <li><Link to="/shop"><button>Products</button></Link></li>
-            <li><Link to="/shopBooks"><button>Books</button></Link></li>
-            <li><Link to="/explore"><button>Explore</button></Link></li>
-          </ol>
-        </div>
-        <div id="nav-bar-right">
-          <div id="nav-bar-misc">
-            <span id="search-container">
-              <label id="search-label" htmlFor="search-input">🔍</label>
-              <input type="text" id="search-input" />
-            </span>
-            <span>
-              <Link to="/cart">🛒</Link>
-            </span>
-          </div>
-          <div id="nav-bar-user-drop">
-            {currentUser ? ( // If the user is logged in, show their name and sign-out option
-              <span>
-                <h3>How's it groovin' {currentUser.user_name} ?</h3> {/* Replace with dynamic user name */}
-                <ul id="user-drop-options">
-                  <li className="drop-option"><button id="drop-down">User dropdown ➤</button></li>
-                  <li className="drop-option"><HashLink smooth to="/settings#user-settings">View Settings</HashLink></li>
-                  <li className="drop-option"><HashLink smooth to="/settings#accessibility-settings">View Accessibility</HashLink></li>
-                  <li className="drop-option"><HashLink smooth to="/settings#connection-settings">View More Settings</HashLink></li>
-                  {/* Sign-out button */}
-                  <li className="drop-option"><button onClick={handleSignOut}>Sign Out</button></li>
-                </ul>
-              </span>
-            ) : (
-              <span>
-                <h3>Welcome, Guest!</h3>
-                <ul id="user-drop-options">
-                  <li className="drop-option"><button id="drop-down">User dropdown ➤</button></li>
-                  <li className="drop-option"><Link to="/login">Login</Link></li>
-                  <li className="drop-option"><Link to="/signup">Sign Up</Link></li>
-                </ul>
-              </span>
-            )}
-            <Link to={`/profile/${currentUser.user_name}`}><img id="pfp" src={currentUser.user_pfp_src} /></Link>
-          </div>
-        </div>
-      </header>
-      <div id="paletteSquares">
-        <span className="paletteSquare background-primary"> </span>
-        <span className="paletteSquare background-secondary"></span>
-        <span className="paletteSquare color-accent-1"></span>
-        <span className="paletteSquare color-accent-2"></span>
-        <span className="paletteSquare color-accent-3"></span>
-        <span className="paletteSquare color-accent-4"></span>
-        <span className="paletteSquare color-accent-5"></span>
-        <span className="paletteSquare color-accent-6"></span>
-        <span className="paletteSquare color-accent-7"></span>
-        <span className="paletteSquare color-accent-8"></span>
-        <span className="paletteSquare color-accent-9"></span>
-        <span className="paletteSquare color-accent-10"></span>
+    <header id="nav-bar">
+      <div id="nav-bar-left">
+        <a href="/"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/812/812680.png" alt="logo" /></a>
+        <ol id="nav-bar-tabs">
+          <li><Link to="/"><button>Home</button></Link></li>
+          <li><Link to="/about"><button>About</button></Link></li>
+          <li><Link to="/shop"><button>Shop</button></Link></li>
+          <li><Link to="/explore"><button>Explore</button></Link></li>
+        </ol>
       </div>
-    </>
+
+      <div id="nav-bar-right">
+        <div id="nav-bar-misc">
+          <div id="search-container" style={{ position: "relative" }}>
+            <label
+              id="search-label"
+              htmlFor="search-input"
+              onClick={() => setSearchVisible(!isSearchVisible)}
+              style={{ cursor: "pointer" }}
+            >
+              {isSearchVisible ? "✖️" : "🔍"}
+            </label>
+
+            {isSearchVisible && (
+              <form onSubmit={handleSearchSubmit} style={{ display: "inline" }}>
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search users..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  style={{ marginLeft: "0.5rem" }}
+                />
+              </form>
+            )}
+
+            {searchResults.length > 0 && (
+              <ul
+                style={{
+                  position: "absolute",
+                  top: "2.5rem",
+                  left: 0,
+                  backgroundColor: "#fff",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  zIndex: 1000,
+                  listStyle: "none",
+                  padding: "0.5rem",
+                  width: "200px",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.15)"
+                }}
+              >
+                {searchResults.slice(0, 5).map((user) => (
+                  <li key={user.user_id} style={{ marginBottom: "0.5rem" }}>
+                    <Link
+                      to={`/profile/${user.user_name}`}
+                      onClick={() => {
+                        setSearchQuery("");
+                        setSearchResults([]);
+                        setSearchVisible(false);
+                      }}
+                    >
+                      {user.user_name}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <button
+                    onClick={() => {
+                      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+                      setSearchQuery("");
+                      setSearchResults([]);
+                      setSearchVisible(false);
+                    }}
+                    style={{ background: "none", border: "none", color: "blue", cursor: "pointer", padding: 0 }}
+                  >
+                    View all results
+                  </button>
+                </li>
+              </ul>
+            )}
+          </div>
+
+          <span><Link to="/cart">🛒</Link></span>
+        </div>
+
+        <div id="nav-bar-user-drop">
+          {currentUser ? (
+            <span>
+              <h3>How's it groovin' {currentUser.user_name}?</h3>
+              <ul id="user-drop-options">
+                <li className="drop-option"><button id="drop-down">User dropdown ➤</button></li>
+                <li className="drop-option"><HashLink smooth to="/settings#user-settings">View Settings</HashLink></li>
+                <li className="drop-option"><HashLink smooth to="/settings#accessibility-settings">View Accessibility</HashLink></li>
+                <li className="drop-option"><HashLink smooth to="/settings#connection-settings">View More Settings</HashLink></li>
+                <li className="drop-option"><button onClick={handleSignOut}>Sign Out</button></li>
+              </ul>
+            </span>
+          ) : (
+            <span>
+              <h3>Welcome, Guest!</h3>
+              <ul id="user-drop-options">
+                <li className="drop-option"><button id="drop-down">User dropdown ➤</button></li>
+                <li className="drop-option"><Link to="/login">Login</Link></li>
+                <li className="drop-option"><Link to="/signup">Sign Up</Link></li>
+              </ul>
+            </span>
+          )}
+
+          {currentUser && (
+            <Link to={`/profile/${currentUser.user_name}`}>
+              <img id="pfp" src={currentUser.user_pfp_src} alt="pfp" />
+            </Link>
+          )}
+        </div>
+      </div>
+    </header>
   );
-}
+};
 
 export default NavBar;

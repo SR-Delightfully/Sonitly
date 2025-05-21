@@ -39,7 +39,7 @@ const Home = () => {
         <ol id="containers">
             <li>
                 <div id="hero-container">
-                    <h2 id="hero-title">Company Name</h2>
+                    <h2 id="hero-title">Sonitly</h2>
 
                     <ol id="carousel-controls">
                         {carouselData.map((_, index) => (
@@ -141,9 +141,6 @@ const Home = () => {
                             <span>Perspiciatis, eveniet iure harum saepe praesentium sequi quod tempora a fugit perferendis tenetur possimus, hic natus, soluta eius voluptatum amet ducimus repellendus deserunt libero nemo ea delectus eligendi ratione. Dolore.</span>
                             <span>Explicabo quibusdam iusto tempore, ut nemo soluta ducimus deleniti iste, laboriosam ullam repellat amet commodi ratione. Eligendi debitis modi aut nobis totam harum quam? Unde illum accusamus sit totam quis?</span>
                             <span>Quo dolorem dolore repellat molestias cum similique, pariatur ut iste doloribus quia. Nulla, recusandae iste deserunt quas aliquam rem quibusdam sapiente molestiae explicabo, minima consectetur quo provident! Ad, quis doloribus.</span>
-                            <span>Aut rem blanditiis doloribus ea nisi aspernatur at iste in veniam expedita. In impedit officia reprehenderit voluptatibus, quaerat iste possimus ea molestias repellat facilis aliquam mollitia, labore delectus quis. Aliquam!</span>
-                            <span>Quibusdam nam odio illum eaque facere nobis, officia perferendis et molestias earum doloribus, in itaque illo, dicta laborum cumque aut libero animi laudantium! Ab, quo molestias voluptate ipsam atque illo!</span>
-                            <span>Hic, earum nostrum. Asperiores, non ullam. Perspiciatis et molestiae, eaque autem enim consequatur nulla est. Laboriosam voluptatum quas aliquam culpa voluptas dicta. Eligendi error ea amet dolorem architecto officia odio.</span>
                         </p>
                     </div>
                 </span>

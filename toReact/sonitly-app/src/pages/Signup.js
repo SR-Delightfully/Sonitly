@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const Signup = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -44,9 +45,7 @@ const Signup = () => {
 
   return (
     <div id="sign-up-container">
-      <div id="form-circle-right"></div>
-
-      <div id="sign-up-form-container">
+        <div id="sign-up-form-container">
         <h1>Sign up</h1>
         <input name="firstName" placeholder="first name" type="text" onChange={handleChange} />
         <input name="lastName" placeholder="last name" type="text" onChange={handleChange} />
@@ -57,7 +56,7 @@ const Signup = () => {
         <input name="password" placeholder="password" type="password" onChange={handleChange} />
         <br />
         <input name="confirmPassword" placeholder="confirm password" type="password" onChange={handleChange} />
-        <div id="have-account">
+        <div id="login-link">
           <a href="/login">Already have an account?</a>
         </div>
         <br />

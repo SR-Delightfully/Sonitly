@@ -1,0 +1,178 @@
+.profile-container {
+    min-height: 200vh;
+    max-width: 100%;
+    margin-top: 30rem;
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    overflow: hidden;
+}
+#banner-picture-img {
+    min-width: 100.1%;
+    height: 30rem;
+    position: relative;
+    top: -2px;
+    left: -3px; 
+    z-index: -1;
+}
+#profile-gallery {
+    height: calc(100% - 30rem - 1rem);
+    width: 75%;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--color-accent-5);
+}
+#profile-gallery > ol {
+    height: calc(100% - 5rem);
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 6rem;
+    gap: 3rem;
+    width: 100%;
+    margin-left: -3rem; 
+    
+
+}
+#profile-gallery > ol > li {
+    height: 18.75rem;
+    width: 18.75rem;
+}
+#profile-gallery-tabs {
+    min-width: calc(100% - 3rem);
+    height: 4rem;
+    background-color: var(--color-accent-4);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+    list-style: none;
+    padding-right: 22.6rem;
+    padding: 0.5rem 30.2rem 0.5rem 0;
+    position: relative;
+    top: -0.5rem;
+    z-index: 0;
+    box-shadow: 0 0 1.5rem 0.01rem var(--text-color-1);
+}
+#profile-gallery-tabs > li > button {
+    border-radius: 100%;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 2rem;
+    padding-top: 0.5rem;
+}
+#profile-info {
+    height: calc(100% - 30rem - 1rem);
+    width: 24%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+#profile-info > div {
+   position: relative;
+    top: 0;
+    height: 7rem;
+    display: flex;
+    width: 101.99%;
+    margin-left: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 3.9rem;
+}
+#profile-info > div > h3 {
+align-content: flex-end;
+}
+
+#profile-info-content > #usersname, #userStats {
+    width: 50%;
+    height: 2rem !important;
+}
+
+#profile-info > div > span {
+    max-width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    margin-left: 8rem;
+}
+#profile-info > div > p {
+    min-height: 4rem;
+}
+
+
+#profile-info > div > span > h5 {
+    align-content: baseline;
+}
+
+
+
+.profile-pfp {
+    height: 12rem !important;
+    width: 12rem !important ;
+    margin-top: -5rem;
+    position: absolute;
+    z-index: 99;
+    border: 0.5rem solid var(--color-accent-4) !important;
+    box-shadow: 0 0 0.5rem 0.01rem var(--text-color-1);}
+
+#user-display {
+    position: relative;
+    left: 2.75rem;
+    top: -1rem;
+    max-width: 95%;
+    min-height: 86.5%;
+    z-index: 9;
+        border: 1rem solid var(--color-accent-4);
+    border-radius: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+    .gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    position: absolute;
+    top: 36rem;
+    left: 59.5%;
+    z-index: 99;
+    }
+
+.gallery-controls button {
+  background-color: var(--color-accent-4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#profile-buttons {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1rem;
+}
+#profile-buttons > li > button {
+      width: 10rem;
+    height: 2.5rem;
+    background-color: var(--background-secondary);
+    border: 0.25rem outset var(--color-accent-4);
+    border-radius: 0.25rem;
+}

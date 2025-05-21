@@ -3,14 +3,8 @@ import Product from '../components/Product';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import {fetchData} from "../data/fetchWrapper";
-//const fs = require('fs');
-{/*const path = require('path');*/}
 
-{/*const filePath = '/data/bookCatalog.json';*/}
-
-// Clear the file
 console.log("clearing all the contents of the JSON file");
-//fs.writeFileSync(filePath, JSON.stringify([], null, 2)); //test if it wo
 
 const ShopBooks = () => {
     const [books, setBooks] = useState([]);
@@ -19,8 +13,7 @@ const ShopBooks = () => {
             let allBooks = [];
             console.log("Loading the books");
 
-            for (let i = 1; i < 26; i++) { // Fetch 25 pages
-                {/*const url = `https://gutendex.com/books?page=${i}`;*/}
+            for (let i = 1; i < 26; i++) { 
                 try {
                     const response = await fetch(`https://gutendex.com/books?page=${i}`);
                     const data = await response.json();
@@ -45,7 +38,6 @@ const ShopBooks = () => {
 
             try {
                 console.log(JSON.stringify(allBooks, null, 2));
-                //fs.writeFileSync('./data/bookCatalog.json', JSON.stringify(allBooks, null, 2));
                 console.log('Saved to bookCatalog.json!');
             } catch (error) {
                 console.log("error saving to JSON file");
@@ -57,15 +49,13 @@ const ShopBooks = () => {
     useEffect(() => {
         async function loadBooks() {
             console.log("Loading the books");
-            const uri = './data/bookCatalog.json'; //will not work
+            const uri = './data/bookCatalog.json'; 
             const bookCatalog = await fetchData(uri);
             setBooks(bookCatalog.books);
         }
         loadBooks();
     }, []);
 
-    // if (loading) return <div>Loading books...</div>;
-    // if (!product) return <div>Book not found.</div>;
 
     return (
         <>

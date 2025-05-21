@@ -44,7 +44,7 @@ const LeafletMap = () => {
 
   useEffect(() => {
     const fetchLocations = async () => {
-      const data = await fetchData("./data/places.json"); // data is already parsed JSON
+      const data = await fetchData("./data/places.json");
       if (data && data.places) {
         setLocations(data.places);
       }
@@ -56,24 +56,24 @@ const LeafletMap = () => {
 
   const zoomToLocation = (lat, lng) => {
     if (mapRef.current) {
-      mapRef.current.setView([lat, lng], 20); // Zoom into the location
+      mapRef.current.setView([lat, lng], 20);
     }
   };
 
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ width: "30%", padding: "10px", backgroundColor: "#f4f4f4" }}>
+    <div id="leafletWrapper">
+      <div id="locationsList">
         <h3>Locations</h3>
         <ul>
-          {locations.map((loc, idx) => (
-            <li key={idx} onClick={() => zoomToLocation(loc.lat, loc.lng)} style={{ cursor: "pointer", listStyle: "none", textAlign: "left", lineHeight: "2rem" }}>
-              {loc.name}
-            </li>
-          ))}
+            {locations.map((loc, idx) => (
+              <li className="location" key={idx} onClick={() => zoomToLocation(loc.lat, loc.lng)}>
+                {loc.name}
+              </li>
+            ))}
         </ul>
       </div>
-      <div style={{ width: "70%" }}>
-        <MapContainer center={[latitude, longitude]} zoom={13} ref={mapRef} style={{ height: "50vh", width: "50vw" }}>
+      <div id="map">
+        <MapContainer center={[latitude, longitude]} zoom={13} ref={mapRef} style={{ height: "81.5vh", width: "62vw", marginTop: "-3rem", marginLeft: "-8rem"}}>
           <TileLayer
             attribution='%copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
