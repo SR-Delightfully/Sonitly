@@ -1,0 +1,333 @@
+/* GLOBAL STYLES                                                                            */
+/* Please note that these styles will be used throughout the project by multiple components */
+/* This is also where we will store root variables, to reuse specific style settings.       */
+/*------------------------------------------------------------------------------------------*/
+:root{  
+    /* Declaring color scheme variables: */
+    --background-primary: var(--s0);
+    --background-secondary: var(--s1);
+    --text-color-1: var(--s5);
+   
+    
+    --color-accent-1: var(--s2);
+    --color-accent-2: var(--s3);
+    --color-accent-3: var(--s4);
+    --color-accent-4: var(--s5);
+    --color-accent-5: var(--s1-80);
+    --color-accent-6: var(--s2-80);
+    --color-accent-7: var(--s3-80);
+    --color-accent-8: var(--s4-80);
+    --color-accent-9: var(--s5-80);
+    --color-accent-10: var(--s0-80);
+
+    --color-r: var(--color-magenta);
+    --color-o: var(--color-orange);
+    --color-y: var(--color-yellow);
+    --color-g: var(--color-green);
+    --color-b: var(--color-blue);
+    --color-p: var(--color-violet);
+
+
+     /* Declaring Solid Shades */
+   --s0: #EEEEEE;
+   --s1: #AEAEAE;
+   --s2: #909090;
+   --s3: #505050     ;
+   --s4: #333333;
+   --s5: #000000;
+
+    /* Declaring Semi-Opaque Shades */
+    --s0-00: #ffffff80;
+    --s0-80: #EEEEEE80;
+    --s1-80: #AEAEAE80;
+    --s2-80: #90909080;
+    --s3-80: #50505080;
+    --s4-80: #33333380;
+    --s5-80: #00000080;
+
+    /* Declaring colors: */
+    --color-really-dark-teal: #1e2a53;
+    --color-dark-teal: #2a555e;
+    --color-teal: #339a79;
+    --color-light-teal: #23c39b;
+    --color-really-light-teal: #c7fff9;
+    --color-off-white: #fffefd;
+    --color-dark-off-white: #fef3e2;
+    --color-really-light-orange: #fed29b;
+    --color-light-orange: #f9ad72;
+    --color-orange: #e97260;
+    --color-dark-orange: #bc302b;
+    --color-really-dark-orange: #7f201e;
+    --color-really-dark-yellow: #93341f;
+    --color-dark-yellow: #b9532b;
+    --color-yellow: #dd7a3c;
+    --color-light-yellow: #fdd053;
+    --color-really-light-yellow: #fefead;
+    --color-really-light-lime: #d2d064;
+    --color-light-lime: #bcab2a;
+    --color-lime: #868823;
+    --color-dark-lime: #5b6628;
+    --color-really-dark-lime: #324024;
+    --color-olive: #7e5f3b;
+    --color-light-olive: #a08a64;
+    --color-really-light-olive: #c8ae79;
+    --color-green: #649d47;
+    --color-light-green: #91b951;
+    --color-mint: #82eda2;
+    --color-dark-mint: #3a784d;
+    --color-dark-indigo: #190931;
+    --color-really-dark-aqua: #004988;
+    --color-dark-aqua: #007da8;
+    --color-aqua: #05b5cc;
+    --color-light-aqua: #00c9d5;
+    --color-really-dark-blue: #3d52b9;
+    --color-dark-blue:#529be2;
+    --color-blue: #1f8dd3;
+    --color-light-blue: #7fb2f4;
+    --color-really-light-blue: #8ad5fa;
+    --color-really-light-grey: #b8cedf;
+    --color-light-grey: #86a0c0;
+    --color-grey: #727fa9;
+    --color-dark-grey: #5e5684;
+    --color-really-dark-grey: #3b3a61;
+    --color-indigo: #402187;
+    --color-really-dark-violet: #6e32a0;
+    --color-dark-violet: #895bb3;
+    --color-violet: #ab79d8;
+    --color-light-violet: #d59df8;
+    --color-purple: #9f4390;
+    --color-dark-purple: #7d1966;
+    --color-really-dark-magenta: #3d193f;
+    --color-dark-indigo: #5f1d43;
+    --color-magenta: #952857;
+    --color-light-magenta: #ce5196;
+    --color-really-light-magenta: #f5c6e9;
+    --color-light-salmon: #f6afb1;
+    --color-salmon: #fa979e;
+    --color-dark-salmon: #d63e55;
+    --color-really-dark-brown: #693543;
+    --color-dark-brown: #8f5759;
+    --color-brown: #964659;
+    --color-light-brown: #b16b5e;
+    --color-really-light-brown: #e09286;
+    --color-peach: #f6afb1;
+}
+:root[data-theme=primary] {
+    --background-primary: var(--s0-00);
+    --background-secondary: var(--color-really-light-grey);
+    --text-color-1:  var(--color-dark-indigo);
+
+    
+    --color-accent-1: var(--color-really-dark-blue); 
+    --color-accent-2: var(--color-really-light-orange);
+    --color-accent-3: var(--s0);
+    --color-accent-4: var(--s0);
+    --color-accent-5: var(--s1-80);
+    --color-accent-6: var(--s2-80);
+    --color-accent-7: var(--s3-80);
+    --color-accent-8: var(--s4-80);
+    --color-accent-9: var(--s5-80);
+    --color-accent-10: var(--s0-80);
+    --color-r: var(--color-light-magenta);
+    --color-o: var(--color-light-orange);
+    --color-y: var(--color-really-light-yellow);
+    --color-g: var(--color-light-green);
+    --color-b: var(--color-light-blue);
+    --color-p: var(--color-light-violet);
+}
+:root[data-theme=eyesore] {
+    --background-primary: var(--color-salmon);
+    --background-secondary: var(--color-light-salmon);
+    
+    --color-accent-1: var(--color-dark-violet);
+    --color-accent-2: var(--color-light-violet);
+    --color-accent-3: var(--color-really-dark-blue);
+    --color-accent-4: var(--color-light-blue);
+    --color-accent-5: var(--color-dark-mint);
+    --color-accent-6: var(--color-mint);
+    --color-accent-7: var(--color-light-lime);
+    --color-accent-8: var(--color-yellow);
+    --color-accent-9: var(--color-dark-yellow);
+    --color-accent-10: var(--color-dark-orange);
+}
+
+/* Styling the body tag:                          
+------------------------------------------------------------------------------------------ */
+
+   body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  
+
+
+/* Styling the site's scroll bar:       
+------------------------------------------------------------------------------------------ */
+
+::-webkit-scrollbar {
+    max-width: 3px;
+    max-height: 3px;
+    background-color: var(--color-accent-8);
+
+}
+::-webkit-scrollbar-thumb {
+    background-color:var(--color-accent-9);
+}
+
+/* Styling wrapper:
+------------------------------------------------------------------------------------------ */
+
+#wrapper {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-height: calc(100vh - 5px);
+    max-width: 100%;
+    min-width: calc(100vw - 4px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: var(--background-secondary);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+h2 {
+    margin-bottom: 3rem;
+    background-color: var(--color-accent-4);
+    height: 6rem;
+    width: 90%;
+    color: var(--text-color-1) !important;
+    text-align: center;
+    font-size: 3rem;
+    box-shadow: 0 0.35rem 1.5rem 0.01rem var(--text-color-1);
+    position: relative;
+    z-index: 9999;
+}
+
+a:link {
+    color: var(--text-color-1);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--text-color-1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-p);
+    text-decoration: none;
+}
+
+a:visited {
+    color:var(--text-color-1);
+    text-decoration: none;
+}
+
+/* Styling the main container:                          
+---------------------------------------------------- */
+#containers {
+    min-height: calc(100vh * 3);
+    width: calc(94vw - 6rem);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Styling the main container's children:                          
+---------------------------------------------------- */
+#containers > li {
+    list-style: none;
+    min-width: 100%;
+    height: 100vh;
+    /* border: 2px solid var(--s3); */
+}
+#containers > li:nth-child(1) {
+    z-index: 80;
+}
+#containers > li:nth-child(2) {
+    z-index: 70;
+}
+#containers > li:nth-child(3) {
+    z-index: 60;
+}
+
+/* Setting display:
+------------------------------------------------------------------------------------------ */
+.invisible {
+    display: none;
+}
+.visible {
+    display: block;
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+/* Setting display:
+------------------------------------------------------------------------------------------ */
+#paletteSquares {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid hotpink;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    height: 6rem;
+}
+.paletteSquare {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.background-primary {
+    color: var(--background-color-primary);
+}
+.background-secondary {
+    background-color: var(--background-secondary);
+}
+.color-accent-1 {
+    background-color: var(--color-accent-1);
+}
+.color-accent-2 {
+    background-color: var(--color-accent-2);
+}
+.color-accent-3 {
+    background-color: var(--color-accent-3);
+}
+.color-accent-4 {
+    background-color: var(--color-accent-4);
+}
+.color-accent-5 {
+    background-color: var(--color-accent-5);
+}
+.color-accent-6 {
+    background-color: var(--color-accent-6);
+}
+.color-accent-7 {
+    background-color: var(--color-accent-7);
+}
+.color-accent-8 {
+    background-color: var(--color-accent-8);
+}
+.color-accent-9 {
+    background-color: var(--color-accent-9);
+}
+.color-accent-10 {
+    background-color: var(--color-accent-10);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) { }
+
+@media screen and (min-width: 480px) and (max-width: 768px) { }
+
+@media screen and (max-width: 480px) { }
