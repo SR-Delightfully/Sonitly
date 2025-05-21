@@ -16,8 +16,6 @@ const Shop = () => {
     loadProducts(); 
     }, []);
 
-    if (loading) return <div>Loading product details...</div>;
-    if (!product) return <div>Product not found.</div>;
   return (
     
     <>

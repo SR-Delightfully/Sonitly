@@ -20,23 +20,23 @@ const Login = () => {
     }
   }, [currentUser, navigate]);
 
-  const handleSpotifyLogin = async () => {
-    const verifier = generateCodeVerifier();
-    const challenge = await generateCodeChallenge(verifier);
-    localStorage.setItem('verifier', verifier);
+  // const handleSpotifyLogin = async () => {
+  //   const verifier = generateCodeVerifier();
+  //   const challenge = await generateCodeChallenge(verifier);
+  //   localStorage.setItem('verifier', verifier);
 
-    const authUrl = `https://accounts.spotify.com/authorize?` +
-      new URLSearchParams({
-        client_id: clientId,
-        response_type: 'code',
-        redirect_uri: redirectUri,
-        scope: scopes,
-        code_challenge_method: 'S256',
-        code_challenge: challenge,
-      });
+  //   const authUrl = `https://accounts.spotify.com/authorize?` +
+  //     new URLSearchParams({
+  //       client_id: clientId,
+  //       response_type: 'code',
+  //       redirect_uri: redirectUri,
+  //       scope: scopes,
+  //       code_challenge_method: 'S256',
+  //       code_challenge: challenge,
+  //     });
 
-    window.location.href = authUrl;
-  };
+  //   window.location.href = authUrl;
+  // };
 
   const handleLogin = async () => {
     try {
@@ -67,12 +67,7 @@ const Login = () => {
         <h1>Login</h1>
 
         <div>
-          <h3>Login with Spotify</h3>
-          <button onClick={handleSpotifyLogin}>Connect with Spotify</button>
-        </div>
-
-        <div>
-          <h3>Or Login with Email</h3>
+          <h3>Login with Email</h3>
           <input
             placeholder="email"
             type="email"
@@ -95,6 +90,10 @@ const Login = () => {
             Login
           </button>
           {error && <p style={{ color: 'red' }}>{error}</p>}
+          <p id="signup-link">
+            Don't have an account? <a href="/sign-up">Sign up</a>
+          </p>
+
         </div>
       </div>
     </div>
