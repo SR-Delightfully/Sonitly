@@ -1,0 +1,154 @@
+#baseProductInfo {
+    background-color: lavender;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#leftInfo {
+    display: flex;
+    flex-flow: row nowrap;
+    min-width: 40%;
+}
+
+#CButtons {
+    display: flex;
+    flex-flow: column wrap;
+    align-self: center;
+    width: calc(100% - 25rem);
+    gap: 1rem;
+    align-items: flex-end;
+    margin-right: 2rem;
+}
+
+.carousselButton {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: none;
+    background-color: burlywood;
+}
+
+#productImageBig {
+    width: 18rem;
+    height: 26rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#rightInfo {
+    margin-top: 1rem;
+}
+
+#rightInfo >h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+#rightInfo >h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#rightInfo >p {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+#tagsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: space-between;
+    position: relative;
+    max-width: 80%;
+    margin-bottom: 2rem;
+    /*border: 2px solid royalblue;*/
+}
+
+.itemTags {
+    padding: 0.3rem 1rem 0.4rem 1rem;
+    background-color: burlywood;
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#optionContainer {
+    display: flex;
+    max-width: 80%;
+}
+
+#optionContainer :nth-child(4) {
+    margin-left: 15%;
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+}
+
+#optionContainer :nth-child(5) {
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+}
+
+#optionContainer :nth-child(6) {
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    margin-right: 0rem;
+}
+
+.buyingOption {
+    font-size: 95%;
+    padding: 0rem 1rem;
+    border: none;
+    background-color: burlywood;
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+}
+
+#additionalProductInfo {
+    /*border: 2px solid hotpink;*/
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#leftStats {
+    width: 40%;
+    padding-left: 15.5rem; /*on my pc = 15.5*/
+    text-align: left;
+    /*border: 2px solid blue;*/
+}
+
+#leftStats >h3 {
+    line-height: 80%;
+    margin-top: 3rem;
+}
+
+#leftStats >p {
+    line-height: 50%;
+}
+
+#rightDescription {
+    width: 80%;
+    padding-right: 13%;
+    text-align: left;
+}
+
+#rightDescription >h3 {
+    line-height: 80%;
+    margin-top: 3rem;
+}
+
+#rightDescription >p {
+    text-align: justify;
+}
+
+.smallProductWrapper {
+    position: relative;
+    left: 18rem;
+    top: 25rem;
+    z-index: 9999;
+}

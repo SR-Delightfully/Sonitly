@@ -1,0 +1,69 @@
+/* Styling contact page */
+
+.wrapper > * > h2, .wrapper > * > * > h2 {
+    text-align: center;
+    min-width: 100% !important;
+}
+
+#about-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: -4rem 0 0 -2rem;
+    text-align: justify;
+}
+#about-container > div {
+    max-width: calc(49% - 1rem);
+}
+
+#about-column-right {
+    margin-left: 4rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 2rem;
+
+}
+
+#contact-right-column {
+    margin-left: 5rem;
+}
+
+.contact-label {
+    display:inline-block;
+    width: 5rem;
+}
+
+#faq-container  {
+    text-align: center;
+}
+
+#faq-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+#faq-right-column {
+    margin-left: 10rem;
+    border: 1px solid var(--color-accent-4);
+}
+
+#faq-left-column > ul > li {
+    list-style-type: none;
+    line-height: 2rem;
+}
+
+    

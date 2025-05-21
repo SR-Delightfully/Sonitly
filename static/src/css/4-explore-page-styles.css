@@ -1,0 +1,54 @@
+/* Leaflet styles */
+#locationsList {
+    background-color: var(--text-color-1);
+    width: 30%;
+    height: 84%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    margin: -4rem 0rem 0rem 0rem;
+    color: var(--background-secondary);
+    overflow: hidden;
+}
+#locationsList > h3 {
+    font-size: 2rem;
+}
+
+#locationsList > ul {
+    max-height: 79%;
+    overflow-y: scroll;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.location {
+    cursor: pointer;
+    list-style: none;
+    text-align: left;
+    line-height: 2rem;
+    color: var(--text-color-1);
+    background-color: var(--background-primary);
+    padding-left: 3rem;
+    min-height: 4rem;
+
+}
+
+#map {
+    width: 70%;
+    min-height: 84%;
+    position: absolute;
+    right: 0;
+    margin: 0rem -8rem 0rem 0rem;
+    /* background-color: hotpink; */
+}
+
+#leafletWrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#explore-title {
+    min-width: 100% !important;
+    padding-top: 2rem;
+}

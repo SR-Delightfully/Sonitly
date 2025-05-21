@@ -1,0 +1,71 @@
+
+#otherProducts {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    padding-left: 4rem;
+    margin-top: 2rem;
+}
+
+#otherProducts >h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+#leftImageCaroussel :first-child {
+    border: 2px solid hotpink;
+    height: 15rem;
+    width: 10rem;
+    position: relative;
+    margin-top: 3rem;
+    left: 9rem;
+    filter: blur(1.5px)  brightness(0.7) opacity(0.8);
+}
+
+#leftImageCaroussel :nth-child(2) {
+    height: 16.5rem;
+    width: 11rem;
+    position: relative;
+    margin-top: 2.3rem;
+    filter: blur(1.3px)  brightness(0.7) opacity(0.9);
+}
+
+#leftImageCaroussel :nth-child(3) {
+    height: 18rem;
+    width: 12rem;
+    position: relative;
+    right: 9rem;
+    margin-top: 1.5rem;
+    filter: blur(1.1px)  brightness(0.7) opacity(0.95);
+}
+
+#rightImageCaroussel :first-child {
+    height: 18rem;
+    width: 12rem;
+    position: relative;
+    left: 18.5rem;
+    margin-top: 1.5rem;
+    z-index: 9998;
+    filter: blur(1.1px)  brightness(0.7) opacity(0.95);
+}
+
+#rightImageCaroussel :nth-child(2) {
+    height: 16.5rem;
+    width: 11rem;
+    position: relative;
+    left: 9rem;
+    z-index: 9997;
+    margin-top: 2.3rem;
+    filter: blur(1.3px)  brightness(0.7) opacity(0.9);
+}
+
+#rightImageCaroussel :nth-child(3) {
+    height: 15rem;
+    width: 10rem;
+    z-index: 9996;
+    position: relative;
+    margin-top: 3rem;
+    filter: blur(1.5px)  brightness(0.7) opacity(0.8);
+}
