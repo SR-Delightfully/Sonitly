@@ -1,0 +1,234 @@
+/* Styling the main container's subsections:  
+
+/* ->> Introduction Section 
+---------------------------------------------------- */
+#intro-container {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    position: relative;
+    gap: 1rem;
+    background-color: var(--background-primary);
+}
+#intro-container > div:nth-child(1){
+    height: 100%;
+    width: calc(32.9% - 0.5rem);
+}
+#intro-container > div:nth-child(2){
+    height: 100%;
+    text-align: justify ;
+}
+#featured-items {
+    position: relative;
+    bottom: 6rem;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;   
+}
+/* Creating falling cd layout */
+#featured-items > li:nth-child(1){
+    transform: rotate(5deg) translateX(-5rem) translateY(0.75rem) skew(-2deg, -5deg);
+}
+#featured-items > li:nth-child(1) > span{
+    transform: rotate(-5deg) translate(9rem) skew(2deg, 5deg);
+}
+#featured-items > li:nth-child(2){
+    transform: rotate(4.5deg) translateX(-12rem) translateY(10rem) skew(-27.5deg, -16deg);
+}
+#featured-items > li:nth-child(2) > span{
+    transform: rotate(-2.3deg) translateX(19rem)  translateY(6rem) skew(27.5deg, 14deg) scale(1.1, 1.1);
+}
+#featured-items > li:nth-child(3){
+    transform: rotate(16deg) translateX(-3rem) translateY(15rem) skew(69deg, -1deg) scale(0.82, 0.30);
+}
+#featured-items > li:nth-child(3) > span{
+    transform: rotate(-22.5deg) translateX(37.2rem) translateY(-8rem) skew(-63deg, -0.5deg) scale(2, 1.79);
+}
+
+#featured-items > li {
+    border: 2px solid var(--color-accent-1);
+    border-radius: 100%;
+    height: calc(2rem* 16);
+    width: calc(2rem*16);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(0,0,0,0) 11%, var(--color-accent-2) 12%, var(--background-primary) 13%, var(--background-secondary) 14%, #ffffff 15%, var(--background-secondary) 76%, var(--background-primary) 100%);
+}
+#store-intro {
+    height: 100%;
+    color: var(--text-color-1);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 1.25rem;
+    padding: 0 1.25rem;
+    gap: 1rem;
+}
+#store-intro > h2 {
+    padding: 0 0.25rem;
+}
+
+#store-intro > div {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    height: calc(100% - 16rem);
+}
+
+#intro-container > div:nth-child(2){
+    min-height: 100%;
+    width: calc(64.5% - 0.5rem) !important;
+}
+/* ->> Hero Section */
+#hero-container {
+    color: var(--text-color-1);
+    height: calc(3.25rem * 17.75);
+    width: calc(6rem * 17.75);
+    border-radius: 1.25rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-primary);
+    background: linear-gradient(var(--background-primary) 0%, var(--color-accent-3) 100%);
+}
+#hero-container > #hero-title {
+    width: 64rem;
+    position: absolute;
+    font-size: 5rem;
+    left: 75%;
+    top: 4rem;
+    transform: translate(-70%,0);
+    z-index: 99;
+    background-color: var(--color-accent-4);
+    color: var(--text-color-1);
+}
+#carousel-controls {
+    width: 3rem;
+    min-height: 12rem;
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#carousel-controls > li > a > button {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index:9999;
+}
+#carousel-controls > li:nth-child(1) > a > button {
+    background-color: var(--color-r);
+}
+#carousel-controls > li:nth-child(2) > a > button {
+    background-color: var(--color-o);
+}
+#carousel-controls > li:nth-child(3) > a > button {
+    background-color: var(--color-y);
+}
+#carousel-controls > li:nth-child(4) > a > button {
+    background-color: var(--color-g);
+}
+#carousel-controls > li:nth-child(5) > a > button {
+    background-color: var(--color-b);
+}
+#carousel-controls > li:nth-child(6) > a > button {
+    background-color: var(--color-p);
+}
+#carousel-images {
+    border: 2px solid var(--color-accent-3);
+    height: calc(3rem * 17.75);
+    width: calc(3.5rem * 17.75);
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    top: 2rem;
+    left: 2rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+    z-index: 85;
+}
+
+#carousel-images > img {
+    object-fit: cover;
+    min-height:100% !important;
+    min-width: 100% !important;
+}
+
+#carousel-details {
+    background-color: var(--color-accent-2);
+    height: calc(3rem * 17.75);
+    width: calc(3rem * 17.75);
+    border-radius: 100%;
+    position: absolute;
+    top: 2rem;
+    right: -3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 79;
+}
+#carousel-details > hr {
+    color: var(--text-color-1);
+    width: 12rem;
+    position: relative;
+    top: 10rem;
+}
+#carousel-details > H3 {
+    position: absolute;
+    top: 18rem;
+    font-size: 1.5rem;
+}
+#carousel-details > p {
+    background-color: var(--color-accent-3);
+    border: 2px solid var(--color-accent-4);
+    height: calc(1.5rem * 16);
+    width: calc(1.5rem * 16); 
+    border-radius: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+/* ->> Overview Section 
+---------------------------------------------------- */
+#overview-container {
+    margin-top: 2.6 rem;
+    min-height: 64rem;
+    max-height: 64rem;
+    min-width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#overview-container > span > h2 {
+    min-width: 100% !important  ;
+    margin-top: -0.1rem;
+    padding-left: 7.5rem;
+
+}
+
+#overview-text {
+    text-align: justify;
+    width: 38.5%;
+    position: relative;
+    margin: 3rem 0;
+    left: 7.2rem;
+    color: var(--text-color-1);
+    border-radius: 1.25rem;
+    padding: 1.25rem; 
+    background-color: var(--background-primary);
+}
