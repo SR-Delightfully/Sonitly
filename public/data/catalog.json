@@ -1,0 +1,243 @@
+{
+    "categories": [
+        {
+            "category_id": 1,
+            "category_name": "Vinyls",
+            "description": "Physical analog sound storage medium"
+        },
+        {
+            "category_id": 2, 
+            "category_name": "CDs",
+            "description": "Compact disc"
+        },
+        {
+            "category_id": 3,
+            "category_name": "Books",
+            "description": "Bound set of pages"
+        },
+        {
+            "category_id": 4,
+            "category_name": "eBooks",
+            "description": "Electronic book"
+        },
+        {
+            "category_id": 5, 
+            "category_name": "Digital music",
+            "description": "Songs online"
+        }
+
+    ],
+    "products": [
+        {
+            "item_id": 1, 
+            "category_id": 3,
+            "item_title": "To Kill a Mockingbird",
+            "description": "Classic novel",
+            "brand": "Harper Lee",
+            "unit_price": 15.99,
+            "quantity_in_stock": 13,
+            "make":"HarperCollins",
+            "thumbnail_image": "https://m.media-amazon.com/images/I/81aY1lxk+9L.jpg"
+        },
+        {
+            "item_id": 2, 
+            "category_id": 1,
+            "item_title": "Abbey Road - The Beatles",
+            "description": "Classic rock album on vinyl",
+            "brand": "The Beatles",
+            "unit_price": 59.99,
+            "quantity_in_stock": 29,
+            "make":"Apple Records",
+            "thumbnail_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmsA1fW-yeoz_cH8H4RCAYGm5AjAyvnfgz9g&s"
+        },
+        {
+            "item_id": 3, 
+            "category_id": 2,
+            "item_title": "Greatest Hits - Queen",
+            "description": "Collection of Queen’s biggest hits.",
+            "brand": "Queen",
+            "unit_price": 14.99,
+            "quantity_in_stock": 7,
+            "make":"EMI",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/0/02/Queen_Greatest_Hits.png"
+        },
+        {
+            "item_id": 4, 
+            "category_id": 4,
+            "item_title": "The Midnight Library",
+            "description": "A novel about infinite life choices.",
+            "brand": "Matt Haig",
+            "unit_price": 8.99,
+            "quantity_in_stock": 1000,
+            "make":"Canongate Books",
+            "thumbnail_image": "https://m.media-amazon.com/images/I/71ls-I6A5KL.jpg"
+        },
+        {
+            "item_id": 5, 
+            "category_id": 5,
+            "item_title": "Shape of You - Ed Sheeran",
+            "description": "Popular hit in MP3 format.",
+            "brand": "Ed Sheeran",
+            "unit_price": 2.99,
+            "quantity_in_stock": 9999,
+            "make":"Asylum",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png"
+        },
+        {
+            "item_id": 6, 
+            "category_id": 1,
+            "item_title": "Rumours - Fleetwood Mac",
+            "description": "Best-selling 1977 album on vinyl.",
+            "brand": "Fleetwood Mac",
+            "unit_price": 49.99,
+            "quantity_in_stock": 17,
+            "make":"Warner Bros.",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG"
+        },
+        {
+            "item_id": 7, 
+            "category_id": 1, 
+            "item_title":"Celeste Complete Vinyl Soundtrack Box Set",
+            "description":"Lena Raine's Celeste, B-Sides, and Farewell soundtracks are now all available in one massive, 6-LP set!",
+            "brand":"Celeste", 
+            "unit_price": 114.99,
+            "quantity_in_stock": 4,
+            "thumbnail_image":"https://lightintheattic.net/cdn/shop/files/tmp_2F1683147895437-qajkcanswyl-1c342a1b5bccff8f8a9a82a78ae792c8_2FVBOX02-Celeste-Complete-COVER_281_29_974x.jpg?v=1690531996"
+        },
+        {
+            "item_id": 8, 
+            "category_id": 1,
+            "item_title": "Midnights: Lavender Edition - Taylor Swift",
+            "description": "13 Songs, Collectible album jacket with unique front and back cover art",
+            "brand": "Taylor Swift",
+            "unit_price": 39.99,
+            "quantity_in_stock": 9,
+            "make":"TSwift",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png"
+        },
+        {
+            "item_id": 9, 
+            "category_id": 1,
+            "item_title": "fruitcake LP - Sabrina Carpenter",
+            "description": "Two sided track on vinyl",
+            "brand": "Sabrina Carpenter",
+            "unit_price": 39.99,
+            "quantity_in_stock": 3,
+            "make":"Carpenter",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Sabrina_Carpenter_-_Fruitcake.png"
+        },
+        {
+            "item_id": 10, 
+            "category_id": 1,
+            "item_title": "Savage Sinusoid - Igorrr",
+            "description": "Gold blackdust vinyl strictly limited to 600 copies worldwide, as stated on front sleeve sticker.Includes free download card!",
+            "brand": "Igorrr",
+            "unit_price": 47.39,
+            "quantity_in_stock": 5,
+            "make": "Metal Blade Records",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/b/bd/Savage_sin.jpg"
+        },
+        {
+            "item_id": 11, 
+            "category_id": 1,
+            "item_title": "Negative Spaces - Poppy",
+            "description": "Poppy's highly anticipated new album, Negative Spaces",
+            "brand": "Poppy",
+            "unit_price": 44.99,
+            "quantity_in_stock": 10,
+            "make": "Sumerian Records",
+            "thumbnail_image": "https://freesonrock.com/cdn/shop/files/R-32300360-1732945663-7489.jpg?v=1743960341"
+        },
+        {
+            "item_id": 12, 
+            "category_id": 1,
+            "item_title": "In Darkness - Varials",
+            "description": "In Darkness is the second studio album by Varials",
+            "brand": "Varials",
+            "unit_price": 54.99,
+            "quantity_in_stock": 10,
+            "make": "Fearless Records",
+            "thumbnail_image": "https://i.scdn.co/image/ab67616d0000b2734499d4e61bf6b5029873fea0"
+        }
+        
+    ],
+    "carouselData": [
+        {
+            "item_id": 1, 
+            "category_id": 3,
+            "item_title": "Celeste Complete Vinyl Soundtrack Box Set",
+            "description": "Lena Raine's Celeste, B-Sides, and Farewell soundtracks are now all available in one massive, 6-LP set!",
+            "brand": "Celeste",
+            "unit_price": 114.99,
+            "quantity_in_stock": 4,
+            "make":"LenaRaine",
+            "thumbnail_image": "https://lightintheattic.net/cdn/shop/files/tmp_2F1683147895437-qajkcanswyl-1c342a1b5bccff8f8a9a82a78ae792c8_2FVBOX02-Celeste-Complete-COVER_281_29_974x.jpg?v=1690531996",
+            "background_color": "really-light-magenta"
+        },
+        {
+            "item_id": 2, 
+            "category_id": 1,
+            "item_title": "Abbey Road - The Beatles",
+            "description": "Classic rock album on vinyl",
+            "brand": "The Beatles",
+            "unit_price": 59.99,
+            "quantity_in_stock": 29,
+            "make":"Apple Records",
+            "thumbnail_image": "https://images.radiox.co.uk/images/596109?crop=1_1&width=660&format=webp&signature=D8me8E6dKDwQrHYEGS-ml8W-osw=",
+            "background_color": "really-light-blue"
+        
+        },
+        {
+            "item_id": 3, 
+            "category_id": 1,
+            "item_title": "Midnights: Lavender Edition Vinyl",
+            "description": "13 Songs, Collectible album jacket with unique front and back cover art",
+            "brand": "Taylor Swift",
+            "unit_price": 39.99,
+            "quantity_in_stock": 9,
+            "make":"TSwift",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png",
+            "background_color": "violet"
+        
+        },
+        {
+            "item_id": 4, 
+            "category_id": 1,
+            "item_title": "fruitcake LP",
+            "description": "Two sided track on vinyl",
+            "brand": "Sabrina Carpenter",
+            "unit_price": 39.99,
+            "quantity_in_stock": 3,
+            "make":"Carpenter",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Sabrina_Carpenter_-_Fruitcake.png",
+            "background_color": "really-light-lime"
+        
+        },
+        {
+            "item_id": 5, 
+            "category_id": 1,
+            "item_title": "Savage Sinusoid",
+            "description": "Gold blackdust vinyl strictly limited to 600 copies worldwide, as stated on front sleeve sticker.Includes free download card!",
+            "brand": "Igorrr",
+            "unit_price": 47.39,
+            "quantity_in_stock": 5,
+            "make": "Metal Blade Records",
+            "thumbnail_image": "https://upload.wikimedia.org/wikipedia/en/b/bd/Savage_sin.jpg",
+            "background_color": "really-dark-blue"
+        
+        },
+        {
+            "item_id": 6, 
+            "category_id": 2,
+            "item_title": "Greatest Hits - Queen",
+            "description": "Collection of Queen’s biggest hits.",
+            "brand": "Queen",
+            "unit_price": 14.99,
+            "quantity_in_stock": 7,
+            "make":"EMI",
+            "thumbnail_image": "https://m.media-amazon.com/images/I/61+RI+JWU4S._UF1000,1000_QL80_.jpg",
+            "background_color": "really-light-orange"
+
+        }
+    ]
+}
