@@ -38,26 +38,26 @@ const Login = () => {
   //   window.location.href = authUrl;
   // };
 
-  // const handleLogin = async () => {
-    // try {
-      // const response = await fetch('/login', {
-        // method: 'POST',
-        // body: JSON.stringify({ email, password }),
-        // headers: { 'Content-Type': 'application/json' },
-      // });
-// 
-      // const data = await response.json();
-      // if (response.ok && data.token) {
-        // loginUser(data.user);
-        // localStorage.setItem('token', data.token);
-        // navigate('/'); 
-      // } else {
-        // setError('Login failed: ' + (data.message || 'Unknown error'));
-      // }
-    // } catch (error) {
-      // setError('Login error: ' + error.message);
-    // }
-  // };
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      const data = await response.json();
+      if (response.ok && data.token) {
+        loginUser(data.user);
+        localStorage.setItem('token', data.token);
+        navigate('/'); 
+      } else {
+        setError('Login failed: ' + (data.message || 'Unknown error'));
+      }
+    } catch (error) {
+      setError('Login error: ' + error.message);
+    }
+  };
 
   return (
     <div id="login-container">
