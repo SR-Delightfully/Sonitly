@@ -5,7 +5,7 @@ import MusicTriviaGame from "../components/MusicTriviaGame";
 const Explore = () => {
   const [stoicQuote, setStoicQuote] = useState(null);
   const [advice, setAdvice] = useState(null);
-
+  const [catFact, setCatFact] = useState(null);
  
   useEffect(() => {
     const fetchStoicQuote = async () => {
@@ -37,6 +37,20 @@ const Explore = () => {
     }
   };
 
+    const getCatFact = async () => {
+    try {
+      const res = await fetch("https://catfact.ninja/fact", {
+        cache: "no-store"
+      });
+
+      const data = await res.json();
+      setCatFact(`"${data.fact}"`);
+
+    } catch {
+      setCatFact("Could not get a cat fact :(");
+    }
+  };
+
 
   useEffect(() => {
     fetchAdvice();
@@ -62,14 +76,23 @@ const Explore = () => {
             <p>{stoicQuote}</p>
           </span>
 
-          <div style={{ marginTop: "2rem" }}>
+            <div style={{ marginTop: "2rem" }}>
             <h4>Need Advice?</h4>
             <p>{advice}</p>
             <button onClick={fetchAdvice} style={{ marginTop: "0.5rem" }}>
               Get New Advice
             </button>
           </div>
+
+
+        <div style={{ marginTop: "2rem" }}>
+          <h4>Cat fact!</h4>
+          <p>{catFact}</p>
+          <button onClick={getCatFact} style={{ marginTop: "0.5rem" }}>
+            Get New Cat Fact
+          </button>
         </div>
+      </div>
 
         <div style={{ marginTop: "3rem" }}>
           <MusicTriviaGame />
