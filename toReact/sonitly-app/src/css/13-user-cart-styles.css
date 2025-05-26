@@ -6,8 +6,8 @@
     display: flex;
     flex-flow: row nowrap;
     /*border: 2px solid royalblue;*/
-    background-color: royalblue;
-    width: 40%; /*in media queries : cahnge the width to full screen for smaller screens*/
+    background-color: var(--color-b);
+    width: 70%;
     margin: 2rem 6rem;
     padding: 1rem;
     text-align: left;
